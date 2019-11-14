@@ -1,0 +1,123 @@
+\documentclass[review]{elsarticle}
+\usepackage{lineno}
+\usepackage{xspace}
+\modulolinenumbers[5]
+
+\journal{Annals of Nuclear Energy}
+
+%% `Elsevier LaTeX' style
+
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%% packages and definitions (optional)
+\usepackage{placeins}
+\usepackage{booktabs} % nice rules (thick lines) for tables
+\usepackage{longtable}
+\usepackage{microtype} % improves typography for PDF
+\usepackage{hhline}
+\usepackage{amsmath}
+\usepackage{pifont}
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
+\usepackage{mathrsfs}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{footnote}
+\usepackage{slashbox}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\usepackage{adjustbox}
+\usepackage{lscape}
+\usepackage{graphicx}
+%\usepackage{cite}
+%\usepackage[demo]{graphicx}
+%\usepackage{caption}
+%\usepackage{subcaption}
+
+\usepackage{booktabs}
+\usepackage{threeparttable, tablefootnote}
+
+\usepackage{tabularx}
+\newcolumntype{b}{>{\hsize=1.0\hsize}X}
+\newcolumntype{s}{>{\hsize=.5\hsize}X}
+\newcolumntype{m}{>{\hsize=.75\hsize}X}
+\newcolumntype{x}{>{\hsize=.25\hsize}X}
+
+\graphicspath{{figures/}}
+
+% tikz %
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows, decorations, shapes}
+
+\usetikzlibrary{shapes.geometric,arrows}
+\tikzstyle{process} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=blue!30]
+\tikzstyle{object} = [ellipse, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+% hyperref %
+\usepackage[hidelinks]{hyperref}
+% after hyperref %
+\usepackage{cleveref}
+\usepackage{datatool}
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+
+
+\makeglossaries
+
+\begin{document}
+\begin{frontmatter}
+\title{Preliminary design of control rods in the Single-fluid Double-zone Thorium Molten Salt Reactor (SD-TMSR): Part 1}
+
+\date{}                     %% if you don't need date to appear
+
+%% Authors
+\input{authors}
+
+% Institutes of the authors
+\input{institutions}
+	
+\begin{keyword}
+MSR \sep
+thorium fuel cycle \sep
+control rod \sep
+safety \sep
+online reprocessing \sep
+Monte carlo code
+%moderated molten salt reactor \sep
+%single-fluid double-zone thorium molten salt reactor \sep
+%sd-tmsr \sep
+%nuclear fuel cycle \sep
+%salt treatment
+\end{keyword}
+
+
+\input{abstract}
+\end{frontmatter}
+\glsresetall
+
+\linenumbers
+
+%\printglossary[type=\acronymtype,title=Abbreviations]
+
+\input{introduction}
+\FloatBarrier
+\input{methods}
+\FloatBarrier
+\input{results}
+\FloatBarrier
+%\input{discussion}
+%\FloatBarrier
+\input{conclusion}
+\FloatBarrier
+\input{acks}
+\FloatBarrier
+\bibliographystyle{elsarticle-num}
+\bibliography{2019-CRs}
+\newpage
+%\appendix
+%\input{Appendix}
+\end{document}
