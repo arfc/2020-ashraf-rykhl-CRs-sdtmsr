@@ -1,0 +1,405 @@
+% --- Cross section data library file path:
+
+%set acelib "/xs/sss_jeff311u.xsdata"
+
+set acelib "/mnt/pool/4/osama.ashraf/xsdata/sss_endfb7u.xsdata"
+
+set declib "/mnt/pool/4/osama.ashraf/xsdata/sss_endfb7.dec"
+
+set nfylib "/mnt/pool/4/osama.ashraf/xsdata/sss_endfb7.nfy"
+
+% --- Neutron population and criticality cycles:
+
+
+% --- Neutron population and criticality cycles:
+
+ set pop   50000  500   50   
+     set gcu -1
+   set nbuf 70
+set lost 100000000
+
+% --- SDMSR -------------------
+
+set title "SD-TMSR"
+
+%/************************
+ %* Material definitions *
+ %************************/
+	
+mat graphite        -2.3       tmp 900       moder graphiteLib   6000 % rgb 255 255 150burn 1      vol 1.5941E+08             %vol 8.2e6
+ 6000.09c          -1.00
+therm graphiteLib 900 gre7.18t gre7.20t % 900K graphite using ENDF/B-VII thermal data 
+ 
+
+mat fuel      -3.3   tmp 900      rgb 150  255  150  % 0.205 vol  5.2997E+07  vol 5.2977E+07
+           3007.09c        -0.075330968
+		   3006.09c        -3.76674E-06
+		   4009.09c        -0.024277005
+		   92233.09c       -0.00743351
+    	   90232.09c       -0.439553632
+		   9019.09c        -0.453401083
+ 
+mat B4C    -2.52     %rgb 100 130 150boron carbide shielding layer  vol  2.9194E+07  vol 2.9246E+07 
+           6000.09c   -0.2173753
+           5010.09c   -0.1440029
+           5011.09c   -0.6386217
+		   
+ 	
+		   
+mat hastelloy  -8.86     %outer core shell hastelloy (SiC?)vol  2.2225E+07   vol 2.2219E+07
+
+           28058.09c   0.472110471
+           28060.09c   0.181855147
+           28061.09c   0.007905841
+           28062.09c   0.025201602
+           28064.09c   0.006421762
+           24050.09c   0.002970795
+           24052.09c   0.057288826
+           24053.09c   0.006496093
+           24054.09c   0.001617015
+           42092.09c   0.02319203
+           42094.09c   0.014455948
+           42095.09c   0.024879859
+           42096.09c   0.026067591
+           42097.09c   0.01492479
+           42098.09c   0.03771049
+           42100.09c   0.015049814
+           26054.09c   0.003399101
+           26056.09c   0.053752686
+           26057.09c   0.001289314
+           26058.09c   0.000164095
+           14028.09c   0.009008595
+           14029.09c   0.000456144
+           14030.09c   0.000302794
+           25055.09c   0.007814026
+           6000.09c    0.000781403
+           74182.09c   0.001294198
+           74183.09c   0.000698867
+           74184.09c   0.001496386
+           74186.09c   0.001388455
+		   
+mat Eu2O3    -7.384   vol 9.2902E+04   % Eu2O3  for CR with  
+           63151.09c    1.2079E-02
+		   63153.09c    1.3190E-02
+		   8016.06c     3.7909E-02
+
+		   
+mat AIM1   sum    % Chemical composition of nuclear grade 15-15 Ti-stabilized stainless steel in wt %.
+6000.09c    -0.0010
+14028.09c   -0.0056
+25055.09c   -0.0183
+15031.09c   -0.00013
+16032.09c   -0.000009
+24052.09c   -0.1508
+28058.09c   -0.1023
+28060.09c   -0.03943
+27059.09c   -0.002
+5010.09c    -0.000026
+5011.09c    -0.000002
+7014.09c    -0.00011
+22046.09c   -0.000404
+22047.09c   -0.00036456
+22048.09c   -0.00361228
+22049.09c   -0.000265
+22050.09c   -0.0002538
+23051.09c   -0.00034
+29063.09c   -0.000179
+29065.09c   -0.0000802
+26054.09c   -0.039475
+26056.09c   -0.619123
+26057.09c   -0.014305
+
+mat SiC    -3.21  %Sic for follower     vol 3.4192E+04
+14028.09c   4.443E-02
+14029.09c   0.226E-02
+14030.09c   0.149E-02
+6000.09c    4.819E-02
+
+% --- Geometry:
+
+
+surf g1    cyl     0   0   280                        %core  ????? ???? ???? ????? ????
+
+%surf g2   cyl     0   0   280                        %graphite
+ 
+surf g3    cyl     0   0   290                         %boron carbide shielding layer 
+%surf g31   cyl     0   0   5 
+ 
+surf g4    cyl     0   0   300                        % IHX
+%surf g41  cyl     0   0   300                    %graphite
+
+surf g5    cyl     0   0   310                       %B4C  
+ 
+surf g6    cyl     0   0   320                % H-alloy
+surf g7    pz      390
+surf g8    pz      400
+surf g9    pz      410
+surf g10   pz     -390
+surf g11   pz     -400
+surf g12   pz     -410
+surf k3    cyl  0  0  5
+%surf k31    cyl  0  0  1
+surf k1    pz  -260
+surf k2    pz  -230
+surf k5    pz  230
+surf k6    pz  260
+
+
+cell  cg1    0  fill core       -g1  k15  k1  -k6
+
+%cell  cg2   0   graphite       g1   -g2  k2  -k5 
+
+cell  cg3    0   B4C             g1  -g3    k2   -k5            
+
+cell  cg31   0  graphite         -g7  g10 -k15 % k31
+%cell  cg32   0  ALum         -g7  k1   -k31
+
+%cell  cg33   0  graphite         -k1  g10   -k3
+
+ %cell  cg31   0   graphite      -k3  k1  -k2
+ %cell  cg32   0   graphite      -k3  k5  -k6
+
+cell  cg4    0   fuel            g3     -g4       k1    -k6  
+%cell cg45    0   fuel            k1  -k2  -g1  k3
+%cell cg46    0   fuel            k5  -k6   -g1  k3
+cell cg43    0     fuel         -k6   k5     -g3  g1
+cell cg44    0     fuel          k1  -k2   -g3   g1
+
+
+cell cg41    0    graphite       -g4  k15  k6   -g7    
+cell cg42    0    graphite       -g4  k15    -k1  g10
+
+
+
+
+cell  cg5   0   B4C              g4    -g5  -g7    g10   
+
+cell  cg6   0   hastelloy        g5  -g6  -g8 g11   
+
+cell cg7    0   B4C              g7  -g8  -g5
+cell cg8    0   hastelloy        g8  -g9  -g6
+cell cg10   0   B4C             -g10  g11  -g5
+cell cg11   0   hastelloy        g12  -g11  -g6 
+
+
+cell cg50   0   outside      g6    
+cell cg51   0   outside       g9
+cell cg52   0   outside      -g12 
+
+
+% --- Reflective boundary condition:
+
+
+ set bc  1
+ 
+ 
+% --- Hex Graphite with central pipe 7.5cm inner:
+
+surf  k4   hexxc  0   0   6.495   %-260  260    
+surf  k15   cyl       0   0   3.5
+
+surf  y1    pz   -208
+surf  y2    pz   -156
+surf  y3    pz   -104
+surf  y4    pz   -52
+surf  y5    pz    0
+surf  y6    pz    52
+surf  y7    pz    104
+surf  y8    pz    156
+surf  y9    pz    208
+
+surf  k16   cyl  0 5  0.75 
+surf  k17   cyl  0  -5  0.75 
+surf  k18   cyl  5  0  0.75 
+surf  k19   cyl  -5  0  0.75 
+
+surf  k20   cyl  0 5  1
+surf  k21   cyl  0  -5  1
+surf  k22   cyl  5  0  1
+surf  k23   cyl  -5  0  1
+
+surf  k24   cyl  0 5  1.1
+surf  k25   cyl  0  -5  1.1
+surf  k26   cyl  5  0  1.1
+surf  k27   cyl  -5  0  1.1
+
+cell  ck4  f  graphite      -k4    k15      k2  -k5
+cell  ck7  f  fuel         -k15   k2  -k5
+cell  ck71  f  fuel         -k4       k5  -k6
+cell  ck72  f  fuel         -k4       k1  -k2
+
+cell  ck4cr  e  graphite      -k4 k16 k17 k18 k19 k20 k21 k22 k23 k24 k25 k26 k27  k15     y5  -k5
+cell  ck700cr  e  Eu2O3         -k16   y5  -k6
+cell  ck701cr  e  Eu2O3         -k17   y5  -k6
+cell  ck702cr  e  Eu2O3         -k18   y5  -k6
+cell  ck703cr  e  Eu2O3         -k19   y5  -k6
+
+cell  ck704cr  e  AIM1         k16 -k20   y5  -k6
+cell  ck705cr  e  AIM1         k17 -k21   y5  -k6
+cell  ck706cr  e  AIM1         k18  -k22  y5  -k6
+cell  ck707cr  e  AIM1         k19  -k23  y5  -k6
+
+cell  ck708cr  e  SiC          k20   -k24  y5   -k6
+cell  ck709cr  e  SiC          k21   -k25  y5   -k6
+cell  ck7010cr  e  SiC         k22   -k26  y5   -k6
+cell  ck7011cr  e  SiC         k23   -k27  y5   -k6
+
+
+cell  ck70cr  e  fuel         -k15   k2  -k5
+cell  ck71cr  e  fuel         -k4   k16 k17 k18 k19 k20 k21 k22 k23 k24 k25 k26 k27   k5   -k6                    %
+cell  ck72cr  e  fuel         -k4      k1  -k2                                                          %  k16  k17 k18 k19 k20 k21 k22 k23 k24 k25 k26 k27
+
+cell  ck4cr1  e  graphite      -k4   k15     -y5  k2
+
+  
+cell cj1    j  graphite        -k4   k3          k2  -k5
+cell cj2    j  fuel            -k3  k2  -k5
+cell  cj21  j  fuel         -k4      k5  -k6
+cell  cj22  j  fuel         -k4      k1  -k2  
+ 
+cell  ch1   h  graphite      -k4     k2  -k5
+cell  ch11   h  fuel      -k4     k5  -k6
+cell  ch12   h  fuel      -k4     k1  -k2
+
+
+cell  cp1  p  graphite      -k4   k3      k2  -k5
+cell  cp11  p  fuel      -k4   k3      k5  -k6
+cell  cp12  p  fuel      -k4   k3      k1  -k2
+
+pin v 
+void 
+
+% --- Lattice (type = 2  pin pitch = 13 cm):
+
+lat core  2  0.0 0.0  51 51  12.99
+
+v v v v v v v v v v v v v v v v v v v v v v v v v h h h h h h h h h h h h h h h h h h h h h h h h h h
+ v v v v v v v v v v v v v v v v v v v v v v v v h h h h h h h h h h h h h h h h h h h h h h h h h h h
+  v v v v v v v v v v v v v v v v v v v v v v v h h h h h h h h h h h h h h h h h h h h h h h h h h h h
+   v v v v v v v v v v v v v v v v v v v v v v h h h h h h h h h h h h h h h h h h h h h h h h h h h h h
+    v v v v v v v v v v v v v v v v v v v v v h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h
+     v v v v v v v v v v v v v v v v v v v v h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h
+      v v v v v v v v v v v v v v v v v v v h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h
+       v v v v v v v v v v v v v v v v v v h h h h h h h h h j j j j j j j j j j j j j j j h h h h h h h h h
+        v v v v v v v v v v v v v v v v v h h h h h h h h j j j j j j j j j j j j j j j j j j h h h h h h h h	  
+         v v v v v v v v v v v v v v v v h h h h h h h j j j j j j j j j j j j j j j j j j j j j h h h h h h h
+          v v v v v v v v v v v v v v v h h h h h h h j j j j j j j j j j j j j j j j j j j j j j h h h h h h h	  
+           v v v v v v v v v v v v v v h h h h h h h j j j j j j j j j j j j j j j j j j j j j j j h h h h h h h	 
+            v v v v v v v v v v v v v h h h h h h h j j j j j j j j j f f f f f f j j j j j j j j j h h h h h h h
+             v v v v v v v v v v v v h h h h h h h j j j j j j e j f f f f e f f f f j e j j j j j j h h h h h h h
+              v v v v v v v v v v v h h h h h h h j j j j j j j f f f f f f f f f f f f j j j j j j j h h h h h h h
+               v v v v v v v v v v h h h h h h h j j j j j j f f f f f f f f f f f f f f f j j j j j j h h h h h h h
+                v v v v v v v v v h h h h h h h j j j j j f f f f f f f f f f f f f f f f f f j j j j j h h h h h h h
+                 v v v v v v v v h h h h h h h j j j j j f f f f f f f f f f f f f f f f f f f j j j j j h h h h h h h
+                  v v v v v v v h h h h h h h j j j j e f f f f f f f f f f f f f f f f f f f f e j j j j h h h h h h h
+                   v v v v v v h h h h h h h j j j j j f f f f f f f f f f f f f f f f f f f f f j j j j j h h h h h h h 
+                    v v v v v h h h h h h h j j j j j f f f f f f f f f f f f f f f f f f f f f f j j j j j h h h h h h h
+                     v v v v h h h h h h h j j j j j f f f f f f f f e f f f f f e f f f f f f f f j j j j j h h h h h h h
+                      v v v h h h h h h h j j j j j j f f f f f f f f f f f f f f f f f f f f f f j j j j j j h h h h h h h	  
+                       v v h h h h h h h j j j j j j f f f f f f f f f f f f f f f f f f f f f f f j j j j j j h h h h h h h	 	  
+                        v h h h h h h h h j j j j j j f f f f f f f f f f f f f f f f f f f f f f j j j j j j h h h h h h h h
+                         h h h h h h h h j j j j j j f f f f f f e f f f f f f f f f e f f f f f f j j j j j j h h h h h h h h 
+                          h h h h h h h h j j j j j j f f f f f f f f f f f f f f f f f f f f f f j j j j j j h h h h h h h h v	  
+                           h h h h h h h j j j j j j f f f f f f f f f f f f f f f f f f f f f f f j j j j j j h h h h h h h v v	  
+                            h h h h h h h j j j j j j f f f f f f f f f f f f f f f f f f f f f f j j j j j j h h h h h h h v v v	  
+                             h h h h h h h j j j j j f f f f f f f f e f f f f f e f f f f f f f f j j j j j h h h h h h h v v v v
+                              h h h h h h h j j j j j f f f f f f f f f f f f f f f f f f f f f f j j j j j h h h h h h h v v v v v
+                               h h h h h h h j j j j j f f f f f f f f f f f f f f f f f f f f f j j j j j h h h h h h h v v v v v v	  
+                                h h h h h h h j j j j e f f f f f f f f f f f f f f f f f f f f e j j j j h h h h h h h v v v v v v v
+                                 h h h h h h h j j j j j f f f f f f f f f f f f f f f f f f f j j j j j h h h h h h h v v v v v v v v
+                                  h h h h h h h j j j j j f f f f f f f f f f f f f f f f f f j j j j j h h h h h h h v v v v v v v v v
+                                   h h h h h h h j j j j j j f f f f f f f f f f f f f f f j j j j j j h h h h h h h v v v v v v v v v v
+                                    h h h h h h h j j j j j j j f f f f f f f f f f f f j j j j j j j h h h h h h h v v v v v v v v v v v
+                                     h h h h h h h j j j j j j e j f f f f e f f f f j e j j j j j j h h h h h h h v v v v v v v v v v v v
+                                      h h h h h h h j j j j j j j j j f f f f f f j j j j j j j j j h h h h h h h v v v v v v v v v v v v v
+                                       h h h h h h h j j j j j j j j j j j j j j j j j j j j j j j h h h h h h h v v v v v v v v v v v v v v
+                                        h h h h h h h j j j j j j j j j j j j j j j j j j j j j j h h h h h h h v v v v v v v v v v v v v v v
+                                         h h h h h h h j j j j j j j j j j j j j j j j j j j j j h h h h h h h v v v v v v v v v v v v v v v v
+                                          h h h h h h h h j j j j j j j j j j j j j j j j j j h h h h h h h h v v v v v v v v v v v v v v v v v
+                                           h h h h h h h h h j j j j j j j j j j j j j j j h h h h h h h h h v v v v v v v v v v v v v v v v v v
+                                            h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h v v v v v v v v v v v v v v v v v v v
+                                             h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h v v v v v v v v v v v v v v v v v v v v
+					      h h h h h h h h h h h h h h h h h h h h h h h h h h h h h h v v v v v v v v v v v v v v v v v v v v v
+					       h h h h h h h h h h h h h h h h h h h h h h h h h h h h h v v v v v v v v v v v v v v v v v v v v v v
+					        h h h h h h h h h h h h h h h h h h h h h h h h h h h h v v v v v v v v v v v v v v v v v v v v v v v
+						 h h h h h h h h h h h h h h h h h h h h h h h h h h h v v v v v v v v v v v v v v v v v v v v v v v v
+						  h h h h h h h h h h h h h h h h h h h h h h h h h h v v v v v v v v v v v v v v v v v v v v v v v v v
+  
+% --- Geometry and mesh plots:
+%plot 3   1000  1000   235
+%plot 3   1000  1000   250
+
+plot 31   500  500   0
+plot 31   500  500   250
+plot 11  500  500   0    
+plot 21  500 500   0   
+
+%mesh 1 500 500  
+%mesh 2 500 500
+%mesh 3 500 500
+
+% -checkvolumes 1000000
+  %set mcvol 100000000
+ 
+ /***************************************
+ * Settings for the burnup calculation *
+ ***************************************/
+
+
+% --- Material division for burnup calculation
+ 
+%div  fuel      sep 1   
+%div  graphite  sep 1
+
+ 
+ 
+
+% --- Nuclide inventory: these nuclides will be included in the
+%     depletion output file burn_dep.m. The list can be changed
+%     after the simulation has concluded if needed. Then you can run
+%     sss2 -rdep burn
+%     which will make Serpent re-read the inventory and re-produce the
+%     depletion output file.
+
+set inventory
+all
+
+
+% --- Use predictor corrector method for the depletion solution
+%     leli: Linear extrapolation on predictor
+%           Linear interpolation on corrector
+%     10 10: 10 substeps on predictor, 10 substeps on corrector
+
+%set pcc leli 10 10
+
+set opti 1
+
+% --- Reduce unionized energy grid size in order to save some memory
+%     Use grid thinning with 5e-5 reconstruction tolerance between
+%     1e-9 and 15 MeV.
+
+set egrid 5e-5 1e-9 15.0
+ 
+  set power  2250e6
+  
+  
+ %or set powdens 2.8e-2 KW/gHM  %2250e3/78.16e6=2.8e-2KW/gHM 
+
+% --- Cut-offs:
+
+set fpcut   1E-6
+set stabcut 1E-12
+
+% --- Options for burnup calculation:
+
+set bumode  2  % CRAM method
+set pcc     0  % Predictor-corrector calculation on
+set xscalc  2  % Cross sections from spectrum
+ set gcu -1 
+
+
+
+% ------------------------------------------------------------------- 
+
+
+% -------------------------------------------------------------------
