@@ -2,14 +2,14 @@
 \subsection{Reactor design}
 
 The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) design was proposed by the Chinese Academy of Sciences in 2011 
-\cite{li_optimization_2018,jiang2012advanced,li2015analysis,li2017model}. The \gls{SD-TMSR} is a graphite-moderated molten salt reactor with a thermal power of 2250 MW$_{th}$. The 
+\cite{li_optimization_2018,jiang2012advanced,li2015analysis,li2017model}. The \gls{SD-TMSR} is a graphite-moderated molten salt reactor with a thermal power of 2,250 MW$_{th}$. The 
 design of the \gls{SD-TMSR} is inspired by the \gls{MSBR} 
 \cite{robertson_conceptual_1971} and the \gls{TMSR} \cite{nuttin2005potential} after modifying the geometry to 
-control the positive temperature coefficient in the MSBR. The \gls{SD-TMSR} core 
-geometry is described in detail by Li \emph{et al.} and Ashraf \emph{et al.}
+control the positive moderator temperature coefficient in the MSBR. The \gls{SD-TMSR} core 
+geometry was described in detail by Li \emph{et al.} and Ashraf \emph{et al.}
 \cite{li_optimization_2018,ashraf2019whole_core}. The active zone of the \gls{SD-TMSR} is a right cylinder divided into the inner zone (486 fuel tubes) and the outer zone (522 fuel tubes) to enhance breeding performance.
 
-In this study, the fuel salt composition is 70LiF - 17.5BeF$_2$ - 12.5(HM)F$_4$ mole\%, where HM is the heavy metal (i.e. $^{232}$Th and fissile materials). Three different types of initial fissile materials are considered: (1) $^{233}$U \cite{ashraf2019whole_core}, (2) reactor-grade Pu \cite{marka1993explosive}, and (3) transuranic (TRU) elements from \gls{LWR} LWR \gls{SNF} \cite{de2000scenarios}.
+In this study, the fuel salt composition is 70LiF - 17.5BeF$_2$ - 12.5(HM)F$_N$ mole\%, where HM is the heavy metal (i.e. $^{232}$Th and fissile materials), and $N$ is dependent on the chosen fissile material and the thermochemical state of the liquid fuel salt. Three different types of initial fissile materials are considered: (1) $^{233}$U \cite{ashraf2019whole_core}, (2) reactor-grade Pu \cite{marka1993explosive}, and (3) transuranic (TRU) elements from \gls{LWR} \gls{SNF} \cite{de2000scenarios}.
 The density and volume of the fuel salt are 3.3 g/cm$^{3}$ and 52.9 m$^3$, respectively.
 The liquid fuel salt circulates continuously through the fuel tubes that pierce the graphite hexagonal 
 prisms. The active zone is surrounded by axial and radial graphite reflectors to minimize the neutron leakage. Finally, the \gls{SD-TMSR} pressure vessel holds all reactor components and is made of a Hastelloy N alloy. The main 
@@ -19,10 +19,10 @@ characteristics of the \gls{SD-TMSR} are summarized in Table~\ref{tab:table1}.
 \begin{table}  %[!ht]
 	\caption{The main characteristics of the SD-TMSR \cite{li_optimization_2018}.}
 	\vspace{0.1in}
-	\begin{tabularx}{\textwidth}{l | l}
+	\begin{tabularx}{\textwidth}{l | r}
 		\hline
 		Thermal power, MW$_{th}$          				&  2,250  \\ 
-		Fuel salt components                            & LiF-BeF$_2$-(\gls{HM})F$_4$ \\
+		Fuel salt components                            & LiF-BeF$_2$-(\gls{HM})F$_N$ \\
 		Fuel composition, mole\%                        & 70-17.5-12.5    \\
 		$^7$Li enrichment, \%        				& 99.995   \\
 		Fuel temperature, K 							& 900  \\
@@ -66,7 +66,7 @@ Boron carbide (B$_4$C) is widely used in control rods fabrication. Enriching B$_
 
 The control rod is a cylinder with a radius of 0.75 cm and a height of 520 cm. The absorber material is surrounded by a 0.25-cm-thick clad made of AIM1 (15Cr-15Ni) steel alloy \cite{SERAN2017285} and the rod follower is made of SiC structural material (see Figure~\ref{fig:cr}). A small gap between the cladding and rod follower is considered to facilitate the control rod movement.
 
-Since the total quantity and distribution of the SD-TMSR control assemblies are unknown, we proposed an original distribution as a starting point of this analysis. We added clusters consist of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods (cluster) can move together as one group. Figure~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the four control rods. The total numbers of graphite elements with control rods are 25: 16 CSD and 9 SSD.
+Since the total quantity and distribution of the control assemblies in the SD-TMSR are unknown, we proposed an original distribution as a starting point of this analysis. We added clusters consist of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods (cluster) can move together as one group. Figure~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the control rods. The total numbers of graphite elements with control rods are 25: 16 CSD and 9 SSD.
 
 \begin{figure}[t!]  % replace 't' with 'b' to \centering
 	\centering
@@ -111,7 +111,7 @@ The selected core segment in the above corner of the Figure~\ref{fig:core_25} sh
 
 In this work, SERPENT-2 version 2.1.31 \cite{leppanen2014serpent} is used to perform steady state calculations for the full-core of the Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) with control rod design. We adopted the ENDF-VII.0 cross section library for all calculations in the present work. The results demonstrate whole-core runs of $12.5\times 10^6$ neutron histories per depletion step. The statistical error in $k_{eff}$ from SERPENT-2 output is equal to $\pm$ $25$ $pcm$.
 
-The initial calculation state of the SD-TMSR is identified by normal operation conditions (see Table~\ref{tab:table1}) and fully withdrawn control rods clusters. In this case, the control rods are located above the upper plenum as shown in Figure~\ref{fig:core_26}. To validate the proposed control rods system we adopted the same operation conditions (as in the initial case) and changed the position of the control rod clusters along $Z$ direction. The main calculated parameters including reactivity, control rod worth, and interference effects (shadowing effects) will describe in the following parts.
+The initial calculation state of the SD-TMSR is identified by normal operation conditions (see Table~\ref{tab:table1}) and fully withdrawn control rods clusters. In this case, the control rods are located above the upper plenum as shown in Figure~\ref{fig:core_26}. To validate the proposed control rods system we adopted the same operation conditions (as in the initial calculation state) and changed the position of the control rod clusters along $Z$ direction. The main calculated parameters including reactivity, control rod worth, and interference effects (shadowing effects) will describe in the following parts.
 
 \begin{figure}[t!] % replace 't' with 'b' to \centering
 	\centering
@@ -131,7 +131,7 @@ The excess reactivity $\rho$$_e$ is the reactivity of the core when all control 
 
 \subsubsection{The control rod worths (CRW)}
 
-The control rod worth (CRW) is the amount of negative reactivity that associated with the control rod insertion. The CRW is calculated by SERPENT-2 in \$ units based on equation~\ref{Equ:2}, where $\Delta\rho$$_{CRi}$ is the worth of i$^{th}$ CR, $\rho$$_e$ is the initial excess reactivity, and $\rho$$_{CRi}$ is the excess reactivity after i$^{th}$ CR insertion \cite{vcerba2017optimization}.
+The control rod worth (CRW) is the amount of negative reactivity that associated with the control rod insertion. The CRW is calculated by SERPENT-2 in \$ units based on equation~\ref{Equ:2}, where $\Delta\rho$$_{CRi}$ is the worth of i$^{th}$ CR, $\rho$$_e$ is the initial excess reactivity, and $\rho$$_{CRi}$ is the excess reactivity after insertion i$^{th}$ CR \cite{vcerba2017optimization}.
 
 \begin{equation}
 \label{Equ:2}
