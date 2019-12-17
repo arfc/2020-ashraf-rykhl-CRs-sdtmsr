@@ -7,44 +7,34 @@ the Sodium-cooled Fast Reactor (SFR), and the Lead-cooled Fast Reactor (LFR).
 The MSR is the only liquid-fueled reactor among these reactors. Major nuclear 
 centers pursue MSRs with renewed interest \cite{betzler_impacts_2019, 
 ashraf2019whole_core,betzler2016modeling,mohsin2019safety,zhang2020radiotoxicity}.
- The MSR is a promising technology because of its dynamics, especially for 
+The MSR is a promising technology because of its dynamics, especially for 
 thorium fuel utilization. However, this technology has difficulties in safety, 
 online reprocessing, and fuel handling. Safety is one of the primary goals of 
 the MSR systems, which was understudied and require further investigation. The 
 unique characteristics of the MSRs (liquid fuel, flux level, neutron economy, 
 etc.) strongly affect its control system design. Graphite-moderated MSRs have 
 a negative total temperature coefficient of reactivity 
-\cite{robertson_conceptual_1971,nuttin2005potential,rykhlevskii2019modeling,ashraf2019whole_core}.
- Doppler effect and thermal expansion of the fuel reduce core reactivity when 
-the core heats up. However, temperature coefficient of reactivity for graphite 
-is small but positive due to Doppler effect \cite{mathieu2006thorium, 
-rykhlevskii_full-core_2017}. The graphite expansion is not a 
-dominating factor, thus core reactivity will decrease automatically when the 
-core heats up \cite{li_optimization_2018}. MSR designs have a drain tanks to 
+\cite{ashraf2019whole_core,robertson_conceptual_1971,nuttin2005potential,rykhlevskii2019modeling,li_optimization_2018}.
+Doppler effect and thermal expansion of the fuel reduce core reactivity when 
+the core heats up. MSR designs have a drain tanks to 
 hold and cool down the liquid fuel in an emergency case. A freeze plug, which 
 located under the core, passively melts when the fuel temperature reaches a 
 critical point, and drains the fuel salt from the reactor vessel to the drain 
-tanks. The drain tanks have a subcriticalconfiguration with a large free 
+tanks. The drain tanks have a subcritical
+configuration with a large free 
 surface area to readily dissipate heat by passive cooling 
 \cite{elsheikh2013safety}.
 
-Safety aspects in the MSRs can be listed as follows 
-\cite{elsheikh2013safety,merle2008optimization}:
-\begin{enumerate}
-\item The negative coefficient of reactivity - high core temperature will reduce reactivity.
-\item The fuel feed rate - decreasing the refueling rate slows down and eventually stops the nuclear chain reaction.
-\item The drain tanks, which have subcritical geometry and passively cooled.
-\item The control rods compensate the excess reactivity, regulate temperature, and/or shut down the reactor.
-\item The continuous removing of fission products and radioactive gasses minimize the chance of radiation exposure.
-\item The outer containment vessel.
-\end{enumerate}
-
-At the Beginning of Life (BOL), we must load the MSR with larger amount of 
+At the Beginning of Life (BOL), the MSR is commonly load with larger amount of 
 fuel than that required to achieve criticality (necessary for long term core 
-operation). This leads to excess reactivity at the BOL 
-\cite{duderstadt650nuclear}. Additionally, during burnup, the online 
+operation). This leads to excess reactivity at the BOL. Recent studies on MSRs showed that this excess reactivity 
+at the BOL is quite large for many refueling scenarios 
+\cite{ashraf2020Strategies,ashraf2019whole_core,rykhlevskii2019modeling,betzler2016modeling,ashraf2018nuclear,ashraf2019modeling}.
+Additionally, during burnup, the online 
 reprocessing and refueling leads to slow reactivity change, which 
-should be compensated \cite{ashraf2019whole_core}. The most common procedure 
+should be compensated \cite{ashraf2020Strategies,ashraf2019whole_core}. 
+The online reprocessing and refueling system helps to control the reactivity of 
+the MSRs \cite{ashraf2019whole_core}. However, the most common and reliable procedure 
 for reactor control is to insert or withdraw control rods made of material 
 with large neutron absorption cross section (e.g., boron, cadmium) 
 \cite{duderstadt650nuclear}. 
@@ -62,15 +52,9 @@ The control rod worth and its efficiency to absorb excess positive reactivity is
 Boron carbide (B$_4$C) is commonly used material for the control rods 
 \cite{zhong2019preliminary,steinbruck2010degradation,dunner1984absorber}. 
 However, we may need to enrich the boron isotope ($^{10}$B) to reach 
-the necessary absorption cross section. Notably, the spatial self-shielding 
-effect correlates with $^{10}$B concentration. For example, B$_4$C enriched to 
-90\% contains $^{10}$B 4.5 times larger than in natural B$_4$C, however, its 
-absorption ability is about 2.3 times compared with natural B$_4$C. 
-Additionally, issues related to helium gas release, swelling, melting risk, 
+the necessary absorption cross section. Additionally, issues related to helium gas release, swelling,
 and high loss of the reactivity worth limit the B$_4$C lifespan 
-\cite{guo2019optimized}.
-
-Guo (2019), Gosset (2017), and Rudy (2011) summarized the properties of the 
+\cite{guo2019optimized}. Guo (2019), Gosset (2017), and Rudy (2011) summarized the properties of the 
 potential alternative absorbers for Generation-IV reactors such as 
 hafnium-based materials and rare earth element oxides. These absorbers have 
 high thermal conductivity, good resistance to neutron irradiation, and release 
@@ -79,18 +63,14 @@ almost no gas
 
 The \gls{SD-TMSR} with a thermal power of 2,250 MW$_{th}$ 
 \cite{ashraf2019whole_core,li_optimization_2018} is a graphite-moderated 
-molten salt reactor. Recent studies on MSRs showed that the excess reactivity 
-at the beginning of the operation is quite large for many refueling scenarios 
-\cite{ashraf2019whole_core,rykhlevskii2019modeling,betzler2016modeling,ashraf2018nuclear,ashraf2019modeling}.
- Adjusting fertile and fissile feed rates helps to control the reactivity of 
-the SD-TMSR \cite{ashraf2019whole_core}. However, we should introduce a 
-reliable safety system beside the online feed system to control the excess 
-reactivity. Therefore, the main objective of our study is to introduce a new 
-fast reactivity control based on control rods in the \gls{SD-TMSR} to control 
-the reactivity during normal operation. Five different absorber materials are 
+molten salt reactor. Adjusting fertile and fissile feed rates helps to control the reactivity of 
+the SD-TMSR \cite{ashraf2019whole_core,ashraf2020Strategies,li_optimization_2018}. However, reactivity control system for maneuvering and emergency shutdown was not introduced in the literature \cite{li_optimization_2018,zou2018transition,zhang2020radiotoxicity,jiang2012advanced,zou2018preliminary,ZOU2015114}. Therefore, the main objective of our study is to introduce a new 
+fast reactivity control system based on control rods in the \gls{SD-TMSR} to control 
+the reactivity during normal operation and shut down the reactor in case of  
+emergency. Five different absorbing materials are 
 applied to study the main neutronics and safety parameters in the SD-TMSR. We 
 focus on the control rod design, absorption ability, integral and differential 
-control rod worths, shutdown margin of absorber materials, and shadowing 
+control rod worths, shutdown margin of absorbing materials, and shadowing 
 effects at steady state calculation.
 
 \v{C}erba \emph{et al.} (2017) designed a reactivity control system for the 
