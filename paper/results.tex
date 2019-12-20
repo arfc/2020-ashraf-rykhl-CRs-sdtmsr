@@ -3,22 +3,18 @@
 \subsection{The excess reactivity $\rho$$_e$}
 
 The excess reactivity $\rho$$_e$ is calculated at zero burnup (steady state 
-calculation), when all CRs are fully withdrawn. $\rho_e$ for $^{233}$U, 
+calculation), when all CRs are fully withdrawn. The $\rho_e$ for $^{233}$U, 
 reactor-grade Pu, and TRU used as initial fissile material are $1.65\pm0.04$ 
-$\$$, $4.11\pm0.02$ $\$$, and $15.38\pm0.04$ $\$$, respectively. For $^{233}$U 
-case, the maximum excess reactivity $\rho$$_e$ is about $4.27\pm0.01$ $\$$ 
-during 60 effective full-power years (EFPY) of reactor operation (see 
-Figure~\ref{fig:keff_25}). 
-The SD-TMSR is able to control the reactivity by adjusting the online 
-refueling and reprocessing rates \cite{ashraf2019whole_core}. An effective and 
-reliable reactivity control system must be designed beside the online feed 
-system to operate with such reactivity changes during burnup.
-
+$\$$, $4.11\pm0.02$ $\$$, and $15.38\pm0.04$ $\$$, respectively.
+Additionally, the previously studied $^{233}$U case recorded the maximum reactivity
+during 60 effective full-power years (EFPY) of reactor operation to be 
+$4.27\pm0.01$ $\$$ (see Figure~\ref{fig:keff_25}).
+The proposed reactivity control system must compensate such reactivity at startup and during burnup.
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{keff_25.png}
 	\vspace{-0.5in}
-	\caption{The change of the effective multiplication factor during 60 EFPY of reactor operation including periodic fissile material insertion (confidence interval $\pm\sigma$ is shaded) \cite{ashraf2019whole_core}.} 
+	\caption{The change of the effective multiplication factor during 60 EFPY of reactor operation including periodic fissile material insertion (confidence interval $\pm\sigma$ is shaded) \cite{ashraf2020whole}.} 
 	\label{fig:keff_25}
 \end{figure}
 
@@ -85,8 +81,8 @@ absorbers.
 
 \subsubsection{CRW} \label{CR_worth}
 
-The total worth of all control rods ranges from $33.7\pm0.4$ to $48.19\pm0.68$ 
-\$ (Table~\ref{tab:worth}). B$_4$C-90 (boron is enriched to 90\% $^{10}$B) 
+The total worth of all control rods ranges from $33.7\pm0.4$ $\$$ to $48.19\pm0.68$ 
+$\$$ (Table~\ref{tab:worth}). B$_4$C-90 (boron is enriched to 90\% $^{10}$B) 
 has the largest absorption ability, while Gd$_2$O$_3$ has the lowest 
 absorption compared with the other absorbing materials in this study. This 
 result agrees with macroscopic absorption cross sections data 
@@ -97,21 +93,21 @@ operation. The effect of the fuel salt burnup on the control rod worth is not
 considered herein, and will be investigated and presented in Part II of this 
 study.
 
-Additionally, the worth of the CSD clusters is by factor $1.56$ greater than 
+As shown in Table~\ref{tab:worth}, the worth of the CSD clusters is by factor $1.56$ greater than 
 the worth of the SSD system for all absorbing materials. Either CSD or SSD 
 clusters are able to shut down the reactor initially loaded by 
 $^{233}$U and reactor-grade Pu regardless of the absorbing material type. 
 However, only SSD clusters made of B$_4$C-90 are able to shut down the SD-TMSR 
-initially loaded with transuranic (TRU) elements. Increasing the number of SSD 
-cluster or changing their location would increase the worth.
+initially loaded with transuranic (TRU) elements. The reason for this is much larger 
+absorption cross section of $^{10}$B in the relatively soft neutron energy 
+spectrum of the SD-TMSR core started with TRU \cite{ashraf2020Strategies}.
 
 The inner ring of the CSD is located in the central zone of the SD-TMSR core 
 (Figure~\ref{fig:core_25}), where the volume ratio between molten salt and 
-graphite is $0.357$. Results show that the inner ring of the CSD has 
+graphite is relatively small ($0.357$). Results show that the inner ring of the CSD has 
 the worth almost equal to the worth of all other CRs together regardless of 
-the absorbing material type (Table~\ref{tab:worth}). This may be attributed to 
-the fact that the absorption cross section decreases with the energy of 
-incident neutron, for example, boron absorbs neutrons in thermal spectrum much 
+the absorbing material type (Table~\ref{tab:worth}). This happens because the absorption cross section
+decreases with the energy of incident neutron, for example, boron absorbs neutrons in thermal spectrum much 
 greater than in fast spectrum.
 
 In case of malfunction of other CR clusters (e.g., stuck in the upper 
@@ -131,15 +127,18 @@ absorption ability degrades in fast spectrum.
 \subsubsection{Shutdown Margin (SDM)}
 
 The SSD clusters are designed mainly for an emergency shutdown, thus it should 
-provide the reactor core with sufficient and adequate negative reactivity. The 
-shutdown margin (SDM) is calculated by equation~\ref{Equ:6}.  
+provide the reactor core with sufficient negative reactivity. The 
+shutdown margin (SDM) is calculated by equation~\ref{Equ:6}.
 Table~\ref{tab:table2} summarizes the shutdown margins for the SD-TMSR core 
-initially loaded with $^{233}$U,  reactor-grade Pu, and transuranic (TRU) 
-elements for different absorbing materials. All absorbing materials provide an 
-adequate shutdown margin for the SD-TMSR core that initially loaded with 
+initially loaded with $^{233}$U, reactor-grade Pu, and transuranic (TRU) 
+elements for different absorbing materials. All absorbing materials provide a sufficient positive
+shutdown margin for the SD-TMSR core that initially loaded with 
 $^{233}$U and reactor-grade Pu. However, the shutdown margins for TRU case are 
 negative or slightly positive (in B$_4$C-90 case), this makes the SSD clusters 
-ineffective to shut down the reactor loaded with TRU.
+unreliable to shut down the reactor loaded with TRU.
+As mentioned previously, the SSD clusters should 
+provide a sufficient positive shutdown margin.
+
 \begin{table}  [!hb]
 	\caption{The shutdown margins for the SD-TMSR core for different absorbing materials.}
 	\vspace{0.1in}
@@ -165,7 +164,9 @@ anti-shadowing is observed when the combined rod worth is greater than the sum
 of the individual worths. The strongest anti-shadowing effect has occurred in 
 SSD4 and CSD9 clusters that are located at the boundary between the core zones 
 with different moderator-to-fuel ratio (see Table~\ref{tab:worth}).
-The obtained results emphasize the absence of the effect of the absorption material on the interference between the control rod clusters.
+The obtained results emphasize that there is no relation between the absorbing
+materials type and the interference between the control rod clusters
+(i.e., the amplification factor (A$_{CRi}$)).
 
 Insertion of the control rod affects the neutron flux distribution, which is 
 the primary reason for the amplification of CR worths indicated in 
@@ -194,24 +195,23 @@ The integral and differential control rod worth are calculated for three
 different systems: all control rods, CSD, and SSD systems. The CRs are 
 inserted gradually into the core from the top to the bottom. 
 Equation~\ref{Equ:4} and~\ref{Equ:5} are used to calculate the integral and 
-differential CRW. Figure~\ref{fig:integ} illustrates the integral CRW for CRs 
+differential CRW, respectively. Figure~\ref{fig:integ} illustrates the integral CRW for CRs 
 made of B$_4$C-90. The maximum integral worth of All CRs, CSD, and SSD 
-clusters are about $48.39$ , $25.3$, and $16.46$ \$, respectively. The 
+clusters are about $48.39$ $\$$, $25.3$ $\$$, and $16.46$ $\$$, respectively. The 
 integral worth of SSD clusters is sufficient to shut down the reactor from any 
 state.
 
-The differential CRWs are demonstrated in Figure~\ref{fig:diff}. Ideally, at the top of the core, the CR insertion has little effect since this region has low thermal neutron flux. Thus, the differential CRW has the lowest values in this region. The effect of CR insertion increases gradually near the center of the core. At the center of the core (region with maximum thermal neutron flux), the differential CRW is the largest and changes slowly with rod insertion. From the center of the core to the bottom, the differential CRW values decrease (region with low thermal neutron flux). Figure~\ref{fig:diff} shows that the maximum differential CRW  is shifted toward the bottom of the core. This because (Need to find a reason(s)).
+The differential CRWs are demonstrated in Figure~\ref{fig:diff}. Ideally, at the top of the core, the CR insertion has little effect since this region has low thermal neutron flux. Thus, the differential CRW has the lowest values in this region. The effect of CR insertion increases gradually near the center of the core. At the center of the core (region with maximum thermal neutron flux), the differential CRW is the largest and changes slowly with rod insertion. From the center of the core to the bottom, the differential CRW values decrease (region with low thermal neutron flux). Figure~\ref{fig:diff} shows that the maximum differential CRW is shifted toward the bottom of the core and the curves is not exactly symmetrical. This is due to the asymmetrical distribution for the fuel and graphite in simulation \cite{xuemei2013study,son2016control}.
 
 Figure~\ref{fig:CSD} shows the integral CRW for only CSD clusters with five 
 different absorbing materials. The results show that all absorbing materials 
-have almost the same integral rod worth in the upper quarter of the core 
-($<130$cm from the upper boundary of the core). Further insertion of the 
+have almost the same integral rod worth in the upper half of the core 
+($<250$ cm from the upper boundary of the core). Further insertion of the 
 control rods shows the unique absorption characteristics of each material (see 
 part~\ref{CR_worth}). B$_4$C-90 absorbs much more neutrons than the 
 Gd$_2$O$_3$, which has the lowest absorption ability among the other absorbing 
-materials in this study. All result are based on steady state calculations. 
-Further and detailed analysis including burnup calculation will be represented 
-in the near future.
+materials in this study. Notably, all result are based on steady state calculations. 
+
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{integ.png}
