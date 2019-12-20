@@ -23,8 +23,9 @@ elements from \gls{LWR} \gls{SNF} \cite{de2000scenarios}.
 The density and volume of the fuel salt are 3.3 g/cm$^{3}$ and 52.9 m$^3$, 
 respectively. The liquid fuel salt circulates continuously through the fuel 
 tubes that pierce the graphite hexagonal prisms. The core is surrounded by 
-axial and radial graphite reflectors to minimize the neutron leakage. Finally, 
-the \gls{SD-TMSR} pressure vessel holds all reactor components and is made of 
+axial and radial graphite reflectors to minimize the neutron leakage.
+A 10-cm-thick B$_4$C cylinder surrounds the core to shield against neutrons and heat.
+Finally, the \gls{SD-TMSR} pressure vessel holds all reactor components and is made of 
 a Hastelloy N alloy. The main characteristics of the \gls{SD-TMSR} are 
 summarized in Table~\ref{tab:table1}.
 
@@ -76,19 +77,12 @@ In the present work, five different absorbing materials are considered based on 
 \item gadolinium oxide (Gd$_2$O$_3$);
 \item europium oxide (Eu$_2$O$_3$).
 \end{enumerate}
-Boron carbide (B$_4$C) is widely used in control rods fabrication. Enriching 
-PB$_4$C increases the fraction of highly neutron absorber isotope (i.e. 
-$^{10}$B) and helps to reach the necessary absorptivity. However, issues 
-related to helium gas release through (n,$\alpha$) reactions of $^{10}$B, 
-swelling, melting risk, and high loss of the reactivity worth limit the B$_4$C 
-lifespan \cite{guo2019optimized}. Hafnium and rare earth elements oxides 
-absorb neutrons through (n,$\gamma$) reactions and this limits gas emission.
 
 The control rod is a cylinder with a radius of 0.75 cm and a height of 520 cm. 
 The absorbing material is surrounded by a 0.25-cm-thick cladding made of AIM1 
-(15Cr-15Ni) steel alloy \cite{SERAN2017285} and the rod follower is made of 
-SiC structural material (see Figure~\ref{fig:cr}). A small gap between the 
-cladding and rod follower is considered to facilitate the control rod movement.
+(15Cr-15Ni) steel alloy \cite{SERAN2017285} and the guide tube is made of 
+SiC structural material (see Figure~\ref{fig:cr}). We simulated a small gap between the 
+cladding and guide tube to facilitate the control rod movement.
 
 Since the total quantity and distribution of the control assemblies in the SD-TMSR are unknown, we proposed an original distribution as a starting point of this analysis. We added clusters consist of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods (cluster) can move together as one group. Figure~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the control rods. The total numbers of graphite elements with control rods are 25: 16 CSD and 9 SSD.
 \begin{figure}[t!]  % replace 't' with 'b' to \centering
@@ -126,7 +120,7 @@ control rods located at the same distance from the fuel channel center.
 	\centering
 	\hspace{+0.65in}
 	\includegraphics[width=\textwidth]{core_25.png}
-	\caption{Distribution of the graphite elements with control rods in the SD-TMSR core.}
+	\caption{Distribution of the graphite elements with control rods in the SD-TMSR core. Green - fuel salt, blue - graphite, pink - B$_4$C, and light-green - vessel (H-alloy).}
 	\label{fig:core_25}
 \end{figure}
 
@@ -136,8 +130,8 @@ In this work, SERPENT-2 version 2.1.31 \cite{leppanen2014serpent} is used to
 perform steady state calculations for the full-core of the SD-TMSR with 
 suggested control rod design. We adopted the ENDF-VII.0 cross section library 
 for all calculations in the present work. The results demonstrate whole-core 
-runs of $12.5\times 10^6$ neutron histories per depletion step. The 
-statistical error in $k_{eff}$ from SERPENT-2 output is equal to $\pm$ $25$ 
+runs of $50,000$ neutrons per cycle, for 50 inactive and 500 active cycles. The 
+statistical error in $k_{eff}$ from SERPENT-2 output is $\leq$ $25$ 
 $pcm$.
 
 The initial calculation state of the SD-TMSR is identified by normal operation 
@@ -152,7 +146,7 @@ worth, and interference effects (shadowing effects) are described below.
 \begin{figure}[t!] % replace 't' with 'b' to \centering
 	\centering
 	\includegraphics[width=\textwidth]{core_26.png}
-	\caption{$XZ$ section of the full-core model of the SD-TMSR, CRs are fully withdrawn.}
+	\caption{$XZ$ view at the midplane of the full-core model of the SD-TMSR, 10 CRs are fully withdrawn.}
 	\label{fig:core_26}
 \end{figure}
 
@@ -220,12 +214,11 @@ fraction of delayed neutrons at i$^{th}$ step. N is the number of steps.
 \end{equation}
 
 Equation~\ref{Equ:5} is used to calculate the differential CRW [\$/cm], where 
-$\Delta H$ is the height change of control rod [cm] before and after 
-insertions.
+$Z$ is the coordinate of the bottom of the control rod.
 
 \begin{equation}
 \label{Equ:5}
-\dfrac{{\partial}{\rho}_{i}}{{\partial{H}}}=\dfrac{1}{{\Delta}{H}}\dfrac{{k_{i}}-{k_{i-1}}}{{{k_{i}}{k_{i-1}}}{{\beta}_{i}}},
+\dfrac{{\partial}{\rho}_{i}}{{\partial{Z}}}=\dfrac{1}{{\Delta}{Z}}\dfrac{{k_{i}}-{k_{i-1}}}{{{k_{i}}{k_{i-1}}}{{\beta}_{i}}},
 \end{equation}
 
 
