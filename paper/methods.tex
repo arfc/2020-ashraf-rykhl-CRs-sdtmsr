@@ -1,14 +1,14 @@
 \section{Model description} \label{Model-description}
 \subsection{Reactor design}
 
-The Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) design was proposed by the Chinese Academy of Sciences in 2011 
+The Chinese Academy of Sciences proposed the Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) design in 2011
 \cite{li_optimization_2018,jiang2012advanced,li2015analysis,li2017model}. The 
 \gls{SD-TMSR} is a graphite-moderated molten salt reactor with a thermal power 
 of 2,250 MW$_{th}$. The design of the \gls{SD-TMSR} is inspired by the 
 \gls{MSBR} \cite{robertson_conceptual_1971} and the \gls{TMSR} 
 \cite{nuttin2005potential} after modifying the geometry to control the 
-positive moderator temperature coefficient in the MSBR. The \gls{SD-TMSR} core 
-geometry was described in detail by Li \emph{et al.} and Ashraf \emph{et al.}
+positive moderator temperature coefficient in the MSBR. Li \emph{et al.} and Ashraf \emph{et al.}
+described in detail the \gls{SD-TMSR} core geometry
 \cite{li_optimization_2018,ashraf2020whole}. The core of the 
 \gls{SD-TMSR} is a right cylinder divided into the inner zone (486 fuel tubes) 
 and the outer zone (522 fuel tubes) to enhance breeding performance.
@@ -84,7 +84,7 @@ The absorbing material is surrounded by a 0.25-cm-thick cladding made of AIM1
 SiC structural material (see Figure~\ref{fig:cr}). We simulated a small gap between the 
 cladding and guide tube to facilitate the control rod movement.
 
-Since the total quantity and distribution of the control assemblies in the SD-TMSR are unknown, we proposed an original distribution as a starting point of this analysis. We added clusters consist of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods (cluster) can move together as one group. Figure~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the control rods. The total numbers of graphite elements with control rods are 25: 16 CSD and 9 SSD.
+Since the total number and distribution of the control assemblies in the SD-TMSR are unknown, we proposed an original distribution as a starting point of this analysis. We added clusters consist of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods (cluster) can move together as one group. Figure~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the control rods. The total number of graphite elements with control rods are 25: 16 CSD and 9 SSD.
 \begin{figure}[t!]  % replace 't' with 'b' to \centering
 	\centering
 	\hspace{+0.65in} 
@@ -112,7 +112,7 @@ Figure~\ref{fig:core_25} illustrates the numbering scheme of control rods
 clusters in the SD-TMSR core.
 The CSD1-16 clusters are represented as yellow color and distributed as two rings: inner and outer ring (peripheral ring). The inner ring includes CSD from 1 to 6, while the outer ring includes CSD from 7 to 16. Red color stands for SSD1-9 clusters.
 We distributed the graphite elements with control rods clusters uniformly in 
-the inner core of the SD-TMSR, where the moderator-to-fuel ratio is high.
+the inner core of the SD-TMSR, in which the moderator-to-fuel ratio is high.
 The selected core segment at the upper left corner of the 
 Figure~\ref{fig:core_25} shows that both CSD and SSD clusters consist of four 
 control rods located at the same distance from the fuel channel center.
@@ -179,14 +179,13 @@ The shutdown margin (SDM) is the amount of reactivity by which a full reactor co
 
 \subsubsection{Interference effects (shadowing effects)}
 
-Interference between control rods (CRs) or shadowing effects occurs when one 
+Interference between control rods (CRs) or shadowing effects occur when one 
 (or more) control rod affects the reactivity worth of another control rod in 
-the surroundings. Thus, anti-shadowing is observed when the combined rod worth 
-is greater than the sum of the individual worths. Oppositely, the shadowing 
-effect appears when the combined rod worth is less than the sum of the 
-individual worths. The core height-to-diameter ratio (H/D) and the 
-three-dimensional configuration of the control rods affect the degree of the 
-interference between CRs \cite{girardin2007control}. 
+the surroundings. Thus, the shadowing effect appears when the combined rod worth
+is less than the sum of the individual worths. Oppositely, anti-shadowing is observed 
+when the combined rod worth is greater than the sum of the individual worths.
+The core height-to-diameter ratio (H/D) and the three-dimensional configuration 
+of the control rods affect the degree of the interference between CRs \cite{girardin2007control}. 
 
 The amplification factor (A$_{CRi}$) of i$^{th}$ control rod helps to evaluate the shadowing effects between control rod clusters. The amplification factor is calculated by equation~\ref{Equ:3} \cite{girardin2007control,vcerba2017optimization}, where $\Delta\rho$$_{CR(1,2,\ldots N)}$ is the total worth of all control rods (from $1$ to $N$), $\Delta\rho$$_{CR(1,2,\ldots N-i)}$ is the total worth of all CRs except the investigated one i$^{th}$ and $\Delta\rho$$_{CRi}$ the worth of the i$^{th}$ rod.
 
@@ -200,13 +199,13 @@ If A$_{CRi}$ is $<$1, the control rod worth is reduced due to shadowing effects,
 \subsubsection{Integral and differential control rod worth}
 
 The integral CRW is the total reactivity change due to the control rod full 
-insertion or withdrawal. In contrast, the differential CRW is the amount of 
+insertion or withdrawal. However, the differential CRW is the amount of 
 reactivity inserted per unit of withdrawal [\$/cm]. To calculate those 
 parameters, we varied the position of CRs clusters from fully withdrawn to 
 fully inserted. Equation~\ref{Equ:4} is used to calculate the integral CRW 
 [\$], where $k_{i}$ and $k_{i-1}$ are the effective multiplication factor 
 after and before CR insertion to i$^{th}$ step. $\beta_{i}$ is the effective 
-fraction of delayed neutrons at i$^{th}$ step. N is the number of steps.
+fraction of delayed neutrons at i$^{th}$ step. $N$ is the number of steps.
 
 \begin{equation}
 \label{Equ:4}
