@@ -42,9 +42,8 @@ summarized in Table~\ref{tab:table1}.
 		Fuel temperature, K 							& 900  \\
 		Fuel density at 900 K, g/cm$^3$		  		& 3.3 \\
 		Fuel dilatation coefficient, g/(cm$^3$$.$K)  &  -6.7$\times$10$^{-4}$ \\
-		Graphite density, g/cm$^3$             	    & 2.3	\\  
-		B$_4$C density, g/cm$^3$					& 2.52  \\
-		$^{10}$B enrichment, \%						&  18.4  \\
+		Graphite density, g/cm$^3$             	    & 2.3	\\ 
+		B$_4$C density, g/cm$^3$					& 2.52  \\ 
 		Core diameter, cm								& 460  \\
 		Core height, cm									& 460  \\
 		Side length of the graphite hexagonal prism, cm   & 7.5 \\
@@ -69,8 +68,9 @@ rods:
 \item Shutdown Safety Devices (SSD).
 \end{enumerate}
 The CSD system is designed for reactivity control during normal operation and the SSD system is designed for an emergency reactor shutdown.
-In the present work, five different absorbing materials are considered based on their neutronics and safety performance:
+In the present work, six different absorbing materials are considered based on their neutronics and safety performance:
 \begin{enumerate}
+\item natural B$_4$C (19.9\% $^{10}$B);
 \item B$_4$C with boron enriched to 90\% $^{10}$B;
 \item hafnium diboride (HfB$_2$);
 \item hafnium hydride (HfH$_{1.62}$);
@@ -126,7 +126,7 @@ control rods located at the same distance from the fuel channel center.
 
 \section{Methodology and tools} \label{Methodology-and-tools}
 \subsection{Control rod design evaluation}
-In this work, SERPENT-2 version 2.1.31 \cite{leppanen2014serpent} is used to 
+In this work, SERPENT-2 \cite{leppanen2014serpent} is used to 
 perform steady state calculations for the full-core of the SD-TMSR with 
 suggested control rod design. We adopted the ENDF-VII.0 cross section library 
 for all calculations in the present work. The results demonstrate whole-core 
@@ -203,13 +203,13 @@ insertion or withdrawal. However, the differential CRW is the amount of
 reactivity inserted per unit of withdrawal [\$/cm]. To calculate those 
 parameters, we varied the position of CRs clusters from fully withdrawn to 
 fully inserted. Equation~\ref{Equ:4} is used to calculate the integral CRW 
-[\$], where $k_{i}$ and $k_{i-1}$ are the effective multiplication factor 
-after and before CR insertion to i$^{th}$ step. $\beta_{i}$ is the effective 
-fraction of delayed neutrons at i$^{th}$ step. $N$ is the number of steps.
+[\$], where $k_{j}$ and $k_{j-1}$ are the effective multiplication factor 
+after and before CR insertion to $j$$^{th}$ step. $\beta_{j}$ is the effective 
+fraction of delayed neutrons at $j$$^{th}$ step. $N$ is the number of steps.
 
 \begin{equation}
 \label{Equ:4}
-{{\Delta}{\rho}_{i}}=\sum_{i=1}^{N}\dfrac{{k_{i}}-{k_{i-1}}}{{{k_{i}}{k_{i-1}}}{{\beta}_{i}}},
+{{\Delta}{\rho}_{j}}=\sum_{j=1}^{N}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}},
 \end{equation}
 
 Equation~\ref{Equ:5} is used to calculate the differential CRW [\$/cm], where 
@@ -217,7 +217,7 @@ $Z$ is the coordinate of the bottom of the control rod.
 
 \begin{equation}
 \label{Equ:5}
-\dfrac{{\partial}{\rho}_{i}}{{\partial{Z}}}=\dfrac{1}{{\Delta}{Z}}\dfrac{{k_{i}}-{k_{i-1}}}{{{k_{i}}{k_{i-1}}}{{\beta}_{i}}},
+\dfrac{{\partial}{\rho}_{j}}{{\partial{Z}}}=\dfrac{1}{{\Delta}{Z}}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}},
 \end{equation}
 
 

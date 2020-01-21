@@ -22,53 +22,53 @@ The proposed reactivity control system must compensate such reactivity at startu
 
 The control rod parameters including control rod worth (CRW), interference 
 between CR clusters, and integral and differential control rod worths are 
-described in this part. Five different absorbing materials are considered based 
-on their neutronics and safety performance (see part \ref{CRD}). 
+described in this part. 
 Table~\ref{tab:worth} shows calculated control rod worth, the amplification 
-factor (A$_{CRi}$), and the type of interference for five different 
+factor (A$_{CRi}$), and the type of interference for the six different 
 absorbers.
 
 \begin{sidewaystable}
-	\fontsize{6}{9}\selectfont
+	\fontsize{5}{7}\selectfont
 	\centering
 	\caption{The control rod worth and shadowing effect for different CR 
 	materials.}
 	\vspace{1ex}
-	\begin{tabularx}{\textwidth}{|X|p{0.65cm}|p{0.65cm}|p{0.65cm}| 
-	p{0.65cm}|p{0.65cm}|p{0.65cm}| p{0.65cm}|p{0.65cm}|p{0.65cm}| 
-	p{0.65cm}|p{0.65cm}|p{0.65cm}| p{0.65cm}|p{0.65cm}|p{0.65cm}|}
+	\begin{tabularx}{\textwidth}{|p{1.8cm}|p{0.56cm}|p{0.5cm}|p{0.49cm}|p{0.56cm}|p{0.5cm}|p{0.49cm}| 
+	p{0.56cm}|p{0.5cm}|p{0.49cm}|p{0.56cm}|p{0.5cm}|p{0.49cm}| 
+	p{0.56cm}|p{0.5cm}|p{0.49cm}|p{0.56cm}|p{0.5cm}|p{0.49cm}|}
 		\hline
 		\multirow{2}{*}{Control Rod group}		& 
-		\multicolumn{3}{c|}{B$_4$C-90}   	&\multicolumn{3}{c|}{HfB$_2$}	
+		\multicolumn{3}{c|}{Nat. B$_4$C} & \multicolumn{3}{c|}{B$_4$C-90}   	&\multicolumn{3}{c|}{HfB$_2$}	
 		&\multicolumn{3}{c|}{HfH$_{1.62}$} 
 		&\multicolumn{3}{c|}{Gd$_2$O$_3$}	& 	
 		\multicolumn{3}{c|}{Eu$_2$O$_3$} \\
-		\cline{2-16}
-		& $\Delta\rho$$_{CRi}$  [\$]  &A$_{CRi}$	& Interfe\-rence	
-		&$\Delta\rho$$_{CRi}$ [\$]&A$_{CRi}$	& Interfe\-rence	
-		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$	& Interfe\-rence	
-		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$	& Interfe\-rence	
-		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$  &	Interfe\-rence \\
+		\cline{2-19}
+		& $\Delta\rho$$_{CRi}$  [\$]  &A$_{CRi}$	& Inter\-ference
+		& $\Delta\rho$$_{CRi}$  [\$]  &A$_{CRi}$	& Inter\-ference	
+		&$\Delta\rho$$_{CRi}$ [\$]  &A$_{CRi}$	& Inter\-ference	
+		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$	& Inter\-ference	
+		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$	& Inter\-ference	
+		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$  &	Inter\-ference \\
 		\hline                   
-		All control rods        				& $48.19\pm0.68$   &	&	
-		&$40.4\pm0.41$	&	&	&$37.96\pm0.36$	&	&	&$33.7\pm0.4$	&	
+		All control rods      &  $42.04\pm0.60$	&	&		& $48.19\pm0.68$   &	&	
+		&$40.40\pm0.41$	&	&	&$37.96\pm0.36$	&	&	&$33.70\pm0.40$	&	
 		&	&$42.39\pm0.48$	& &	 \\
 		\hline 
-		CSD 							& $25.5\pm0.23$   &$1.24\pm0.01$	&$\star$	&$21.9\pm0.17$	&$1.1\pm0.01$	&$\star$	&$20.62\pm0.34$	&$1.1\pm0.01$	&$\star$	&$18.48\pm0.25$	&$1.17\pm0.01$	&$\star$	&$22.96\pm0.18$	&$1.2\pm0.01$ &$\star$ \\
+		CSD 		 & $22.32\pm0.20$ 	& $1.24\pm0.01$	&	$\star$				& $25.50\pm0.23$   &$1.24\pm0.01$	&$\star$	&$21.90\pm0.17$	&$1.10\pm0.01$	&$\star$	&$20.62\pm0.34$	&$1.10\pm0.01$	&$\star$	&$18.48\pm0.25$	&$1.17\pm0.01$	&$\star$	&$22.96\pm0.18$	&$1.20\pm0.01$ &$\star$ \\
 		\hline 
-		SSD		  		&$16.39\pm0.11$ &$1.38\pm0.02$	&$\star$	&$14.27\pm0.21$	&$1.29\pm0.01$	&$\star$	&$13.23\pm0.18$	&$1.3\pm0.06$	&$\star$	&$12\pm0.2$	&$1.26\pm0.01$	&$\star$	&$14.58\pm0.11$	&$1.3\pm0.02$	&$\star$ \\
+		SSD		   & $14.27\pm0.10$ 	&$1.38\pm0.02$	&	$\star$	&$16.39\pm0.11$ &$1.38\pm0.02$	&$\star$	&$14.27\pm0.21$	&$1.29\pm0.01$	&$\star$	&$13.23\pm0.18$	&$1.30\pm0.06$	&$\star$	&$12.00\pm0.20$	&$1.26\pm0.01$	&$\star$	&$14.58\pm0.11$	&$1.30\pm0.02$	&$\star$ \\
 		\hline 
-		CSD inner ring  &  $18.42\pm0.05$  &$1.6\pm0.04$	&$\star$		&$16.29\pm0.29$	&$1.48\pm0.02$	&$\star$	&$15.5\pm0.17$	& $1.46\pm0.01$ &$\star$	&$14.12\pm0.07$	&$1.39\pm0.01$	&$\star$	&$16.92\pm0.13$	&$1.5\pm0.01$	 &$\star$\\
+		CSD inner ring   &  $16.80\pm0.02$	&$1.50\pm0.01$	&$\star$ &  $18.42\pm0.05$  &$1.60\pm0.04$	&$\star$		&$16.29\pm0.29$	&$1.48\pm0.02$	&$\star$	&$15.50\pm0.17$	& $1.46\pm0.01$ &$\star$	&$14.12\pm0.07$	&$1.39\pm0.01$	&$\star$	&$16.92\pm0.13$	&$1.50\pm0.01$	 &$\star$\\
 		\hline 
-		CSD outer ring            	    &$2.26\pm0.02$ &$4.21\pm0.07$	&$\star$	&$2.1\pm0.06$	&$3.11\pm0.1$&$\star$	&$1.85\pm0.07$	&$3.24\pm0.06$	&$\star$	&$1.8\pm0.1$	&$2.54\pm0.14$	&$\star$	&$2.14\pm0.05$	&$3.2\pm0.05$	 &$\star$	\\  
+		CSD outer ring            &  $2.16\pm0.02$	&$3.11\pm0.06$	&	$\star$    &$2.26\pm0.02$ &$4.21\pm0.07$	&$\star$	&$2.10\pm0.06$	&$3.11\pm0.10$&$\star$	&$1.85\pm0.07$	&$3.24\pm0.06$	&$\star$	&$1.80\pm0.10$	&$2.54\pm0.14$	&$\star$	&$2.14\pm0.05$	&$3.20\pm0.05$	 &$\star$	\\
 		\hline 
-		CSD2								& $2.25\pm0.04$   &$3.69\pm0.16$	&$\star$	&$2.24\pm0.05$	&$2.42\pm0.1$	&$\star$	&$2\pm0.1$	&$2.68\pm0.03$	&$\star$	&$1.8\pm0.1$	&$2.55\pm0.2$	&$\star$	&$2.19\pm0.12$	&$2.9\pm0.08$	&$\star$ \\
+		CSD2			 &  $2.11\pm0.03$	&$3.00\pm0.08$	&	$\star$				& $2.25\pm0.04$   &$3.69\pm0.16$	&$\star$	&$2.24\pm0.05$	&$2.42\pm0.10$	&$\star$	&$2.00\pm0.10$	&$2.68\pm0.03$	&$\star$	&$1.80\pm0.10$	&$2.55\pm0.20$	&$\star$	&$2.19\pm0.12$	&$2.90\pm0.08$	&$\star$ \\
 		\hline 
-		CSD9								& $0.15\pm0.04$   & $10.53\pm0.01$	&$\star$$\star$	&$0.1\pm0.05$	&$5.1\pm0.05$	&$\star$	&$0.05\pm0.01$	&$16.4\pm0.1$	&$\star$$\star$	&$0.09\pm0.07$	&$5.55\pm0.2$	&$\star$$\star$	&$0.07\pm0.05$	&$14\pm0.1$	&$\star$$\star$ \\ 
+		CSD9			 &  $0.06\pm0.01$	&$15.16\pm0.10$	&	$\star$$\star$				& $0.15\pm0.04$   & $10.53\pm0.01$	&$\star$$\star$	&$0.10\pm0.05$	&$5.10\pm0.05$	&$\star$	&$0.05\pm0.01$	&$16.40\pm0.10$	&$\star$$\star$	&$0.09\pm0.07$	&$5.55\pm0.20$	&$\star$$\star$	&$0.07\pm0.05$	&$14.00\pm0.10$	&$\star$$\star$ \\ 
 		\hline
-		SSD1					& $4.18\pm0.07$   &$1.59\pm0.08$	&$\star$	&$3.95\pm0.13$	&$1.3\pm0.07$	&$\star$	&$3.59\pm0.03$	&$1.49\pm0.01$	&$\star$	&$3.45\pm0.12$	&$1.4\pm0.08$	&$\star$	&$3.91\pm0.06$	&$1.4\pm0.01$&$\star$ \\
+		SSD1		 &  $3.95\pm0.05$	&$1.31\pm0.01$	&	$\star$		& $4.18\pm0.07$   &$1.59\pm0.08$	&$\star$	&$3.95\pm0.13$	&$1.30\pm0.07$	&$\star$	&$3.59\pm0.03$	&$1.49\pm0.01$	&$\star$	&$3.45\pm0.12$	&$1.40\pm0.08$	&$\star$	&$3.91\pm0.06$	&$1.40\pm0.01$&$\star$ \\
 		\hline 
-		SSD4					&  $0.57\pm0.09$  &$7.84\pm0.15$	&$\star$$\star$	&$0.63\pm0.06$	&$4.4\pm0.1$	&$\star$	&$1\pm0.05$	&$2.51\pm0.16$	&$\star$	&$0.6\pm0.8$	&$3.31\pm0.27$	&$\star$	&$0.6\pm0.08$	&$5.1\pm0.28$	&$\star$$\star$ \\
+		SSD4		 &  $0.59\pm0.08$	& $9.52\pm0.10$	&	$\star$$\star$		&  $0.57\pm0.09$  &$7.84\pm0.15$	&$\star$$\star$	&$0.63\pm0.06$	&$4.40\pm0.10$	&$\star$	&$1.00\pm0.05$	&$2.51\pm0.16$	&$\star$	&$0.60\pm0.80$	&$3.31\pm0.27$	&$\star$	&$0.60\pm0.08$	&$5.10\pm0.28$	&$\star$$\star$ \\
 		\hline
 	\end{tabularx}
 	\begin{tablenotes}
@@ -87,7 +87,7 @@ has the largest absorption ability, while Gd$_2$O$_3$ has the lowest
 absorption compared with the other absorbing materials in this study. This 
 result agrees with macroscopic absorption cross sections data 
 \cite{guo2019optimized}. B$_4$C-90 has the highest macroscopic 
-absorption cross sections followed by Eu$_2$O$_3$, HfB$_2$, HfH$_{1.62}$, and 
+absorption cross sections followed by Eu$_2$O$_3$, natural B$_4$C (Nat. B$_4$C), HfB$_2$, HfH$_{1.62}$, and 
 finally Gd$_2$O$_3$. The control rod material is being transmuted during 
 operation. The effect of the fuel salt burnup on the control rod worth is neglected
 herein, and will be investigated and presented in Part II of this 
@@ -106,7 +106,7 @@ spectrum of the SD-TMSR core started with TRU \cite{ashraf2020Strategies}.
 The inner ring of the CSD is located in the central zone of the SD-TMSR core 
 (Figure~\ref{fig:core_25}), in which the volume ratio between molten salt and 
 graphite is relatively small ($0.357$). Results show that the inner ring of the CSD has 
-the worth almost equal to the worth of all other CRs together regardless of 
+the worth almost equal to the worth of all other CRs together (SSD + CSD outer ring) regardless of 
 the absorbing material type (see Table~\ref{tab:worth}). This happens because the absorption cross section
 decreases with the energy of incident neutron, for example, boron absorbs neutrons in thermal spectrum much 
 greater than in fast spectrum.
@@ -147,10 +147,11 @@ provide a sufficient positive shutdown margin.
 		\hline
 		Absorbing materials        				&  $^{233}$U & reactor-grade Pu&  TRU \\
 		\hline
+		Nat. B$_4$C					& $12.62\pm0.08$ $\$$ &$10.18\pm0.09$ $\$$ &$-1.12\pm0.08$ $\$$ \\
 		B$_4$C-90                          & $14.74\pm0.09$ $\$$ & $12.28\pm0.12$ $\$$ & $ $ $ $ $1.01\pm0.09$ $\$$ \\
 		Eu$_2$O$_3$                       &  $12.93\pm0.09$ $\$$    &  $10.47\pm0.12$ $\$$   &$-0.80\pm0.09$ $\$$\\
 		HfB$_2$        				 &$12.62\pm0.24$ $\$$ &$10.16\pm0.26$ $\$$ &$-1.11\pm0.24$ $\$$   \\
-		HfH$_{1.62}$							& $11.58\pm0.19$ $\$$ &$9.120\pm0.22$ $\$$ &$-2.15\pm0.19$ $\$$ \\
+		HfH$_{1.62}$							& $11.58\pm0.19$ $\$$ &$9.12\pm0.22$ $\$$ &$-2.15\pm0.19$ $\$$ \\
 		Gd$_2$O$_3$	  		& $10.35\pm0.22$ $\$$ &$7.890\pm0.25$ $\$$& $-3.38\pm0.22$ $\$$\\
 		\hline
 	\end{tabularx}
@@ -185,7 +186,7 @@ into the core \cite{girardin2007control}.
 	\includegraphics[width=\textwidth]{totalflux.png}
 	\vspace{-0.5in}
 	\caption{Radial neutron flux distribution at the mid-core for different 
-	CRs positions.} 
+	CRs positions (CRs made of B$_4$C-90).} 
 	\label{fig:totalflux}
 \end{figure}
  
@@ -198,13 +199,13 @@ inserted gradually into the core from the top to the bottom.
 Equation~\ref{Equ:4} and~\ref{Equ:5} are used to calculate the integral and 
 differential CRW, respectively. Figure~\ref{fig:integ} illustrates the integral CRW for CRs 
 made of B$_4$C-90. The maximum integral worth of All CRs, CSD, and SSD 
-clusters are about $48.39$ $\$$, $25.3$ $\$$, and $16.46$ $\$$, respectively. The 
-integral worth of SSD clusters is sufficient to shut down the reactor from any 
+clusters are about $48.39$ $\$$, $25.30$ $\$$, and $16.46$ $\$$, respectively. The 
+integral worth of SSD clusters made of B$_4$C-90 is sufficient to shut down the reactor from any 
 state.
 
 The differential CRWs are demonstrated in Figure~\ref{fig:diff}. Ideally, at the top of the core, the CR insertion has little effect since this region has low thermal neutron flux. Thus, the differential CRW has the lowest values in this region. The effect of CR insertion increases gradually near the center of the core. At the center of the core (region with maximum thermal neutron flux), the differential CRW is the largest and changes slowly with rod insertion. From the center of the core to the bottom, the differential CRW values decrease (region with low thermal neutron flux). Figure~\ref{fig:diff} shows that the maximum differential CRW is shifted toward the bottom of the core and the curves is not exactly symmetrical. This is due to the asymmetrical distribution for the fuel and graphite in simulation \cite{xuemei2013study,son2016control}.
 
-Figure~\ref{fig:CSD} shows the integral CRW for only CSD clusters with five 
+Figure~\ref{fig:CSD} shows the integral CRW for only CSD clusters with the six 
 different absorbing materials. The results show that all absorbing materials 
 have almost the same integral rod worth in the upper half of the core 
 ($<250$ cm from the upper boundary of the core). Further insertion of the 
@@ -217,14 +218,14 @@ materials in this study. Notably, all results are based on steady state calculat
 	\centering
 	\includegraphics[width=\textwidth]{integ.png}
 	\vspace{-0.5in}
-	\caption{Integral control rod worth of all CRs, CSD, and SSD clusters.} 
+	\caption{Integral control rod worth of all CRs, CSD, and SSD clusters (CRs made of B$_4$C-90).} 
 	\label{fig:integ}
 \end{figure}
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{diff.png}
 	\vspace{-0.5in}
-	\caption{Differential control rod worth of all CRs, CSD, and SSD clusters.} 
+	\caption{Differential control rod worth of all CRs, CSD, and SSD clusters (CRs made of B$_4$C-90).} 
 	\label{fig:diff}
 \end{figure}
 \begin{figure}
