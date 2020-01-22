@@ -1,11 +1,11 @@
 \section{Conclusion} \label{Conclusion}
-In the current work, we introduced design of reactivity control system for the 
+In the current work, we introduced design of a reactivity control system for the 
 Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR). The 
 design has been evaluated at the startup for the full-core geometry using 
-SERPENT-2 Monte-Carlo code. We considered three various startup composition of 
+SERPENT-2 Monte-Carlo code. We considered three various startup compositions of 
 the fuel salt: (1) $^{232}$Th as fertile and $^{233}$U as fissile material; 
-(2) $^{232}$Th and plutonium, extracted from \gls{LWR} \gls{SNF}; (3) 
-$^{232}$Th and transuranic vector, extracted from \gls{LWR} \gls{SNF}.
+(2) $^{232}$Th and Pu, extracted from \gls{LWR} \gls{SNF}; (3) 
+$^{232}$Th and TRU vector, extracted from \gls{LWR} \gls{SNF}.
 
 The excess reactivity $\rho_e$ is calculated at zero burnup when all CRs are 
 fully withdrawn. The $\rho_e$ for $^{233}$U, reactor-grade Pu, and 
@@ -20,14 +20,14 @@ the other absorbing materials in this study. Both CSD and SSD clusters are
 separately able to shut down the reactor initially loaded with $^{233}$U and 
 reactor-grade Pu regardless of the absorbing material type. However, only SSD 
 clusters made of B$_4$C-90 are able to shut down the SD-TMSR initially loaded 
-with transuranic vector from \gls{LWR}. The reason for this is much larger 
+with TRU vector from \gls{LWR}. The reason for this is the much larger 
 absorption cross section of $^{10}$B in the relatively soft neutron energy 
 spectrum of the SD-TMSR core started with TRU.
 
 In case of malfunction of the other CR clusters (e.g., stuck in the upper 
 position), the outer ring of the CSD failed to counteract the excess 
-reactivity of the core initially loaded with reactor-grade Pu and transuranic 
-(TRU) elements. However, the worth of the outer ring of the CSD is sufficient 
+reactivity of the core initially loaded with reactor-grade Pu and TRU elements.
+However, the worth of the outer ring of the CSD is sufficient 
 to compensate the excess reactivity for the core refueled by $^{233}$U.
 
 All absorbing materials provide an adequate shutdown margin for the SD-TMSR 
@@ -38,23 +38,23 @@ with TRU because the SSD clusters should provide a sufficient positive shutdown 
 
 The amplification factor (A$_{CRi}$) results show that the CSD, SSD, CSD inner ring, and SSD1 are slightly amplified due to the anti-shadowing effects. The strongest anti-shadowing effect has observed in SSD4 and CSD9 clusters that are located at the boundary between the core zones with different moderator-to-fuel ratio.
 
-The insertion of CRs deforms the radial flux shape in certain positions, i.e., around CRs positions. This shifts the neutron flux from the core center towards the periphery.
+The insertion of CRs deforms the radial flux shape in certain positions, i.e., around CRs. This shifts the neutron flux from the core center towards the periphery.
 
-The integral and differential control rod worth are calculated for three 
-different systems: all control rods, CSD, and SSD systems. The results show 
+The integral and differential CR worth are calculated for three 
+different systems: all CRs, CSD, and SSD systems. The results show 
 that all absorbing materials have almost the same integral rod worth in the 
-upper half of the core. Further insertion of the control rods shows the unique 
+upper half of the core. Further insertion of the CRs shows the unique 
 absorption characteristics of each material.
 
 Finally, the proposed design of CRs successfully control the excess reactivity and enhance the safety aspects of the SD-TMSR.
 
 \section{Future work}
-In Part II of this research effort, we will evaluate effect of fuel salt 
-burnup on the CRW. The depleted fuel composition will be obtained using 
+In Part II of this research effort, we will evaluate the effect of fuel salt 
+burnup on the CRW. The depleted fuel composition will be obtained using a
 SERPENT-2 online reprocessing subroutine \cite{aufiero2013extended} and 
 batch-wise tool SaltProc \cite{rykhlevskii_arfc/saltproc_2018, 
 rykhlevskii_milestone_2019}. Additionally, the authors intend to investigate 
-kinetic parameters (effective delayed neutron fraction $\beta_{eff}$ and 
+kinetic parameters' (effective delayed neutron fraction $\beta_{eff}$ and 
 effective delayed neutron precursor decay constant $\lambda_{eff}$) evolution 
 during the SD-TMSR operation. These parameters are crucial for accident 
 transient analysis, which will be performed using Moltres 
