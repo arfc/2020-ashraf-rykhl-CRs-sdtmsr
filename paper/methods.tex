@@ -84,7 +84,7 @@ The absorbing material is surrounded by a 0.25-cm-thick cladding made of AIM1
 SiC structural material (see Figure~\ref{fig:cr}). We simulated a small gap between the 
 cladding and guide tube to facilitate the control rod movement.
 
-Since the total number and distribution of the control assemblies in the SD-TMSR are unknown, we proposed an original distribution as a starting point of this analysis. We added clusters consist of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods (cluster) can move together as one group. Figure~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the control rods. The total number of graphite elements with control rods are 25: 16 CSD and 9 SSD.
+Since the total number and distribution of the control assemblies in the SD-TMSR are unknown, we proposed an original distribution as a starting point of this analysis. We added clusters consisting of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods (cluster) can move together as one group. Figures~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the control rods. The total number of graphite elements with control rods are 25: 16 CSD and 9 SSD.
 \begin{figure}[t!]  % replace 't' with 'b' to \centering
 	\centering
 	\hspace{+0.65in} 
@@ -108,38 +108,38 @@ Since the total number and distribution of the control assemblies in the SD-TMSR
 	\label{fig:graphite_elemen1}
 \end{figure}
 
-Figure~\ref{fig:core_25} illustrates the numbering scheme of control rods 
+Figure~\ref{fig:core_25} illustrates the numbering scheme of control rod 
 clusters in the SD-TMSR core.
-The CSD1-16 clusters are represented as yellow color and distributed as two rings: inner and outer ring (peripheral ring). The inner ring includes CSD from 1 to 6, while the outer ring includes CSD from 7 to 16. Red color stands for SSD1-9 clusters.
-We distributed the graphite elements with control rods clusters uniformly in 
+The CSD1-16 clusters are represented as yellow and distributed as two rings: inner and outer (peripheral) ring. The inner ring includes CSD from 1 to 6, while the outer ring includes CSD from 7 to 16. Red stands for SSD1-9 clusters.
+We distributed the graphite elements with control rod clusters uniformly in 
 the inner core of the SD-TMSR, in which the moderator-to-fuel ratio is high.
-The selected core segment at the upper left corner of the 
+The selected core segment at the upper left corner of 
 Figure~\ref{fig:core_25} shows that both CSD and SSD clusters consist of four 
 control rods located at the same distance from the fuel channel center.
 \begin{figure}[t!]  % replace 't' with 'b' to \centering
 	\centering
 	\hspace{+0.65in}
 	\includegraphics[width=\textwidth]{core_25.png}
-	\caption{Distribution of the graphite elements with control rods in the SD-TMSR core. Green - fuel salt, blue - graphite, pink - B$_4$C, and light-green - vessel (H-alloy).}
+	\caption{Distribution of the graphite elements with CRs in the SD-TMSR core. Green - fuel salt, blue - graphite, pink - B$_4$C, and light-green - vessel (H-alloy).}
 	\label{fig:core_25}
 \end{figure}
 
 \section{Methodology and tools} \label{Methodology-and-tools}
 \subsection{Control rod design evaluation}
 In this work, SERPENT-2 \cite{leppanen2014serpent} is used to 
-perform steady state calculations for the full-core of the SD-TMSR with 
-suggested control rod design. We adopted the ENDF-VII.0 cross section library 
+perform steady state calculations for the full core of the SD-TMSR with 
+the suggested control rod design. We adopted the ENDF-VII.0 cross section library 
 for all calculations in the present work. The results demonstrate whole-core 
 runs of $50,000$ neutrons per cycle, for 50 inactive and 500 active cycles. The 
-statistical error in $k_{eff}$ from SERPENT-2 output is $\leq$ $25$ 
+statistical error in $k_{eff}$ from the SERPENT-2 output is $\leq$ $25$ 
 $pcm$.
 
 The initial calculation state of the SD-TMSR is identified by normal operation 
-conditions (see Table~\ref{tab:table1}) and fully withdrawn control rods 
+conditions (see Table~\ref{tab:table1}) and fully withdrawn control rod 
 clusters. In this case, the control rods are located above the upper plenum as 
 shown in Figure~\ref{fig:core_26}. To validate the proposed control rods 
 system we adopted the same operation conditions (as in the initial calculation 
-state) and changed the position of the control rod clusters along $Z$ 
+state) and changed the position of the control rod clusters along the $Z$ 
 direction. The main calculated parameters including reactivity, control rod 
 worth, and interference effects (shadowing effects) are described below.
 
@@ -152,29 +152,32 @@ worth, and interference effects (shadowing effects) are described below.
 
 \subsubsection{Reactivity calculation}
 
-The excess reactivity $\rho$$_e$ is the reactivity of the core when all control rods are withdrawn. $\rho$$_e$ is calculated by SERPENT-2 in \$ units based on equation~\ref{Equ:1}, where $k_{eff}$ is the effective multiplication factor of the core and $\beta_{eff}$ is the effective fraction of delayed neutrons. The effective delayed neutron fraction is calculated by the adjoint-weighted time constants using perturbation technique in SERPENT-2 \cite{leppanen2014calculation}.
+The excess reactivity $\rho$$_e$ is the reactivity of the core when all control rods are withdrawn. $\rho$$_e$ is calculated by SERPENT-2 in \$ units based on equation~\ref{Equ:1}, where $k_{eff}$ is the effective multiplication factor of the core and $\beta_{eff}$ is the effective fraction of delayed neutrons:
 
 \begin{equation}
 \label{Equ:1}
-{{\rho}_{e}}=\dfrac{{k_{eff}}-1}{{k_{eff}}{{\beta}_{eff}}},
+{{\rho}_{e}}=\dfrac{{k_{eff}}-1}{{k_{eff}}{{\beta}_{eff}}}.
 \end{equation}
 
-\subsubsection{The control rod worths (CRW)}
+The effective delayed neutron fraction is calculated by the adjoint-weighted time constants using a perturbation technique in SERPENT-2 \cite{leppanen2014calculation}.
 
-The control rod worth (CRW) is the amount of negative reactivity that associated with the control rod insertion. The CRW is calculated by SERPENT-2 in \$ units based on equation~\ref{Equ:2}, where $\Delta\rho$$_{CRi}$ is the worth of i$^{th}$ CR, $\rho$$_e$ is the initial excess reactivity, and $\rho$$_{CRi}$ is the excess reactivity after insertion i$^{th}$ CR \cite{vcerba2017optimization}.
+
+\subsubsection{The control rod worth (CRW)}
+
+The control rod worth (CRW) is the amount of negative reactivity associated with the control rod insertion. The CRW is calculated by SERPENT-2 in \$ units based on equation~\ref{Equ:2}, where $\Delta\rho$$_{CRi}$ is the worth of the i$^{th}$ control rod (CR), $\rho$$_e$ is the initial excess reactivity, and $\rho$$_{CRi}$ is the excess reactivity after insertion of the i$^{th}$ CR \cite{vcerba2017optimization}:
 
 \begin{equation}
 \label{Equ:2}
-{{\Delta}{\rho}_{CRi}}={{\rho}_{e}}-{{\rho}_{CRi}},
+{{\Delta}{\rho}_{CRi}}={{\rho}_{e}}-{{\rho}_{CRi}}.
 \end{equation}
 
-\subsubsection{Shutdown Margin (SDM)}
+\subsubsection{Shutdown margin (SDM)}
 
-The shutdown margin (SDM) is the amount of reactivity by which a full reactor core is subcritical from a given state. The SDM is expressed in terms of reactivity and calculated by equation~\ref{Equ:6}, where $\Delta\rho_{SSD}$ is the total worth of the Shutdown Safety Devices (SSD) and $\rho$$_e$ is the core excess reactivity.
+The shutdown margin (SDM) is the amount of reactivity by which a full reactor core is subcritical from a given state. The SDM is expressed in terms of reactivity and calculated by equation~\ref{Equ:6}, where $\Delta\rho_{SSD}$ is the total worth of the Shutdown Safety Devices (SSD) and $\rho$$_e$ is the core excess reactivity:
 
 \begin{equation}
 \label{Equ:6}
-{SDM}={{\Delta}{\rho}_{SSD}}-{{\rho}_{e}},
+{SDM}={{\Delta}{\rho}_{SSD}}-{{\rho}_{e}}.
 \end{equation}
 
 \subsubsection{Interference effects (shadowing effects)}
@@ -185,39 +188,39 @@ the surroundings. Thus, the shadowing effect appears when the combined rod worth
 is less than the sum of the individual worths. Oppositely, anti-shadowing is observed 
 when the combined rod worth is greater than the sum of the individual worths.
 The core height-to-diameter ratio (H/D) and the three-dimensional configuration 
-of the control rods affect the degree of the interference between CRs \cite{girardin2007control}. 
+of the CRs affect the degree of the interference between CRs \cite{girardin2007control}. 
 
-The amplification factor (A$_{CRi}$) of i$^{th}$ control rod helps to evaluate the shadowing effects between control rod clusters. The amplification factor is calculated by equation~\ref{Equ:3} \cite{girardin2007control,vcerba2017optimization}, where $\Delta\rho$$_{CR(1,2,\ldots N)}$ is the total worth of all control rods (from $1$ to $N$), $\Delta\rho$$_{CR(1,2,\ldots N-i)}$ is the total worth of all CRs except the investigated one i$^{th}$ and $\Delta\rho$$_{CRi}$ the worth of the i$^{th}$ rod.
+The amplification factor (A$_{CRi}$) of the i$^{th}$ CR helps to evaluate the shadowing effects between CR clusters. The A$_{CRi}$ is calculated by equation~\ref{Equ:3} \cite{girardin2007control,vcerba2017optimization}, where $\Delta\rho$$_{CR(1,2,\ldots N)}$ is the total worth of all CRs (from $1$ to $N$), $\Delta\rho$$_{CR(1,2,\ldots N-i)}$ is the total worth of all CRs except the i$^{th}$ rod, and $\Delta\rho$$_{CRi}$ is the worth of the i$^{th}$ rod:
 
 \begin{equation}
 \label{Equ:3}
-{{A}_{CRi}}=\dfrac{{{\Delta}{\rho}_{CR(1,2,\ldots N)}}-{{\Delta}{\rho}_{CR(1,2,\ldots N-i)}}}{{\Delta}{\rho}_{CRi}},
+{{A}_{CRi}}=\dfrac{{{\Delta}{\rho}_{CR(1,2,\ldots N)}}-{{\Delta}{\rho}_{CR(1,2,\ldots N-i)}}}{{\Delta}{\rho}_{CRi}}.
 \end{equation}
 
-If A$_{CRi}$ is $<$1, the control rod worth is reduced due to shadowing effects, while if A$_{CRi}$ is $>$1 the control rod worth is amplified and anti-shadowing effects occur. A$_{CRi}$ = 1 means no shadowing effects occur.
+If A$_{CRi}$ is $<$1, the CRW is reduced due to shadowing effects, but if A$_{CRi}$ is $>$1 the CRW is amplified and anti-shadowing effects occur. A$_{CRi}$ = 1 means no shadowing effects occur.
 
 \subsubsection{Integral and differential control rod worth}
 
-The integral CRW is the total reactivity change due to the control rod full 
-insertion or withdrawal. However, the differential CRW is the amount of 
+The integral CRW is the total reactivity change due to the full 
+insertion or withdrawal of the CR. However, the differential CRW is the amount of 
 reactivity inserted per unit of withdrawal [\$/cm]. To calculate those 
-parameters, we varied the position of CRs clusters from fully withdrawn to 
+parameters, we varied the position of CR clusters from fully withdrawn to 
 fully inserted. Equation~\ref{Equ:4} is used to calculate the integral CRW 
 [\$], where $k_{j}$ and $k_{j-1}$ are the effective multiplication factor 
-after and before CR insertion to $j$$^{th}$ step. $\beta_{j}$ is the effective 
-fraction of delayed neutrons at $j$$^{th}$ step. $N$ is the number of steps.
+after and before CR insertion to the $j$$^{th}$ step, respectively, $\beta_{j}$ is the effective 
+fraction of delayed neutrons at the $j$$^{th}$ step, and $N$ is the number of steps:
 
 \begin{equation}
 \label{Equ:4}
-{{\Delta}{\rho}_{j}}=\sum_{j=1}^{N}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}},
+{{\Delta}{\rho}_{j}}=\sum_{j=1}^{N}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}}.
 \end{equation}
 
-Equation~\ref{Equ:5} is used to calculate the differential CRW [\$/cm], where 
-$Z$ is the coordinate of the bottom of the control rod.
+Equation~\ref{Equ:5} is used to calculate the differential CRW, where 
+$Z$ is the coordinate of the bottom of the control rod:
 
 \begin{equation}
 \label{Equ:5}
-\dfrac{{\partial}{\rho}_{j}}{{\partial{Z}}}=\dfrac{1}{{\Delta}{Z}}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}},
+\dfrac{{\partial}{\rho}_{j}}{{\partial{Z}}}=\dfrac{1}{{\Delta}{Z}}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}}.
 \end{equation}
 
 
