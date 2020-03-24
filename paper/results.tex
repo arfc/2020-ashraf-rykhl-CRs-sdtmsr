@@ -1,11 +1,10 @@
 \section{Results and discussion} \label{Results-and-discussion}
 
-\subsection{The excess reactivity $\rho$$_e$}
+\subsection{Excess reactivity}
 
 The excess reactivity $\rho$$_e$ is calculated at zero burnup (steady state 
 calculation), when all control rods (CRs) are fully withdrawn. The $\rho_e$ for $^{233}$U, 
-reactor-grade Pu, and TRU used as initial fissile material are $1.65\pm0.04$ 
-$\$$, $4.11\pm0.02$ $\$$, and $15.38\pm0.04$ $\$$, respectively.
+reactor-grade Pu, and TRU used as initial fissile material are listed in Table~\ref{tab:excess}.
 The previously studied $^{233}$U case recorded the maximum reactivity
 during 60 effective full-power years (EFPY) of reactor operation to be 
 $4.27\pm0.01$ $\$$ (see Figure~\ref{fig:keff_25}).
@@ -14,9 +13,24 @@ The proposed reactivity control system must compensate such reactivity at startu
 	\centering
 	\includegraphics[width=\textwidth]{keff_25.png}
 	\vspace{-0.5in}
-	\caption{The change of the effective multiplication factor during 60 EFPY of reactor operation including periodic fissile material insertion (confidence interval $\pm\sigma$ is shaded) \cite{ashraf2020whole}.} 
+	\caption{Uncontrolled effective multiplication factor during 60 EFPY of reactor operation including periodic fissile material insertion (confidence interval $\pm\sigma$ is shaded) \cite{ashraf2020whole}.} 
 	\label{fig:keff_25}
 \end{figure}
+
+Table~\ref{tab:excess}
+
+\begin{table}  %[!hb]
+	\caption{The excess reactivity for the SD-TMSR core with different initial fissile materials.}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{p{3cm} s s s}
+		\hline
+		Initial fissile materials       				&  $^{233}$U & reactor-grade Pu&  TRU \\
+		\hline
+		$\rho_e$					& $1.65\pm0.04$ $\$$ & $4.11\pm0.02$ $\$$ & $15.38\pm0.04$ $\$$ \\
+		\hline
+	\end{tabularx}
+	\label{tab:excess}
+\end{table}
 
 \subsection{Control rod parameters}
 
@@ -81,7 +95,7 @@ absorbers.
 
 \subsubsection{CRW} \label{CR_worth}
 
-The total worth of all CRs extends from $33.7\pm0.4$ $\$$ to $48.19\pm0.68$ 
+Among the absorbers investigated, the total worth of all CRs extends from $33.7\pm0.4$ $\$$ to $48.19\pm0.68$ 
 $\$$ (the first row in Table~\ref{tab:worth}). B$_4$C-90 (boron enriched to 90\% $^{10}$B)
 has the largest absorption ability, while Gd$_2$O$_3$ has the lowest 
 absorption compared with the other absorbing materials in this study. This 
@@ -93,13 +107,13 @@ operation; the effect of the fuel salt burnup on the CRW is neglected
 herein and will be investigated and presented in Part II of this 
 study.
 
-The worth of the CSD clusters is $1.56$ times greater than 
-the worth of the SSD system for all absorbing materials. Either CSD or SSD 
+The worth of the Control Safety Devices (CSD) clusters is $1.56$ times greater than 
+the worth of the Shutdown Safety Devices (SSD) system for all absorbing materials. Either CSD or SSD 
 clusters are able to shut down the reactor initially loaded by 
-$^{233}$U and reactor-grade Pu regardless of the absorbing material type because 
-the $\rho_e$ for $^{233}$U and reactor-grade Pu as initial fissile material are $1.65\pm0.04$ 
-$\$$ and $4.11\pm0.02$ $\$$, respectively. However, only SSD clusters made of B$_4$C-90 are able to shut down the SD-TMSR 
-initially loaded with transuranic (TRU) elements ($\rho_e$ is $15.38\pm0.04$ $\$$). The reason for this is the much larger 
+$^{233}$U and reactor-grade Pu regardless the absorbing material type.
+However, only SSD clusters made of B$_4$C-90 are able to shut down the SD-TMSR 
+initially loaded by transuranic (TRU) elements ($\rho_e$ is $15.38\pm0.04$ $\$$).
+The reason for this is the much larger 
 absorption cross section of $^{10}$B in the relatively soft neutron energy 
 spectrum of the SD-TMSR core started with TRU \cite{ashraf2020Strategies}.
 
@@ -112,17 +126,17 @@ decreases with the energy of the incident neutron; for example, boron absorbs ne
 greater than in the fast spectrum.
 
 In case of malfunction of other CR clusters (e.g., stuck in the upper 
-position), the outer ring of the CSD failed to compensate the excess 
-reactivity of the core initially loaded by reactor-grade Pu and TRU elements. However, the outer ring of the CSD worth is sufficient 
-to compensate the excess reactivity for the core refueled by $^{233}$U. 
+position), the outer ring of the CSD will be able to compensate the excess reactivity of the core initially loaded by $^{233}$U.
+Meanwhile, it will fail to compensate the excess 
+reactivity of the core initially loaded by reactor-grade Pu and TRU elements.
 
-We separately calculated the worth of CSD2, CSD9, SSD1, and SSD4 clusters to 
-investigate the variation of CRW with the position in the inner core.
+We separately calculated the worth of CSD2, CSD9, SSD1, and SSD4 clusters (CR clusters located in the center and at the boundary between the core
+zones, see Figure~\ref{fig:core_25}) to investigate the variation of CRW with the position in the inner core.
 The CRW decreases in the direction of the outer core zone. The outer core zone 
 has smaller moderator-to-fuel ratio ($0.86$) compared with the central zone 
 ($2.8$); consequently, the neutron energy spectrum is faster in the peripheral 
-zone than in the center of the core. As mentioned previously, the CR's 
-absorption ability degrades in the fast spectrum.
+zone than in the center of the core degrading the CR's 
+absorption ability in that region.
 
 \subsubsection{Shutdown margin (SDM)}
 
@@ -208,10 +222,8 @@ Figure~\ref{fig:CSD} shows the integral CRW for only CSD clusters with six
 different absorbing materials. The results show that all absorbing materials 
 have almost the same integral rod worth in the upper half of the core 
 ($<250$ cm from the upper boundary of the core). Further insertion of the 
-CRs shows the unique absorption characteristics of each material (see 
-part~\ref{CR_worth}). B$_4$C-90 absorbs much more neutrons than the 
-Gd$_2$O$_3$, which has the lowest absorption ability among the other absorbing 
-materials in this study. Notably, all results are based on steady state calculations. 
+CRs demonstrates that the strongest absorber, B$_4$C-90 outperforms other materials.
+Notably, all results are based on steady state calculations. 
 
 \begin{figure}
 	\centering
@@ -231,6 +243,6 @@ materials in this study. Notably, all results are based on steady state calculat
 	\centering
 	\includegraphics[width=\textwidth]{CSD.png}
 	\vspace{-0.5in}
-	\caption{Integral CRW of CSD clusters for different absorbing materials.} 
+	\caption{Integral CRW of CSD clusters for various absorbing materials.} 
 	\label{fig:CSD}
 \end{figure}

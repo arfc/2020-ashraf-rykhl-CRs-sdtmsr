@@ -1,32 +1,32 @@
 \section{Model description} \label{Model-description}
 \subsection{Reactor design}
 
-The Chinese Academy of Sciences proposed the Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR) design in 2011
+The Chinese Academy of Sciences proposed the SD-TMSR design in 2011
 \cite{li_optimization_2018,jiang2012advanced,li2015analysis,li2017model}. The 
-\gls{SD-TMSR} is a graphite-moderated molten salt reactor with a thermal power 
-of 2,250 MW$_{th}$. The design of the \gls{SD-TMSR} is inspired by the 
+SD-TMSR is a graphite-moderated molten salt reactor with a thermal power 
+of 2,250 MW$_{th}$. The design of the SD-TMSR is inspired by the 
 \gls{MSBR} \cite{robertson_conceptual_1971} and the \gls{TMSR} 
 \cite{nuttin2005potential} after modifying the geometry to control the 
 positive moderator temperature coefficient in the MSBR. Li \emph{et al.} and Ashraf \emph{et al.}
-described in detail the \gls{SD-TMSR} core geometry
+described in detail the SD-TMSR core geometry
 \cite{li_optimization_2018,ashraf2020whole}. The core of the 
-\gls{SD-TMSR} is a right cylinder divided into the inner zone (486 fuel tubes) 
-and the outer zone (522 fuel tubes) to enhance breeding performance.
+SD-TMSR is a right cylinder divided into an inner zone (486 fuel tubes) 
+and an outer zone (522 fuel tubes) to enhance breeding performance.
 
-In this study, the fuel salt composition is 70LiF - 17.5BeF$_2$ - 
-12.5(HM)F$_N$ mole\%, where HM is the heavy metal (i.e. $^{232}$Th and fissile 
+In this study, the fuel salt composition is LiF-BeF$_2$-(HM)F$_N$ (70-17.5-12.5 mol\%),
+where HM is the heavy metal (i.e. $^{232}$Th and fissile 
 materials), and $N$ depends on the chosen fissile material and the 
 thermochemical state of the liquid fuel salt. Three different types of initial 
 fissile materials are considered: (1) $^{233}$U \cite{ashraf2020whole}, 
 (2) reactor-grade Pu \cite{marka1993explosive}, and (3) transuranic (TRU) 
 elements from \gls{LWR} \gls{SNF} \cite{de2000scenarios}.
 The density and volume of the fuel salt are 3.3 g/cm$^{3}$ and 52.9 m$^3$, 
-respectively. The liquid fuel salt circulates continuously through the fuel 
-tubes that pierce the graphite hexagonal prisms. The core is surrounded by 
+respectively. The liquid fuel salt circulates continuously through the channels
+that pierce the graphite hexagonal prisms. The core is surrounded by 
 axial and radial graphite reflectors to minimize the neutron leakage.
 A 10-cm-thick B$_4$C cylinder surrounds the core to shield against neutrons and heat.
-Finally, the \gls{SD-TMSR} pressure vessel holds all reactor components and is made of 
-a Hastelloy N alloy. The main characteristics of the \gls{SD-TMSR} are 
+Finally, the SD-TMSR pressure vessel holds all reactor components and is made of 
+a Hastelloy N alloy. The main characteristics of the SD-TMSR are 
 summarized in Table~\ref{tab:table1}.
 
 
@@ -41,17 +41,23 @@ summarized in Table~\ref{tab:table1}.
 		$^7$Li enrichment, \%        				& 99.995   \\
 		Fuel temperature, K 							& 900  \\
 		Fuel density at 900 K, g/cm$^3$		  		& 3.3 \\
-		Fuel dilatation coefficient, g/(cm$^3$$.$K)  &  -6.7$\times$10$^{-4}$ \\
-		Graphite density, g/cm$^3$             	    & 2.3	\\ 
-		B$_4$C density, g/cm$^3$					& 2.52  \\ 
+		Dilatation coefficient, g/(cm$^3$$\cdot{}$K)  &  -6.7$\times$10$^{-4}$ \\
+		Graphite density, g/cm$^3$             	    & 2.3	\\  
 		Core diameter, cm								& 460  \\
 		Core height, cm									& 460  \\
 		Side length of the graphite hexagonal prism, cm   & 7.5 \\
 		Inner radius, cm							& 3.5  \\
 		Outer radius, cm							& 5  \\
-		Ratio of molten salt and graphite in the inner zone	&  0.357  \\
-		Ratio of molten salt and graphite in the outer zone &  1.162  \\
+		Volume ratio of molten salt to graphite \\in the inner zone	&  0.357  \\
+		Volume ratio of molten salt to graphite \\in the outer zone &  1.162  \\
 		Fuel volume, m$^3$  &	52.9 \\
+		B$_4$C density, g/cm$^3$  &  2.54 \\
+		HfB$_2$ density, g/cm$^3$  &  10.5 \\
+		HfH$_{1.62}$ density, g/cm$^3$ &  11.4 \\
+		Gd$_2$O$_3$ density, g/cm$^3$  &  7.04 \\
+		Eu$_2$O$_3$ density, g/cm$^3$  &  7.38 \\
+		SiC density, g/cm$^3$  & 3.21 \\
+		AIM1 cladding density, g/cm$^3$  & 7.987 \\
 		\hline
 	\end{tabularx}
 	\label{tab:table1}
@@ -61,8 +67,7 @@ summarized in Table~\ref{tab:table1}.
 
 \subsection{Control rod design} \label{CRD}
 
-The reactivity of the SD-TMSR core is controlled by two clusters of control 
-rods:
+The present paper proposes two sets of rods to control the reactivity of the SD-TMSR core:
 \begin{enumerate}
 \item Control Safety Devices (CSD);
 \item Shutdown Safety Devices (SSD).
@@ -71,7 +76,7 @@ The CSD system is designed for reactivity control during normal operation and th
 In the present work, six different absorbing materials are considered based on their neutronics and safety performance:
 \begin{enumerate}
 \item natural B$_4$C (19.9\% $^{10}$B);
-\item B$_4$C with boron enriched to 90\% $^{10}$B;
+\item B$_4$C (enriched to 90\% $^{10}$B);
 \item hafnium diboride (HfB$_2$);
 \item hafnium hydride (HfH$_{1.62}$);
 \item gadolinium oxide (Gd$_2$O$_3$);
@@ -81,17 +86,21 @@ In the present work, six different absorbing materials are considered based on t
 The control rod is a cylinder with a radius of 0.75 cm and a height of 520 cm. 
 The absorbing material is surrounded by a 0.25-cm-thick cladding made of AIM1 
 (15Cr-15Ni) steel alloy \cite{SERAN2017285} and the guide tube is made of 
-SiC structural material (see Figure~\ref{fig:cr}). We simulated a small gap between the 
+SiC structural material (see Figure~\ref{fig:cr}). We simulated a 0.04-cm-thick gap between the 
 cladding and guide tube to facilitate the control rod movement.
+All densities of rod materials are listed in
+Table~\ref{tab:table1}.
 
-Since the total number and distribution of the control assemblies in the SD-TMSR are unknown, we proposed an original distribution as a starting point of this analysis. We added clusters consisting of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods (cluster) can move together as one group. Figures~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the control rods. The total number of graphite elements with control rods are 25: 16 CSD and 9 SSD.
-\begin{figure}[t!]  % replace 't' with 'b' to \centering
+\begin{figure}[b!]  % replace 't' with 'b' to \centering
 	\centering
 	\hspace{+0.65in} 
 	\includegraphics[width=\textwidth]{cr.png}
 	\caption{Cross section of the B$_4$C control rod.}
 	\label{fig:cr}
 \end{figure}
+
+Since the total number and distribution of the control assemblies in the SD-TMSR have not been determined, we propose an original distribution as a starting point of this analysis. We added clusters consisting of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods can move together as one group (cluster). Figures~\ref{fig:graphite_elemen} and~\ref{fig:graphite_elemen1} demonstrate the plan and axial view of the graphite element with the control rods. We propose 25 graphite elements with control rods: 16 Control Safety Devices (CSD) and 9 Shutdown Safety Devices (SSD).
+
 \begin{figure}[t!]  % replace 't' with 'b' to \centering
 	\centering
 	\hspace{+0.65in}
@@ -120,7 +129,7 @@ control rods located at the same distance from the fuel channel center.
 	\centering
 	\hspace{+0.65in}
 	\includegraphics[width=\textwidth]{core_25.png}
-	\caption{Distribution of the graphite elements with CRs in the SD-TMSR core. Green - fuel salt, blue - graphite, pink - B$_4$C, and light-green - vessel (H-alloy).}
+	\caption{Distribution of the graphite elements with CRs in the SD-TMSR core.}
 	\label{fig:core_25}
 \end{figure}
 
@@ -130,8 +139,8 @@ In this work, SERPENT-2 \cite{leppanen2014serpent} is used to
 perform steady state calculations for the full core of the SD-TMSR with 
 the suggested control rod design. We adopted the ENDF-VII.0 cross section library 
 for all calculations in the present work. The results demonstrate whole-core 
-runs of $50,000$ neutrons per cycle, for 50 inactive and 500 active cycles. The 
-statistical error in $k_{eff}$ from the SERPENT-2 output is $\leq$ $25$ 
+runs of $50,000$ neutrons per cycle, for 50 inactive and 500 active cycles, and
+statistical error in $k_{eff}$ of $\leq$ $25$ 
 $pcm$.
 
 The initial calculation state of the SD-TMSR is identified by normal operation 
@@ -183,31 +192,31 @@ The shutdown margin (SDM) is the amount of reactivity by which a full reactor co
 \subsubsection{Interference effects (shadowing effects)}
 
 Interference between control rods (CRs) or shadowing effects occur when one 
-(or more) control rod affects the reactivity worth of another control rod in 
+(or more) control rod impacts the reactivity worth of another control rod in 
 the surroundings. Thus, the shadowing effect appears when the combined rod worth
-is less than the sum of the individual worths. Oppositely, anti-shadowing is observed 
+is less than the sum of the individual worths. Meanwhile, anti-shadowing is observed 
 when the combined rod worth is greater than the sum of the individual worths.
 The core height-to-diameter ratio (H/D) and the three-dimensional configuration 
 of the CRs affect the degree of the interference between CRs \cite{girardin2007control}. 
 
-The amplification factor (A$_{CRi}$) of the i$^{th}$ CR helps to evaluate the shadowing effects between CR clusters. The A$_{CRi}$ is calculated by equation~\ref{Equ:3} \cite{girardin2007control,vcerba2017optimization}, where $\Delta\rho$$_{CR(1,2,\ldots N)}$ is the total worth of all CRs (from $1$ to $N$), $\Delta\rho$$_{CR(1,2,\ldots N-i)}$ is the total worth of all CRs except the i$^{th}$ rod, and $\Delta\rho$$_{CRi}$ is the worth of the i$^{th}$ rod:
+The amplification factor of the i$^{th}$ CR (A$_{CRi}$) helps to evaluate the shadowing effects between CR clusters. The A$_{CRi}$ is calculated by equation~\ref{Equ:3} \cite{girardin2007control,vcerba2017optimization}, where $\Delta\rho$$_{CR(1,2,\ldots N)}$ is the total worth of all CRs (from $1$ to $N$), $\Delta\rho$$_{CR(1,2,\ldots N-i)}$ is the total worth of all CRs except the i$^{th}$ rod, and $\Delta\rho$$_{CRi}$ is the worth of the i$^{th}$ rod:
 
 \begin{equation}
 \label{Equ:3}
 {{A}_{CRi}}=\dfrac{{{\Delta}{\rho}_{CR(1,2,\ldots N)}}-{{\Delta}{\rho}_{CR(1,2,\ldots N-i)}}}{{\Delta}{\rho}_{CRi}}.
 \end{equation}
 
-If A$_{CRi}$ is $<$1, the CRW is reduced due to shadowing effects, but if A$_{CRi}$ is $>$1 the CRW is amplified and anti-shadowing effects occur. A$_{CRi}$ = 1 means no shadowing effects occur.
+If A$_{CRi}$ is $<$1, the CRW is reduced due to shadowing effects, but if A$_{CRi}$ is $>$1, the CRW is amplified and anti-shadowing effects occur. A$_{CRi}$ = 1 means no shadowing effects occur.
 
 \subsubsection{Integral and differential control rod worth}
 
 The integral CRW is the total reactivity change due to the full 
-insertion or withdrawal of the CR. However, the differential CRW is the amount of 
+insertion or withdrawal of the CR. However, the \textit{differential CRW} is the
 reactivity inserted per unit of withdrawal [\$/cm]. To calculate those 
 parameters, we varied the position of CR clusters from fully withdrawn to 
 fully inserted. Equation~\ref{Equ:4} is used to calculate the integral CRW 
-[\$], where $k_{j}$ and $k_{j-1}$ are the effective multiplication factor 
-after and before CR insertion to the $j$$^{th}$ step, respectively, $\beta_{j}$ is the effective 
+[\$], where $k_{j-1}$ and $k_{j}$ are the effective multiplication factors 
+before and after CR insertion to the $j$$^{th}$ step, respectively, $\beta_{j}$ is the
 fraction of delayed neutrons at the $j$$^{th}$ step, and $N$ is the number of steps:
 
 \begin{equation}
@@ -216,7 +225,7 @@ fraction of delayed neutrons at the $j$$^{th}$ step, and $N$ is the number of st
 \end{equation}
 
 Equation~\ref{Equ:5} is used to calculate the differential CRW, where 
-$Z$ is the coordinate of the bottom of the control rod:
+$\Delta Z$ is the length of rod inserted:
 
 \begin{equation}
 \label{Equ:5}
