@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plain Cover Letter
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Rensselaer Polytechnic Institute (http://www.rpi.edu/dept/arc/training/latex/resumes/)
+% It was modified by Katy Huff
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%    PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10.75pt]{letter} % Default font size of the document, change to 10pt to fit more text
+\usepackage{graphicx}
+%\usepackage{newcent} % Default font is the New Century Schoolbook PostScript font
+%\usepackage{helvet} % Uncomment this (while commenting the above line) to use the Helvetica font
+
+% Margins
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+%\let\raggedleft\raggedright % Pushes the date (at the top) to the left, comment this line to have the date on the right
+
+\usepackage{eso-pic,graphicx}
+
+
+%--------------------------------------------------------------------------------------
+%--------INPUT DATA
+%--------------------------------------------------------------------------------------
+\usepackage{xspace}
+\newcommand{\StudentFirstName}{O.\xspace}
+\newcommand{\StudentLastName}{Ashraf\xspace}
+\newcommand{\RecipientName}{Profs. Azmy, Joyce, and Su\xspace}
+\newcommand{\RecipientAddress}{Executive Editor\\Progress in Nuclear Energy}
+%\newcommand{\<++>}{<++>\xspace}
+
+\begin{document}
+	\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{background.pdf}}
+	
+	
+	%----------------------------------------------------------------------------------------
+	%    ADDRESSEE SECTION
+	%----------------------------------------------------------------------------------------
+	
+	\begin{letter}{\RecipientName\\
+			\RecipientAddress\xspace}
+		
+		%-------------------------------------------------------------------------------
+		%    YOUR NAME & ADDRESS SECTION
+		%-------------------------------------------------------------------------------
+		\address{O. Ashraf\\
+			oabdelaziz@mephi.ru\\
+			osama.ashraf@edu.asu.edu.eg\\
+			Institute of Nuc. Physics and Eng.\\
+			National Research Nuclear University\\
+			Moscow, Russia, 115409}
+		
+		%-------------------------------------------------------------------------------
+		%    LETTER CONTENT SECTION
+		%-------------------------------------------------------------------------------
+		
+		\opening{To \RecipientName,}
+		
+		Please find enclosed a manuscript entitled: ``Preliminary design of control rods in the single-fluid double-zone thorium molten salt reactor (SD-TMSR). Part I: Design development, material selection, and worth analysis'' which I and my coauthors (Mr. Andrei Rykhlevskii, Prof. G. V. Tikhomirov, and Prof. Kathryn D. Huff) are submitting for exclusive consideration of publication as a research article in Progress in Nuclear Energy. The current manuscript is the first part of the two-part series that introduces a reliable safety system based on control rods in addition to the online feed system reactivity control in the SD-TMSR. Part I focus on control rod design and material selection, integral and differential control rod worth, shutdown margin, and shadowing effects at steady state. Meanwhile, Part II will focus on control rod worth evolution during operation. We intended to submit Part II on June-July, 2020.
+		
+		In the present paper, all calculations presented were performed using Monte-Carlo code SERPENT-2. We considered three different initial fissile loadings and applied six different absorbing materials to investigate the main operational and safety parameters in the SD-TMSR. Result showed that $^{233}$U and reactor-grade Pu startup cores maintain adequate shutdown margin with all considered absorbers. Finally, this paper proposes a design of control rod clusters that compensate the excess reactivity of the SD-TMSR loaded with different initial fissile material.
+		
+		Thank you for your consideration of our work. I expect it will be of interest
+		to a broad readership concerned with simulation of MSRs.\\
+		
+		%Declarations of interest: none\\
+		
+		\closing{Sincere regards,
+			\includegraphics[height=1.3cm]{signature.png}\\
+			\fromsig{O. Ashraf\\
+				Assistant Teacher\\
+				Institute of Nuc. Physics and Eng.\\
+				National Research Nuclear University (MEPhI)}
+		}
+		
+		%-------------------------------------------------------------------------------
+		
+	\end{letter}
+	
+\end{document}
