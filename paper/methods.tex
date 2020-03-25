@@ -9,10 +9,16 @@ of 2,250 MW$_{th}$. The design of the SD-TMSR is inspired by the
 \cite{nuttin2005potential} after modifying the geometry to control the 
 positive moderator temperature coefficient in the MSBR. Li \emph{et al.} and Ashraf \emph{et al.}
 described in detail the SD-TMSR core geometry
-\cite{li_optimization_2018,ashraf2020whole}. The core of the 
+\cite{li_optimization_2018,ashraf2020whole}. Figure~\ref{fig:ff} illustrates the quarter-core view of the 
+SD-TMSR. The core of the 
 SD-TMSR is a right cylinder divided into an inner zone (486 fuel tubes) 
 and an outer zone (522 fuel tubes) to enhance breeding performance.
-
+\begin{figure} % replace 't' with 'b' to \centering [hbp!]
+	\includegraphics[width=\textwidth]{ff.png}
+	\caption{$XZ$ (a) and $XY$ (b) section of the quarter-core model of the 
+		SD-TMSR \cite{ashraf2019Preliminary}.}
+	\label{fig:ff}
+\end{figure}
 In this study, the fuel salt composition is LiF-BeF$_2$-(HM)F$_N$ (70-17.5-12.5 mol\%),
 where HM is the heavy metal (i.e. $^{232}$Th and fissile 
 materials), and $N$ depends on the chosen fissile material and the 
@@ -40,17 +46,10 @@ summarized in Table~\ref{tab:table1}.
 		Fuel composition, mole\%                        & 70-17.5-12.5    \\
 		$^7$Li enrichment, \%        				& 99.995   \\
 		Fuel temperature, K 							& 900  \\
-		Fuel density at 900 K, g/cm$^3$		  		& 3.3 \\
-		Dilatation coefficient, g/(cm$^3$$\cdot{}$K)  &  -6.7$\times$10$^{-4}$ \\
-		Graphite density, g/cm$^3$             	    & 2.3	\\  
-		Core diameter, cm								& 460  \\
-		Core height, cm									& 460  \\
-		Side length of the graphite hexagonal prism, cm   & 7.5 \\
-		Inner radius, cm							& 3.5  \\
-		Outer radius, cm							& 5  \\
-		Volume ratio of molten salt to graphite \\in the inner zone	&  0.357  \\
-		Volume ratio of molten salt to graphite \\in the outer zone &  1.162  \\
+		Dilatation coefficient, g/(cm$^3$$\cdot{}$K)  &  -6.7$\times$10$^{-4}$ \\ 
 		Fuel volume, m$^3$  &	52.9 \\
+		Fuel density at 900 K, g/cm$^3$		  		& 3.3 \\
+		Graphite density, g/cm$^3$             	    & 2.3	\\ 
 		B$_4$C density, g/cm$^3$  &  2.54 \\
 		HfB$_2$ density, g/cm$^3$  &  10.5 \\
 		HfH$_{1.62}$ density, g/cm$^3$ &  11.4 \\
@@ -58,6 +57,14 @@ summarized in Table~\ref{tab:table1}.
 		Eu$_2$O$_3$ density, g/cm$^3$  &  7.38 \\
 		SiC density, g/cm$^3$  & 3.21 \\
 		AIM1 cladding density, g/cm$^3$  & 7.987 \\
+		Core diameter, cm								& 460  \\
+		Core height, cm									& 460  \\
+		Side length of the graphite hexagonal prism, cm   & 7.5 \\
+		Radius (inner fuel channel), cm							& 3.5  \\
+		Radius (outer fuel channel), cm							& 5  \\
+		Volume ratio of molten salt to graphite \\in the inner zone	&  0.357  \\
+		Volume ratio of molten salt to graphite \\in the outer zone &  1.162  \\
+		
 		\hline
 	\end{tabularx}
 	\label{tab:table1}
@@ -91,7 +98,7 @@ cladding and guide tube to facilitate the control rod movement.
 All densities of rod materials are listed in
 Table~\ref{tab:table1}.
 
-\begin{figure}[b!]  % replace 't' with 'b' to \centering
+\begin{figure}[t!]  % replace 't' with 'b' to \centering
 	\centering
 	\hspace{+0.65in} 
 	\includegraphics[width=\textwidth]{cr.png}
@@ -193,11 +200,17 @@ The shutdown margin (SDM) is the amount of reactivity by which a full reactor co
 
 Interference between control rods (CRs) or shadowing effects occur when one 
 (or more) control rod impacts the reactivity worth of another control rod in 
-the surroundings. Thus, the shadowing effect appears when the combined rod worth
+the surroundings. 
+The insertion of a CR depresses the neutron flux
+in its vicinity and makes the curvature of the neutron flux greater. The gradient
+of the neutron flux will contrarily increase at a radial distance. The CRs, distributed in the core,
+will distort the neutron flux around each other and will impact the reactivity worth.
+The term ``shadowing effect" has been used to describe this \cite{oka2014nuclear}.
+The shadowing effect appears when the combined rod worth
 is less than the sum of the individual worths. Meanwhile, anti-shadowing is observed 
 when the combined rod worth is greater than the sum of the individual worths.
-The core height-to-diameter ratio (H/D) and the three-dimensional configuration 
-of the CRs affect the degree of the interference between CRs \cite{girardin2007control}. 
+The core height-to-diameter ratio (H/D), CR locations, and the three-dimensional configuration 
+of the CRs affect the degree of the interference between CRs \cite{oka2014nuclear,girardin2007control}. 
 
 The amplification factor of the i$^{th}$ CR (A$_{CRi}$) helps to evaluate the shadowing effects between CR clusters. The A$_{CRi}$ is calculated by equation~\ref{Equ:3} \cite{girardin2007control,vcerba2017optimization}, where $\Delta\rho$$_{CR(1,2,\ldots N)}$ is the total worth of all CRs (from $1$ to $N$), $\Delta\rho$$_{CR(1,2,\ldots N-i)}$ is the total worth of all CRs except the i$^{th}$ rod, and $\Delta\rho$$_{CRi}$ is the worth of the i$^{th}$ rod:
 
@@ -206,7 +219,7 @@ The amplification factor of the i$^{th}$ CR (A$_{CRi}$) helps to evaluate the sh
 {{A}_{CRi}}=\dfrac{{{\Delta}{\rho}_{CR(1,2,\ldots N)}}-{{\Delta}{\rho}_{CR(1,2,\ldots N-i)}}}{{\Delta}{\rho}_{CRi}}.
 \end{equation}
 
-If A$_{CRi}$ is $<$1, the CRW is reduced due to shadowing effects, but if A$_{CRi}$ is $>$1, the CRW is amplified and anti-shadowing effects occur. A$_{CRi}$ = 1 means no shadowing effects occur.
+If A$_{CRi}$ is $<$1, the CRW is reduced due to shadowing effects, but if A$_{CRi}$ is $>$1, the CRW is amplified and anti-shadowing effects occur \cite{girardin2007control}. A$_{CRi}$ = 1 means no shadowing effects occur.
 
 \subsubsection{Integral and differential control rod worth}
 
