@@ -22,6 +22,8 @@ The density and volume of the fuel salt are 3.3 g/cm$^{3}$ and 52.9 m$^3$,
 respectively. The liquid fuel salt circulates continuously through the channels
 that pierce the graphite hexagonal prisms. The core is surrounded by 
 axial and radial graphite reflectors to minimize the neutron leakage.
+We adopted the same graphite density reported in the original SD-TMSR paper \cite{li_optimization_2018}.
+Just have one sentence state it somewhere.
 A 10-cm-thick B$_4$C cylinder surrounds the core to shield against neutrons and heat.
 Finally, the SD-TMSR pressure vessel holds all reactor components and is made of 
 a Hastelloy N alloy. The main characteristics of the SD-TMSR are 
@@ -173,7 +175,7 @@ control rods located at the same distance from the fuel channel center.
 \section{Methodology and tools} \label{Methodology-and-tools}
 \subsection{Control rod design evaluation}
 In this work, SERPENT-2 \cite{leppanen2014serpent} is used to 
-perform steady state calculations for the full core of the SD-TMSR with 
+perform steady-state calculations for a full 3D model of the SD-TMSR with 
 the suggested control rod design. We adopted the ENDF-VII.0 cross section library 
 for all calculations in the present work. The results demonstrated in this study were obtained after full-core calculations simulating 25$\times$10$^6$ active neutron histories per cycle. Simulations consisted in 500 active cycles of 5$\times$10$^4$ neutrons subdivided in 8 parallel tasks. Each simulation skipped 50 inactive cycles before beginning active tallies to allow for the convergence of the fission source distribution. Convergence has been checked through the fission source entropy. The statistical error in $k_{eff}$ was $\leq$ $25$ $pcm$.
 
@@ -222,7 +224,7 @@ The excess reactivity $\rho$$_e$ is the reactivity of the core when all control 
 {{\rho}_{e}}=\dfrac{{k_{eff}}-1}{{k_{eff}}{{\beta}_{eff}}}.
 \end{equation}
 
-The effective delayed neutron fraction is calculated by the adjoint-weighted time constants using a perturbation technique in SERPENT-2 \cite{leppanen2014calculation} and it accounts for the steady state of the fuel salt.
+The effective delayed neutron fraction is calculated by the adjoint-weighted time constants using a perturbation technique in SERPENT-2 \cite{leppanen2014calculation} and it accounts for the steady-state of the fuel salt.
 
 \subsubsection{The control rod worth (CRW)}
 
@@ -284,7 +286,7 @@ fraction of delayed neutrons at the $j$$^{th}$ step, and $N$ is the number of st
 {{\Delta}{\rho}_{j}}=\sum_{j=1}^{N}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}}.
 \end{equation}
 
-Equation~\ref{Equ:5} is used to calculate the differential CRW, where 
+Equation~\ref{Equ:5} is used to calculate the theoretical differential CRW, where 
 $\Delta Z$ is the length of rod inserted:
 
 \begin{equation}
