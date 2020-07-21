@@ -1,7 +1,9 @@
 \section{Conclusion} \label{Conclusion}
-In the current work, we proposed a reactivity control system design for the 
+
+The online reprocessing and refueling system is designed to operate as a long-term reactivity control in the MSRs. However, we cannot rely on online reprocessing to adjust reactivity quickly. Additionally, the Nuclear Regulatory Commission (NRC) prescribes that one of two independent reactivity control systems should use control rods. Consequently, we proposed a reactivity control system design based on control rods in addition to the 
+online feed system reactivity control in the 
 Single-fluid Double-zone Thorium-based Molten Salt Reactor (SD-TMSR). The 
-design has been evaluated at the startup for the full-core geometry using the
+design has been evaluated at the startup for a full 3D model of the SD-TMSR using the
 SERPENT-2 Monte-Carlo code. We considered three startup fuel salt compositions:
 (1) $^{232}$Th as fertile and $^{233}$U as fissile material; 
 (2) $^{232}$Th and Pu, extracted from \gls{LWR} \gls{SNF}; (3) 
@@ -27,7 +29,7 @@ spectrum of the SD-TMSR core started with TRU.
 
 In case of malfunction of the other CR clusters (e.g., stuck in the upper 
 position), the outer ring of the CSD failed to counteract the excess 
-reactivity of the core initially loaded with reactor-grade Pu and TRU elements.
+reactivity of the core initially loaded with reactor-grade Pu and TRU elements. Therefore, the fuel salt must be drained into subcritical tanks to shut down the SD-TMSR.
 However, the worth of the outer ring of the CSD is sufficient 
 to compensate the excess reactivity for the core refueled by $^{233}$U.
 
@@ -49,10 +51,10 @@ absorption characteristics of each material.
 Finally, the proposed design of CRs successfully control the excess reactivity and enhance the safety aspects of the SD-TMSR.
 
 \section{Future work}
-The authors intend to evaluate the effect of fuel salt 
-burnup on the CRW. The depleted fuel composition will be obtained using a
+The authors intend to evaluate the effect of the fuel salt 
+depletion on the CRW. The depleted fuel composition will be obtained using a
 SERPENT-2 online reprocessing subroutine and 
-batch-wise tool SaltProc \cite{rykhlevskii_milestone_2019}. Additionally, the authors intend to investigate 
+batch-wise tool SaltProc \cite{rykhlevskii_arfc/saltproc_2018}. Additionally, the authors intend to investigate
 kinetic parameters' (effective delayed neutron fraction $\beta_{eff}$ and 
 effective delayed neutron precursor decay constant $\lambda_{eff}$) evolution 
 during the SD-TMSR operation. These parameters are crucial for accident 

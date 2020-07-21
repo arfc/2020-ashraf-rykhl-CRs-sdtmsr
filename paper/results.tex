@@ -1,13 +1,25 @@
 \section{Results and discussion} \label{Results-and-discussion}
 
+The SERPENT-2 is used to obtain the presented results.
+We use the ENDF-VII.0 cross section library for all calculations in the current work. The statistical error in $k_{eff}$ is $\leq$ $25$ $pcm$.
+The initial calculation state of a full 3D model of the SD-TMSR is identified by normal operation 
+conditions (see Table~\ref{tab:table1}) and fully withdrawn control rod 
+clusters. 
+To validate the proposed control rods 
+system we adopted the same operation conditions (as in the initial calculation 
+state) and changed the position of the control rod clusters along the $Z$ 
+direction.
+The obtained results including reactivity, control rod 
+worth, and interference effects (shadowing effects) are discussed below.
+
 \subsection{Excess reactivity}
 
-The excess reactivity $\rho$$_e$ is calculated at zero burnup (steady state 
+The excess reactivity $\rho$$_e$ is calculated at zero burnup (steady-state 
 calculation), when all control rods (CRs) are fully withdrawn. The $\rho_e$ for $^{233}$U, 
 reactor-grade Pu, and TRU used as initial fissile material are listed in Table~\ref{tab:excess}.
-The previously studied $^{233}$U case recorded the maximum reactivity
+The previously studied $^{233}$U case \cite{ashraf2020Strategies} recorded the maximum reactivity
 during 60 effective full-power years (EFPY) of reactor operation to be 
-$4.27\pm0.01$ $\$$ (see Figure~\ref{fig:keff_25}).
+$4.27\pm0.01$ $\$$ (see Figure~\ref{fig:keff_25} at $\approx$ 8 EFPY).
 The proposed reactivity control system must compensate such reactivity at startup and during burnup.
 \begin{figure}
 	\centering
@@ -157,12 +169,12 @@ graphite is relatively small ($0.357$). Results show that the inner ring of the 
 a worth almost equal to the worth of all other CRs together (SSD + CSD outer ring) regardless of 
 the absorbing material type (see Table~\ref{tab:worth}). This happens because the absorption cross section
 decreases with the energy of the incident neutron; for example, boron absorbs neutrons in the thermal spectrum much 
-greater than in the fast spectrum. Additionally, the maximum neutron flux is located in the central zone of the SD-TMSR (see Figure~\ref{fig:totalflux}); therefore the inner ring of the CSD has a worth higher than the worth of the outer ring of the CSD.
+greater than in the fast spectrum. Additionally, the maximum neutron flux is located in the central zone of the SD-TMSR (see Figure~\ref{fig:totalflux}); therefore, the inner ring of the CSD has a worth higher than the worth of the outer ring of the CSD.
 
 In case of malfunction of other CR clusters (e.g., stuck in the upper 
 position), the outer ring of the CSD will be able to compensate the excess reactivity of the core initially loaded by $^{233}$U.
 Meanwhile, it will fail to compensate the excess 
-reactivity of the core initially loaded by reactor-grade Pu and TRU elements.
+reactivity of the core initially loaded by reactor-grade Pu and TRU elements. In this unlikely case, the fuel salt must be drained into subcritical tanks to shut down the SD-TMSR.
 
 We separately calculated the worth of CSD2, CSD9, SSD1, and SSD4 clusters (i.e., clusters located in the center and at the boundary between the core
 zones, see Figure~\ref{fig:core_25}) to investigate the variation of CRW with the position in the inner core.
@@ -254,7 +266,7 @@ different absorbing materials. The results show that all absorbing materials
 have almost the same integral rod worth in the upper half of the core 
 ($<250$ cm from the upper boundary of the core). Further insertion of the 
 CRs demonstrates that the strongest absorber, B$_4$C-90 outperforms other materials.
-Notably, all results are based on steady state calculations. 
+Notably, all results are based on steady-state calculations. 
 
 \begin{figure}
 	\centering
