@@ -1,32 +1,20 @@
 \section{Results and discussion} \label{Results-and-discussion}
 
-The SERPENT-2 is used to obtain the presented results.
+The SERPENT-2 is used to obtain all presented results.
 We use the ENDF-VII.0 cross section library for all calculations in the current work. The statistical error in $k_{eff}$ is $\leq$ $25$ $pcm$.
 The initial calculation state of a full 3D model of the SD-TMSR is identified by normal operation 
 conditions (see Table~\ref{tab:table1}) and fully withdrawn control rod 
 clusters. 
-To validate the proposed control rods 
-system we adopted the same operation conditions (as in the initial calculation 
-state) and changed the position of the control rod clusters along the $Z$ 
-direction.
-The obtained results including reactivity, control rod 
-worth, and interference effects (shadowing effects) are discussed below.
+The obtained results including excess reactivity, control rod 
+worth, shutdown margin, interference effects (shadowing effects), etc. are discussed below.
 
 \subsection{Excess reactivity}
 
-The excess reactivity $\rho$$_e$ is calculated at zero burnup (steady-state 
+The excess reactivity $\rho$$_e$ is calculated by using equation~\ref{Equ:1} at zero burnup (steady-state 
 calculation), when all control rods (CRs) are fully withdrawn. The $\rho_e$ for $^{233}$U, 
 reactor-grade Pu, and TRU used as initial fissile material are listed in Table~\ref{tab:excess}.
-For $^{233}$U case \cite{ashraf2020Strategies} the maximum observed excess reactivity is $4.27\pm0.01$ $\$$ during 60 effective full-power years (EFPY) of operation (see Figure~\ref{fig:keff_25} at $\approx$ 8 EFPY).
+For $^{233}$U case \cite{ashraf2020Strategies} the maximum observed excess reactivity is $4.27\pm0.01$ $\$$ during 60 effective full-power years (EFPY) of operation (see Figure~\ref{fig:keff_25} (at $\approx$ 8 EFPY)).
 The proposed reactivity control system must compensate such reactivity at startup and during burnup.
-\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{keff_25.png}
-	\vspace{-0.5in}
-	\caption{Uncontrolled effective multiplication factor during 60 EFPY of reactor operation
-		including periodic $^{233}$U/$^{232}$Th insertion (confidence interval $\pm\sigma$ is shaded) \cite{ashraf2020whole}.} 
-	\label{fig:keff_25}
-\end{figure}
 
 \begin{table}  %[!hb]
 	\caption{The excess reactivity at startup for the SD-TMSR core with different initial fissile materials.}
@@ -40,6 +28,15 @@ The proposed reactivity control system must compensate such reactivity at startu
 	\end{tabularx}
 	\label{tab:excess}
 \end{table}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{keff_25.png}
+	\vspace{-0.5in}
+	\caption{Uncontrolled effective multiplication factor during 60 EFPY of reactor operation
+		including periodic $^{233}$U/$^{232}$Th insertion (confidence interval $\pm\sigma$ is shaded) \cite{ashraf2020whole}.} 
+	\label{fig:keff_25}
+\end{figure}
 
 \subsection{Control rod parameters}
 
@@ -155,7 +152,7 @@ herein and will be investigated in future work.
 The worth of the Control Safety Devices (CSD) clusters is $1.56$ times greater than 
 the worth of the Shutdown Safety Devices (SSD) system for all absorbing materials. Either CSD or SSD 
 clusters are able to shut down the reactor initially loaded by 
-$^{233}$U and reactor-grade Pu regardless the absorbing material type.
+$^{233}$U and reactor-grade Pu regardless of the absorbing material type.
 However, only SSD clusters made of B$_4$C-90 are able to shut down the SD-TMSR 
 initially loaded by transuranic (TRU) elements ($\rho_e$ is $15.38\pm0.04$ $\$$).
 The reason for this is the much larger 
@@ -179,7 +176,7 @@ We separately calculated the worth of CSD2, CSD9, SSD1, and SSD4 clusters (i.e.,
 zones, see Figure~\ref{fig:core_25}) to investigate the variation of CRW with the position in the inner core.
 The CRW decreases in the direction of the outer core zone. The outer core zone 
 has smaller moderator-to-fuel ratio ($0.86$) compared with the central zone 
-($2.8$); consequently, the neutron energy spectrum is faster in the peripheral 
+($2.80$); consequently, the neutron energy spectrum is faster in the peripheral 
 zone than in the center of the core degrading the CR's 
 absorption ability in that region.
 
@@ -195,8 +192,8 @@ SDM for the SD-TMSR core that is initially loaded with
 $^{233}$U and reactor-grade Pu. However, the SDMs for the TRU case are 
 negative or slightly positive (in B$_4$C-90 case); this makes the SSD clusters 
 unreliable to shut down the reactor loaded with TRU.
-As mentioned previously, the SSD clusters should 
-provide a sufficient positive SDM.
+For the TRU case, increasing the number of SSD clusters would provide a sufficient positive SDM.
+This should be carefully studied when designing the reactivity control system.
 
 \begin{table}  %[!hb]
 	\caption{The SDMs for the SD-TMSR core for different absorbing materials.}
@@ -223,7 +220,7 @@ ring, and SSD1 are slightly amplified due to the anti-shadowing effects. The
 anti-shadowing is observed when the combined rod worth is greater than the sum 
 of the individual worths. As listed in Tables~\ref{tab:worth} and ~\ref{tab:table25}, the strongest anti-shadowing effect occurred in 
 SSD4 and CSD9 clusters that are located at the boundary between the core zones 
-with different moderator-to-fuel ratios. This can be attributed to the fact that the SSD4 and CSD9 clusters are surrounded by fewer clusters compared with other clusters located in the inner zone of the SD-TMSR (see Figure~\ref{fig:core_25}). Consequently, low interference between the SSD4 and CSD9 clusters and other surrounding clusters is observed. The obtained results show a negligible relationship between the absorbing material type and the interference between the CR clusters (i.e., the A$_{CRi}$).
+with different moderator-to-fuel ratios. This can be attributed to the fact that the SSD4 and CSD9 clusters are surrounded by fewer clusters compared with other clusters located in the inner zone of the SD-TMSR (see Figure~\ref{fig:core_25}). Consequently, low interference between these SSD4 and CSD9 clusters and other surrounding clusters is observed. The obtained results show a negligible relationship between the absorbing material type and the interference between the CR clusters (i.e., the A$_{CRi}$).
 
 Insertion of the CR affects the neutron flux distribution, which is 
 the primary reason for the amplification of CRWs indicated in 

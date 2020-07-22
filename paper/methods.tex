@@ -1,7 +1,7 @@
 \section{Model description} \label{Model-description}
 \subsection{Reactor design}
 
-The Chinese Academy of Sciences started the program of Thorium Molten Salt Reactor (TMSR) in 2011 \cite{jiang2012advanced}, and many works have been done on the design of MSR and the use of Thorium with the Th-U fuel cycle \cite{li2015analysis}. Among them, the SD-TMSR is proposed in 2018 \cite{li_optimization_2018}, which is a graphite-moderated molten salt reactor with thermal power of 2,250 MW$_{th}$. The design of the SD-TMSR is inspired by the \gls{MSBR} \cite{robertson_conceptual_1971} and the \gls{TMSR} \cite{nuttin2005potential}, which combines the advantages of high breeding ratio (BR) in fast spectrum and low fissile inventory of $^{233}$U in thermal spectrum. SD-TMSR also offers a negative and strong temperature coefficient of reactivity \cite{li_optimization_2018}. Figure~\ref{fig:ff} illustrates the quarter-core view of the
+The Chinese Academy of Sciences started the program of Thorium Molten Salt Reactor (TMSR) in 2011 \cite{jiang2012advanced}, and many works have been done on the design of MSR and the use of Thorium with the Th-U fuel cycle \cite{li2015analysis}. Among them, the SD-TMSR is proposed in 2018 \cite{li_optimization_2018}, which is a graphite-moderated molten salt reactor with thermal power of 2,250 MW$_{th}$. The design of the SD-TMSR is inspired by the \gls{MSBR} \cite{robertson_conceptual_1971} and the \gls{TMSR} \cite{nuttin2005potential}, which combines the advantages of high breeding ratio (BR) in fast spectrum and low fissile inventory of $^{233}$U in thermal spectrum. The SD-TMSR also offers a negative and strong temperature coefficient of reactivity \cite{li_optimization_2018}. Figure~\ref{fig:ff} illustrates the quarter-core view of the
 SD-TMSR. The core of the 
 SD-TMSR is a right cylinder divided into an inner zone (486 fuel tubes) 
 and an outer zone (522 fuel tubes) to enhance breeding performance.
@@ -45,6 +45,8 @@ summarized in Table~\ref{tab:table1}.
 		Graphite density, g/cm$^3$             	    & 2.3	\\ 
 		Core diameter, cm								& 460  \\
 		Core height, cm									& 460  \\
+		Upper plenum, cm								& 30  \\
+		Lower plenum, cm								& 30  \\
 		Side length of the graphite hexagonal prism, cm   & 7.5 \\
 		Radius (inner fuel channel), cm							& 3.5  \\
 		Radius (outer fuel channel), cm							& 5  \\
@@ -84,15 +86,23 @@ In the present work, six different absorbing materials are considered based on t
 \end{figure}
 
 The assessment of the optimal absorber radius should be an important consideration. If the CR radius is too large, the absorber material is not effectively utilized, due to self-shielding. We changed the radius of the CR and calculated the corresponding $k_{eff}$ when all CRs were fully inserted. Figure~\ref{fig:Radius} illustrates the change of the $k_{eff}$ with the radius of the B$_4$C control rod. As shown in Figure~\ref{fig:Radius}, in the region between 0 and 0.75 cm, the $k_{eff}$ decreases sharply with increasing absorber radius. However, in the region between 0.75 and 1.0 cm, there is almost no change in the $k_{eff}$. This is because of the geometry self-shielding of the neutron flux; beyond r = 0.75 cm, the $^{10}$B atoms in the central zone of the CR have relatively low chance for neutron capture.
-From the obtained results, the control rod is a cylinder with a radius of 0.75 cm and a height of 520 cm. 
+From the obtained results, we proposed the control rod as a cylinder with a radius of 0.75 cm and a height of 520 cm (core height in addition to upper and lower plenums).
 The absorbing material is surrounded by a 0.25-cm-thick cladding made of AIM1 
 (15Cr-15Ni) steel alloy \cite{SERAN2017285} and the guide tube is made of 
 SiC structural material (see Figure~\ref{fig:cr}). We simulated a 0.1-cm-thick gap between the 
-cladding and guide tube to facilitate the control rod movement.
+cladding and guide tube to facilitate the control rod movement. However, absorber-cladding gap was neglected for simplicity.
 All densities of rod materials are listed in
 Table~\ref{tab:table111}.
 
-\begin{table}
+\begin{figure}[t!]  % replace 't' with 'b' to \centering
+	\centering
+	\hspace{+0.65in} 
+	\includegraphics[width=\textwidth]{cr.png}
+	\caption{Cross section of the B$_4$C control rod.}
+	\label{fig:cr}
+\end{figure}
+
+\begin{table}[b!]
 	\caption{The densities of the absorbing materials.}
 	\vspace{0.05in}
 	\begin{center}	
@@ -129,15 +139,7 @@ Table~\ref{tab:table111}.
 %
 %A single-pin design is a semi 1D approach preventing any interference caused by the self-shielding or geometrical influences of the surrounding absorber pins.
 
-\begin{figure}[t!]  % replace 't' with 'b' to \centering
-	\centering
-	\hspace{+0.65in} 
-	\includegraphics[width=\textwidth]{cr.png}
-	\caption{Cross section of the B$_4$C control rod.}
-	\label{fig:cr}
-\end{figure}
-
-Since the total number and distribution of the control assemblies in the SD-TMSR have not been determined, we propose an original distribution as a starting point of this analysis. We added clusters consisting of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods can move together as one group (cluster). Figure~\ref{fig:graphite_elemen} demonstrates the plan view of the graphite element with the control rods. We propose 25 graphite elements with control rods: 16 Control Safety Devices (CSD) and 9 Shutdown Safety Devices (SSD).
+Since the total number and distribution of the control assemblies in the SD-TMSR have not been determined, we propose an original distribution as a starting point of this analysis. We added clusters consisting of four control rods to specific graphite hexagonal prisms (elements) in the SD-TMSR core. Every four control rods can move together as one group (cluster). Figure~\ref{fig:graphite_elemen} demonstrates the plan view of the graphite element with the control rods. We propose 25 graphite elements with control rods: 16 Control Safety Devices (CSD) and 9 Shutdown Safety Devices (SSD). We distributed the 25 graphite elements with control rod clusters uniformly in the inner core of the SD-TMSR, in which the moderator-to-fuel ratio is high.
 
 \begin{figure}[t!]  % replace 't' with 'b' to \centering
 	\centering
@@ -158,8 +160,6 @@ Since the total number and distribution of the control assemblies in the SD-TMSR
 Figure~\ref{fig:core_25} illustrates the numbering scheme of control rod 
 clusters in the SD-TMSR core.
 The CSD1-16 clusters are represented as yellow and distributed as two rings: inner and outer (peripheral) ring. The inner ring includes CSD from 1 to 6, while the outer ring includes CSD from 7 to 16. Red stands for SSD1-9 clusters.
-We distributed the graphite elements with control rod clusters uniformly in 
-the inner core of the SD-TMSR, in which the moderator-to-fuel ratio is high.
 The selected core segment at the upper left corner of 
 Figure~\ref{fig:core_25} shows that both CSD and SSD clusters consist of four 
 control rods located at the same distance from the fuel channel center.
@@ -223,7 +223,7 @@ The excess reactivity $\rho$$_e$ is the reactivity of the core when all control 
 {{\rho}_{e}}=\dfrac{{k_{eff}}-1}{{k_{eff}}{{\beta}_{eff}}}.
 \end{equation}
 
-The effective delayed neutron fraction is calculated by the adjoint-weighted time constants using a perturbation technique in SERPENT-2 \cite{leppanen2014calculation} and it accounts for the steady-state of the fuel salt.
+The effective delayed neutron fraction is calculated by the adjoint-weighted time constants using a perturbation technique in SERPENT-2 \cite{leppanen2014calculation} and it accounts for the steady state of the fuel salt.
 
 \subsubsection{The control rod worth (CRW)}
 
@@ -253,7 +253,7 @@ The insertion of a CR depresses the neutron flux
 in its vicinity and makes the curvature of the neutron flux greater. The gradient
 of the neutron flux will contrarily increase at a radial distance. The CRs, distributed in the core,
 will distort the neutron flux around each other and will impact the reactivity worth.
-The term ``shadowing effect" has been used to describe this \cite{oka2014nuclear}.
+The term ``shadowing effect" has been used to describe this phenomenon \cite{oka2014nuclear}.
 The shadowing effect appears when the combined rod worth
 is less than the sum of the individual worths. Meanwhile, anti-shadowing is observed 
 when the combined rod worth is greater than the sum of the individual worths.
