@@ -1,0 +1,408 @@
+
+%
+% Copyright 2007, 2008, 2009 Elsevier Ltd
+%
+% This file is part of the 'Elsarticle Bundle'.
+% ---------------------------------------------
+%
+% It may be distributed under the conditions of the LaTeX Project Public
+% License, either version 1.2 of this license or (at your option) any
+% later version.  The latest version of this license is in
+%    http://www.latex-project.org/lppl.txt
+% and version 1.2 or later is part of all distributions of LaTeX
+% version 1999/12/01 or later.
+%
+% The list of all files belonging to the 'Elsarticle Bundle' is
+% given in the file `manifest.txt'.
+%
+
+% Template article for Elsevier's document class `elsarticle'
+% with numbered style bibliographic references
+% SP 2008/03/01
+%
+%
+%
+% $Id: elsarticle-template-num.tex 4 2009-10-24 08:22:58Z rishi $
+%
+%
+%\documentclass[preprint,12pt]{elsarticle}
+\documentclass[answers,11pt]{exam}
+
+% \documentclass[preprint,review,12pt]{elsarticle}
+
+% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn
+% for a journal layout:
+% \documentclass[final,1p,times]{elsarticle}
+% \documentclass[final,1p,times,twocolumn]{elsarticle}
+% \documentclass[final,3p,times]{elsarticle}
+% \documentclass[final,3p,times,twocolumn]{elsarticle}
+% \documentclass[final,5p,times]{elsarticle}
+% \documentclass[final,5p,times,twocolumn]{elsarticle}
+
+% if you use PostScript figures in your article
+% use the graphics package for simple commands
+% \usepackage{graphics}
+% or use the graphicx package for more complicated commands
+\usepackage{graphicx}
+% or use the epsfig package if you prefer to use the old commands
+% \usepackage{epsfig}
+
+% The amssymb package provides various useful mathematical symbols
+\usepackage{amssymb}
+% The amsthm package provides extended theorem environments
+% \usepackage{amsthm}
+\usepackage{amsmath}
+
+% The lineno packages adds line numbers. Start line numbering with
+% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+% for the whole article with \linenumbers after \end{frontmatter}.
+\usepackage{lineno}
+
+% I like to be in control
+\usepackage{placeins}
+
+% natbib.sty is loaded by default. However, natbib options can be
+% provided with \biboptions{...} command. Following options are
+% valid:
+
+%   round  -  round parentheses are used (default)
+%   square -  square brackets are used   [option]
+%   curly  -  curly braces are used      {option}
+%   angle  -  angle brackets are used    <option>
+%   semicolon  -  multiple citations separated by semi-colon
+%   colon  - same as semicolon, an earlier confusion
+%   comma  -  separated by comma
+%   numbers-  selects numerical citations
+%   super  -  numerical citations as superscripts
+%   sort   -  sorts multiple citations according to order in ref. list
+%   sort&compress   -  like sort, but also compresses numerical citations
+%   compress - compresses without sorting
+%
+% \biboptions{comma,round}
+
+% \biboptions{}
+
+
+% Katy Huff addtions
+\usepackage{xspace}
+\usepackage{color}
+
+\usepackage{multirow}
+\usepackage[hyphens]{url}
+
+
+\usepackage[acronym,toc]{glossaries}
+\include{acros}
+
+\makeglossaries
+
+%\journal{Annals of Nuclear Energy}
+
+\begin{document}
+
+%\begin{frontmatter}
+
+% Title, authors and addresses
+
+% use the tnoteref command within \title for footnotes;
+% use the tnotetext command for the associated footnote;
+% use the fnref command within \author or \address for footnotes;
+% use the fntext command for the associated footnote;
+% use the corref command within \author for corresponding author footnotes;
+% use the cortext command for the associated footnote;
+% use the ead command for the email address,
+% and the form \ead[url] for the home page:
+%
+% \title{Title\tnoteref{label1}}
+% \tnotetext[label1]{}
+% \author{Name\corref{cor1}\fnref{label2}}
+% \ead{email address}
+% \ead[url]{home page}
+% \fntext[label2]{}
+% \cortext[cor1]{}
+% \address{Address\fnref{label3}}
+% \fntext[label3]{}
+
+\title{Preliminary design of control rods in the single-fluid double-zone thorium molten salt reactor (SD-TMSR)\\
+\large Response to Review Comments}
+\author{O. Ashraf, Andrei Rykhlevskii, G. V. Tikhomirov, Kathryn D. Huff}
+
+% use optional labels to link authors explicitly to addresses:
+% \author[label1,label2]{<author name>}
+% \address[label1]{<address>}
+% \address[label2]{<address>}
+
+
+%\author[uiuc]{Kathryn Huff}
+%        \ead{kdhuff@illinois.edu}
+%  \address[uiuc]{Department of Nuclear, Plasma, and Radiological Engineering,
+%        118 Talbot Laboratory, MC 234, Universicy of Illinois at
+%        Urbana-Champaign, Urbana, IL 61801}
+%
+% \end{frontmatter}
+\maketitle
+\section*{Review General Response}
+We would like to thank the reviewers for their detailed assessment of
+this paper. Your suggestions, clarifications, and comments have resulted in 
+changes which certainly improved the paper.
+
+
+\begin{questions}
+        \section*{Reviewer 1}
+
+        \question The manuscript investigated preliminary design of control rods in the SD-TMSR. Several issues should be clarified and discussed in detail before it can be published.
+
+        \begin{solution}
+                Thank you very much for these comments. We appreciate your detailed review, which has certainly improved the paper. The manuscript has been enhanced and more detail is described regarding these changes in the specific comment responses below.
+        \end{solution}
+
+        %---------------------------------------------------------------------
+
+        \question  The total demands of different control rods systems should be discussed first. According to the demands of nuclear safety regulations, two different shutdown systems of SSD and CSD must be adopted in a reactor design to ensure the reactor safe operation, to adjust power and to ensure the shutdown of reactor etc. All the shutdown systems must meet the shutdown margin of the reactor. For the CSD, it should contain the reactivity adjusting rods, reactor safety rods and reactivity compensation rods etc. Hence, the sizes of different control rods should be further optimized to realize their functional properties.
+        \begin{solution}
+        		 
+        		Thank you for the excellent point. The demands of different control rods systems have been discussed in the manuscript. Optimization of different control rods sizes will be done in our future work.
+        		        		
+        		The following paragraph has been added to the manuscript to clarify this point:\\
+        		
+The control rod worth and its efficiency in compensating excess reactivity is a subject of significant interest since it directly affects the reactor safety \cite{atkinson2019small}. Additionally, the Nuclear Regulatory Commission (NRC) prescribes that one of two independent reactivity control systems should use control rods (Criterion 26) \cite{nuclear1987standard}. According to the demands of nuclear safety regulations, two independent shutdown systems must be adopted in reactor design to ensure the reactor safe operation, to adjust power, and to ensure the shutdown of the reactor anytime independently. All the shutdown systems must be sufficient to shut down the reactor at any time during operation.
+        		    
+        \end{solution}
+
+        %---------------------------------------------------------------------
+        \question  Although Xe can be online removed during regular operation, it may remain in the core in the event of the bubble system failure. Hence, the Xenon poison effect of the SD-TMSR should be assessed for the designs of SSD and CSD. 
+        \begin{solution}
+		         
+		         Thank you for the excellent point. The Xenon poison effect is not considered in this paper, but we intend to study this phenomenon in our upcoming article when calculating the worth of the control rods during fuel depletion. The present work focuses on the steady-state calculations without taking into account fuel salt depletion.
+		         
+		         The following sentence has been added to the future work to clarify this point:\\
+		         
+		         The Xenon poison effect will be studied in our upcoming article when calculating the worth of the control rods during fuel depletion.
+		          
+		           
+    
+        \end{solution}
+
+        %---------------------------------------------------------------------
+	
+	\question If an extreme accident of the fuel salt solidification happens, the temperature of the fuel salt would drop significantly to about 300 K. A large positive reactivity may occur due to the large negative temperature feedback coefficient of the SD-TMSR. Hence, the control demands of both SSD and CSD should be assessed to meet all possible extreme accident conditions.
+	\begin{solution}
+		
+	We appreciate your detailed review.
+	Indeed rapid solidification would require a very rapid decline in temperature precluded by the same negative temperature feedback coefficient due to a reactivity insertion transient at 300K. That is, the speed of salt temperature reduction is slowed, throughout any fuel cooling transient, by the negative temperature feedback coefficient. The feedback coefficient does not suddenly start when the temperature of the salt reaches a specific temperature. Indeed, a temperature of 300K could not be achieved while power is still being generated in the core. It could likely only be reached after the post-shutdown decay heat has reduced substantially due to time. If that is the case, then the reactor must have already been shut down.
+	
+	
+	
+	\end{solution}
+%---------------------------------------------------------------------
+
+	\question Figure~2 shows the neutron saturation thickness of B4C. However, the saturation thicknesses for different neutron absorbing materials may be significantly different from the B4C material, and the saturation thickness of same material is also inconsistent at different locations in the core. Hence, please evaluate the saturation thickness of different materials at different locations of the core.
+\begin{solution}
+	
+ 	 Thank you for your suggestion. The evaluation of the saturation thicknesses of different absorbers is illustrated in Figure~2. 	
+	 We changed the radius of the CR and calculated the corresponding $k_{eff}$ when all CRs were fully inserted for all different materials. Results showed that in the region between 0.0 and 0.75 cm, the $k_{eff}$ decreases sharply with increasing absorber radius for all absorbers. However, for the B$_4$C control rod, in the region between 0.75 and 1.0 cm, there is almost no change in the $k_{eff}$. This is because of the geometry self-shielding. All other absorbers not significantly affected by the self-shielding phenomenon in the region of study (0.0$<$r$<$1.0 cm). 
+	 
+	 The following paragraph has been added to the text to clarify this point:\\
+	
+     The assessment of the optimal absorber radius should be an essential consideration. If the CR radius is too large, the absorber material is not effectively utilized due to self-shielding. We changed the radius of the CR and calculated the corresponding $k_{eff}$ when all CRs were fully inserted. Figure~2 illustrates the change of the $k_{eff}$ with the radius of the control rod for all different materials. As shown in Figure~2, in the region between 0.0 and 0.75 cm, the $k_{eff}$ decreases sharply with increasing absorber radius for all absorbers. However, for the B$_4$C control rod, in the region between 0.75 and 1.0 cm, there is almost no change in the $k_{eff}$. This is because of the geometry self-shielding of the neutron flux; beyond r = 0.75 cm, the $^{10}$B atoms in the central zone of the CR have a relatively low chance for neutron capture. In contrast, other absorbers are not affected by the self-shielding phenomenon in the considered region (0.0$<$r$<$1.0 cm). From the obtained results, we proposed the control rod as a cylinder with a radius of 0.75 cm and a height of 520 cm (core height in addition to upper and lower plenums).
+	 
+     
+\end{solution}
+%---------------------------------------------------------------------
+
+\question As shown in Figure~3, only a small thickness of gap of 0.1 cm is designed in a control rod, which would not meet the heat release requirements. It is necessary to evaluate the thermal emission behavior of the control rods, since the control rod material would release a large amount of heat after absorbing neutrons.
+\begin{solution}
+	
+    Thank you for the suggestion. Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work.
+	
+	The following paragraph has been added to the text to clarify this point:\\
+	
+	Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work.
+	
+	
+\end{solution}
+%---------------------------------------------------------------------
+
+\question Table~3 lists the initial excess reactivity for different fissile fuel component. Please clarify the corresponding actual reactivity of 1 \$ for each fissile fuel, since all of them may be significantly different from each other. In addition, why is the initial excess reactivity of TRU fuel significantly higher than that of 233U? Also, the large initial excess reactivity of TRU fuel may affect the total SDMs of the different control rods in Table 6.
+\begin{solution}
+	
+	Thank you for the questions. Now all initial excess reactivities are listed in Table~5 in [pcm] unit. Regarding the initial excess reactivity of TRU fuel; TRU has a great amount of thermal neutron absorbers, therefore, the SD-TMSR becomes subcritical relatively quickly. Previous studies showed that for promising fueling scenarios (e.g., TRU/$^{232}$Th), large excess reactivity is required for long-term core operation \cite{ashraf2020Strategies,betzler2017assessment,rykhlevskii_fuel_2019}. The proposed reactivity control system must compensate such reactivity at startup and during burnup.
+	
+	The following sentence has been added to the conclusion to clarify this point:\\
+	
+	TRU has a great amount of thermal neutron absorbers, therefore, the SD-TMSR becomes subcritical relatively quickly. Previous studies showed that for promising fueling scenarios (e.g., TRU/$^{232}$Th), large excess reactivity is required for long-term core operation \cite{ashraf2020Strategies,betzler2017assessment,rykhlevskii_fuel_2019}. The proposed reactivity control system must compensate such reactivity at startup and during burnup.
+	
+	
+\end{solution}
+%---------------------------------------------------------------------
+
+\question In section of 4.2.1, the total control rod value for different starting fissile fuel conditions is discussed. However, these values for the reactor-grade Pu and TRU are not found in Table~4 and Table~5. Please clarify the data.
+\begin{solution}
+	
+	Thank you for catching this. Table~8 lists the total CRW of all CRs, CSD, and SSD for SD-TMSR initially loaded by reactor-grade Pu and TRU. 
+	
+	
+\end{solution}
+%---------------------------------------------------------------------
+
+\question For the reactivity adjustment in a reactor, it should be only done by the special adjusting rods rather than by all the control rods. Hence, Figure~10 should only give the differential worth of the adjusting rods. The function and corresponding demand of different control rods should be discussed in detail. In addition, it can be seen from Figure~10 that the differential worth of CSD overturns significantly at about 100 cm, which would not accord with the actual condition. Please clarify the reasons of this phenomenon.
+\begin{solution}
+	
+	Thank you for catching this. The differential CRWs for only CSD clusters are demonstrated in Figure~11. The function and corresponding demand of different control rods have been discussed in the manuscript. Regarding overturns; sorry for that, we recalculated the differential worth at 100 cm and found a computational error. Now it is corrected in Figure~11. 	
+	
+	The following sentence has been added to the conclusion to clarify this point:\\
+	
+The integral CRWs are calculated for three different systems: all CRs, CSD, and SSD systems. We calculated the differential CRWs for the CSD system only because special adjusting rods (i.e., CSD) were assumed to adjust the reactivity.
+	
+	
+\end{solution}
+%---------------------------------------------------------------------
+
+\question Please assess whether the control rods would still meet the shutdown requirement if a single control rod with maximum worth is withdrawn.
+\begin{solution}
+	
+	Thank you for your suggestion. Table~10 lists the shutdown margin provided by all SSD clusters when a single SSD cluster with maximum worth (i.e., SSD1) is withdrawn. As shown in Table~10 the control rods still meet the shutdown requirement even in the case of SSD1 cluster failure for the SD-TMSR core that is initially loaded with $^{233}$U and reactor-grade Pu. For the TRU case, increasing the number of SSD clusters would provide a sufficient positive SDM.
+	
+		The following paragraph has been added to the manuscript to clarify this point:\\
+	
+	Table~10 lists the shutdown margin provided by all SSD clusters when a single SSD cluster with maximum worth (i.e., SSD1) is withdrawn. As shown in Table~10 the control rods still meet the shutdown requirement even in the case of SSD1 cluster failure for the SD-TMSR core that is initially loaded with $^{233}$U and reactor-grade Pu. For the TRU case, increasing the number of SSD clusters would provide a sufficient positive SDM. This should be carefully studied when designing the reactivity control system. 
+	
+	
+\end{solution}
+%---------------------------------------------------------------------
+
+        \section*{Reviewer 2}
+
+        %---------------------------------------------------------------------
+        \question The paper is well written, well structured, and covers an important topic. I did not find even a typo. It certainly ought to be published. However, since the cores investigated are static, the reactivity in \$ can be difficult to interpret or even misleading. I suggest adding the values of $\beta$$_{eff}$ [pcm] used in Equation 1, for each of the different fuels, into the paper, so readers can make their own conclusions about the circulation $\beta$$_{eff}$ and this the \$ values. Additionally, I think it would be beneficial for completeness of the paper to include isotopic vectors of the different fuels.
+        
+        \begin{solution}
+        Thank you very much for these comments. We appreciate your detailed review, which has certainly improved the paper. Now all values of reactivity and SDMs are mentioned in the manuscript in [pcm] unit. Additionally, the isotopic vectors of the different fuels are listed in Table~1 and Table~2, respectively.
+        
+        \end{solution}
+
+        %---------------------------------------------------------------------
+
+        \question The models ran were not published (e.g. on github), so it is impossible to independently verify the work, but, alas, this has become a troubling standard in the field.
+        
+        \begin{solution}
+                 Thank you very much for your interest in our work. Please, follow our scientific group ``Advanced Reactors and Fuel Cycles -
+                 ARFC`` on Github on this link: https://github.com/arfc.   
+
+                 
+        \end{solution}
+
+      
+ %--------------------------------------------------------------------
+\section*{Reviewer 3}
+        %--------------------------------------------------------------------
+        \question This manuscript describes the design of control rods for a graphite moderated molten salt reactor. It is appropriately structured and well written, but it is difficult to discern the main takeaways from this work as it reads like a progress report. The discussion omits some information regarding the design of the control rods and feasibility of geometries. These issues are captured in the below comments.
+        
+        \begin{solution}
+        	 Thank you very much for these comments. We appreciate your detailed review, which has certainly improved the paper. The manuscript has been enhanced and more detail is described regarding these changes in the specific comment responses below.
+        	
+
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question  The statement, " Safety is one of the primary goals of the MSR system, and the SD-TMSR, in particular, requires further investigation to support a licensing case" is obvious.
+        
+        \begin{solution}
+             
+              Thank you for the comment. The statement has been removed from the text.
+              
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question How is 0.1 cm a reasonable gap between the cladding and guide tube?
+        \begin{solution}
+        	
+Thank you for the question. Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work.
+
+The following paragraph has been added to the text to clarify this point:\\
+
+Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work.
+
+
+
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question Why do the four rods break the 60-degree symmetry of the fuel assemblies?
+        
+        \begin{solution}
+                 Thank you for the excellent point. We calculated the shutdown margin (SDM) and the amplification factor (A$_{CRi}$) for three different configurations of the CRs in the graphite element for the SD-TMSR initially loaded by TRU (maximum excess reactivity at startup) as demonstrated in Figure~8. Results showed that three rods in the graphite element save the 60-degree symmetry of the component; however, the SDM in such a case is $-1058$ $pcm$ and the A$_{CRi}$ is $1.09$. In the case of four rods, the 60-degree symmetry of the graphite element is broken; however, the SDM is about $228$ $pcm$, and the A$_{CRi}$ is $0.97$. Finally, when six rods are distributed evenly in the graphite element, both symmetry and relatively high SDM are obtained ($598$ $pcm$), but the A$_{CRi}$ is about $0.29$, which means high interference between rods due to the shadowing effect in this case. Therefore the 3- and 6-CR configurations are ineffectual due to the negative SDM and the low A$_{CRi}$, respectively. The 4-CRs configuration is adopted in the current study since the SDM is positive, and almost no shadowing effect has been observed.
+                 
+                 The following paragraph has been added to the manuscript:\\
+               
+We calculated the shutdown margin (SDM) and the amplification factor (A$_{CRi}$) for three different configurations of the CRs in the graphite element for the SD-TMSR initially loaded by TRU (maximum excess reactivity at startup) as demonstrated in Figure~8. Results showed that three rods in the graphite element save the 60-degree symmetry of the component; however, the SDM in such a case is $-1058$ $pcm$ and the A$_{CRi}$ is $1.09$. In the case of four rods, the 60-degree symmetry of the graphite element is broken; however, the SDM is about $228$ $pcm$, and the A$_{CRi}$ is $0.97$. Finally, when six rods are distributed evenly in the graphite element, both symmetry and relatively high SDM are obtained ($598$ $pcm$), but the A$_{CRi}$ is about $0.29$, which means high interference between rods due to the shadowing effect in this case. Therefore the 3- and 6-CR configurations are ineffectual due to the negative SDM and the low A$_{CRi}$, respectively. The 4-CRs configuration is adopted in the current study since the SDM is positive, and almost no shadowing effect has been observed.
+
+
+                 
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question  How are the 16 control safety devices and 9 shutdown safety devices selected?
+        \begin{solution}
+        	Thank you for the question. Since the total number and distribution of the control assemblies in the SD-TMSR have not been determined, \v{C}erba's methodology \cite{vcerba2017optimization} helped us as a starting point of this analysis. The control rod cluster with the maximum worth (i.e., SSD1), which located in the center of the core is selected as a shutdown safety device.
+        	Then it followed by the CSD inner ring, SSD ring, and the CSD outer ring. Therefore, 16 CSD and 9 SSD are uniformly distributed in the inner core of the SD-TMSR, in which the moderator-to-fuel ratio is high. We taking into account the distance between CR clusters to avoid the shadowing effects.
+        	
+
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question Are control rod guide tubes voided?
+        \begin{solution}
+                Thank you for your comment. No, the control rod guide tubes are filled by fuel salt. It is necessary to remove the heat released from the CRs after absorbing neutrons. Notably, for example, the CRs made of $B_{4}C$ (lower density among the absorbers in this study) will not float in the fuel salt since the existence of the AIM1 cladding will make the total density $\sim 4.92$ $g/cm^3$ $>$ the density of the fuel salt.
+                 
+                
+              
+                
+                
+                
+
+        \end{solution}
+
+        %--------------------------------------------------------------------
+        \question Does flux shape also contribute to the reactivity worth of the inner ring of the CSD?
+        \begin{solution}
+                 Thank you for your question. The inner ring of the CSD is located in the central zone of the SD-TMSR core, in which the volume ratio between molten salt and graphite is relatively small ($0.357$). The inner ring of the CSD has significantly large reactivity worth due to much greater neutron flux at the center of the core than on the periphery.
+
+        \end{solution}
+
+ %--------------------------------------------------------------------
+\question Please speak more to the anti-shadowing effects observed for CSD9 and SSD4.
+\begin{solution}
+	Thank you for your suggestion. 
+	
+	The following paragraphs have been added to the manuscript:\\
+	
+	As listed in Tables~6 and ~7, the strongest anti-shadowing effect occurred in 
+	SSD4 and CSD9 clusters that are located at the boundary between the core zones 
+	with different moderator-to-fuel ratios. This happened because fewer clusters surround the SSD4 and CSD9 clusters compared with other clusters located in the inner zone of the SD-TMSR (see Figure~5). Consequently, low interference between these SSD4 and CSD9 clusters and other surrounding clusters is observed. The obtained results show a negligible relationship between the absorbing material type and the interference between the CR clusters (i.e., the A$_{CRi}$).
+	
+
+\end{solution}
+ %--------------------------------------------------------------------
+\question What is "sufficient positive SDM"? This phrase is unspecific. What is sufficient? Be more specific here.
+\begin{solution}
+	Thank you for your question. We considered the sufficient positive SDM to be 2$\beta$, where $\beta$ is the total delayed fraction. Thus, the sufficient positive SDM is $\sim$1300 $pcm$.
+	
+	The following phrase has been added to the manuscript:\\
+	
+	We considered the sufficient positive SDM to be 2$\beta$, where $\beta$ is the total delayed fraction. Thus, the sufficient positive SDM is $\sim$1300 $pcm$.
+	
+	
+
+\end{solution}
+        %--------------------------------------------------------------------
+
+        
+        
+\end{questions}
+\bibliographystyle{elsarticle-num}
+\bibliography{../2019-CRs}
+\end{document}
+
+%
+% End of file `elsarticle-template-num.tex'.

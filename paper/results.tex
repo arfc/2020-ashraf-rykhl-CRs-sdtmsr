@@ -11,10 +11,9 @@ worth, shutdown margin, interference effects (shadowing effects), etc. are discu
 \subsection{Excess reactivity}
 
 The excess reactivity $\rho$$_e$ is calculated by using equation~\ref{Equ:1} at zero burnup (steady-state 
-calculation), when all control rods (CRs) are fully withdrawn. The $\rho_e$ for $^{233}$U, 
+calculation), when all control rods are fully withdrawn. The $\rho_e$ for $^{233}$U, 
 reactor-grade Pu, and TRU used as initial fissile material are listed in Table~\ref{tab:excess}.
-For $^{233}$U case \cite{ashraf2020Strategies} the maximum observed excess reactivity is $4.27\pm0.01$ $\$$ during 60 effective full-power years (EFPY) of operation (see Figure~\ref{fig:keff_25} after $\approx$ 8 EFPY of operation).
-The proposed reactivity control system must compensate such reactivity at startup and during burnup.
+For $^{233}$U case \cite{ashraf2020Strategies} the initial excess reactivity is about $1180\pm28$ $pcm$, however, the maximum observed excess reactivity is $1344\pm25$ $pcm$ during 60 effective full-power years (EFPY) of operation (see Figure~\ref{fig:keff_25} after $\approx$ 8 EFPY of operation). TRU has a great amount of thermal neutron absorbers, therefore, the SD-TMSR becomes subcritical relatively quickly. Previous studies showed that for promising fueling scenarios (e.g., TRU/$^{232}$Th), large excess reactivity is required for long-term core operation \cite{ashraf2020Strategies,betzler2017assessment,rykhlevskii_fuel_2019}. The proposed reactivity control system must compensate such reactivity at startup and during burnup.
 
 \begin{table}  %[!hb]
 	\caption{The excess reactivity at startup for the SD-TMSR core with different initial fissile materials.}
@@ -23,7 +22,7 @@ The proposed reactivity control system must compensate such reactivity at startu
 		\hline
 		Initial fissile materials       				&  $^{233}$U & reactor-grade Pu&  TRU \\
 		\hline
-		$\rho_e$					& $1.65\pm0.04$ $\$$ & $4.11\pm0.02$ $\$$ & $15.38\pm0.04$ $\$$ \\
+		$\rho_e$					& $1180\pm28$ $pcm$ & $2330\pm30$ $pcm$ & $4800\pm35$ $pcm$ \\
 		\hline
 	\end{tabularx}
 	\label{tab:excess}
@@ -45,12 +44,13 @@ between CR clusters, and integral and differential control rod worths are
 described in this work. Table~\ref{tab:worth} shows calculated CRW and the amplification 
 factor (A$_{CRi}$) for six different 
 absorbers. The types of interference for all different 
-absorbers are listed in Table ~\ref{tab:table25}. Fuel salt composition of LiF-BeF$_2$-ThF$_4$-$^{233}$UF$_4$ at 70-17.5-12.3-0.2 mole\% is used to generate the results listed in Tables~\ref{tab:worth} and ~\ref{tab:table25}.
+absorbers are listed in Table ~\ref{tab:table25}. Fuel salt composition of LiF-BeF$_2$-ThF$_4$-$^{233}$UF$_4$ at 70-17.5-12.3-0.2 mole\% is used to generate the results listed in Tables~\ref{tab:worth} and ~\ref{tab:table25}. However, Table~\ref{tab:table51} summarizes the CRW of all CRs, CSD, and SSD for SD-TMSR initially loaded by reactor-grade Pu and TRU. 
+
 \begin{sidewaystable}
 	\fontsize{5}{7}\selectfont
 	\centering
 	\caption{The control rod worth for different CR 
-		materials.}
+		materials (SD-TMSR initially loaded by $^{233}$U).}
 	\vspace{1ex}
 	\begin{tabularx}{\textwidth}{|p{1.8cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}| 
 			p{1cm}|p{1cm}|p{1cm}|p{1cm}| 
@@ -62,32 +62,32 @@ absorbers are listed in Table ~\ref{tab:table25}. Fuel salt composition of LiF-B
 		&\multicolumn{2}{c|}{Gd$_2$O$_3$}	& 	
 		\multicolumn{2}{c|}{Eu$_2$O$_3$} \\
 		\cline{2-13}
-		& $\Delta\rho$$_{CRi}$  [\$]  &A$_{CRi}$	
-		& $\Delta\rho$$_{CRi}$  [\$]  &A$_{CRi}$		
-		&$\Delta\rho$$_{CRi}$ [\$]  &A$_{CRi}$		
-		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$		
-		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$		
-		&$\Delta\rho$$_{CRi}$ [\$]	&A$_{CRi}$  \\
+		& $\Delta\rho$$_{CRi}$  [pcm]  &A$_{CRi}$	
+		& $\Delta\rho$$_{CRi}$  [pcm]  &A$_{CRi}$		
+		&$\Delta\rho$$_{CRi}$ [pcm]  &A$_{CRi}$		
+		&$\Delta\rho$$_{CRi}$ [pcm]	&A$_{CRi}$		
+		&$\Delta\rho$$_{CRi}$ [pcm]	&A$_{CRi}$		
+		&$\Delta\rho$$_{CRi}$ [pcm]	&A$_{CRi}$  \\
 		\hline                   
-		All control rods      &  $42.04\pm0.60$	&	& $48.19\pm0.68$   &		
-		&$40.40\pm0.41$	&		&$37.96\pm0.36$	&		&$33.70\pm0.40$	&	
-			&$42.39\pm0.48$	& 	 \\
+		All control rods      &  $13067\pm35$	&	& $14978\pm37$   &		
+		&$12739\pm35$	&		&$11576\pm31$	&		&$10558\pm30$	&	
+			&$13596\pm35$	& 	 \\
 		\hline 
-		CSD 		 & $22.32\pm0.20$ 	& $1.24\pm0.01$	 			& $25.50\pm0.23$   &$1.24\pm0.01$	 	&$21.90\pm0.17$	&$1.10\pm0.01$	 	&$20.62\pm0.34$	&$1.10\pm0.01$	 	&$18.48\pm0.25$	&$1.17\pm0.01$	 	&$22.96\pm0.18$	&$1.20\pm0.01$   \\
+		CSD 		 & $6990\pm29$ 	& $1.22\pm0.01$	 			& $7914\pm28$   &$1.26\pm0.01$	 	&$6534\pm28$	&$1.27\pm0.01$	 	&$6490\pm29$	&$1.16\pm0.01$	 	&$5705\pm25$	&$1.18\pm0.01$	 	&$7080\pm28$	&$1.26\pm0.01$   \\
 		\hline 
-		SSD		   & $14.27\pm0.10$ 	&$1.38\pm0.02$	 	&$16.39\pm0.11$ &$1.38\pm0.02$	 	&$14.27\pm0.21$	&$1.29\pm0.01$	 	&$13.23\pm0.18$	&$1.30\pm0.06$	 	&$12.00\pm0.20$	&$1.26\pm0.01$	 	&$14.58\pm0.11$	&$1.30\pm0.02$	  \\
+		SSD		   & $4482\pm31$ 	&$1.35\pm0.02$	 	&$4998\pm34$ &$1.41\pm0.02$	 	&$4400\pm35$	&$1.41\pm0.01$	 	&$4034\pm29$	&$1.26\pm0.06$	 	&$3805\pm28$	&$1.28\pm0.01$	 	&$4676\pm35$	&$1.39\pm0.02$	  \\
 		\hline 
-		CSD inner ring   &  $16.80\pm0.02$	&$1.50\pm0.01$	  &  $18.42\pm0.05$  &$1.60\pm0.04$	 		&$16.29\pm0.29$	&$1.48\pm0.02$	 	&$15.50\pm0.17$	& $1.46\pm0.01$  	&$14.12\pm0.07$	&$1.39\pm0.01$	 	&$16.92\pm0.13$	&$1.50\pm0.01$	  \\
+		CSD inner ring      &  $5011\pm42$	&$1.61\pm0.01$	  &  $5704\pm47$  &$1.70\pm0.04$	 		&$4951\pm47$	&$1.56\pm0.02$	 	&$4804\pm38$	    & $1.53\pm0.01$  	&$4306\pm38$	&$1.57\pm0.01$	 	&$5068\pm31$	&$1.76\pm0.01$	  \\
 		\hline 
-		CSD outer ring            &  $2.16\pm0.02$	&$3.11\pm0.06$	     &$2.26\pm0.02$ &$4.21\pm0.07$	 	&$2.10\pm0.06$	&$3.11\pm0.10$ 	&$1.85\pm0.07$	&$3.24\pm0.06$	 	&$1.80\pm0.10$	&$2.54\pm0.14$	 	&$2.14\pm0.05$	&$3.20\pm0.05$	  	\\
+		CSD outer ring      &  $635\pm31$	&$3.87\pm0.06$	     &$836\pm35$ &$4.16\pm0.07$	 	&$602\pm27$	&$4.26\pm0.10$ 	&$554\pm30$	&$3.94\pm0.06$	 	&$550\pm29$	&$3.31\pm0.14$	 	&$681\pm28$	&$3.75\pm0.05$	  	\\
 		\hline 
-		CSD2			 &  $2.11\pm0.03$	&$3.00\pm0.08$	 			& $2.25\pm0.04$   &$3.69\pm0.16$	 	&$2.24\pm0.05$	&$2.42\pm0.10$	 	&$2.00\pm0.10$	&$2.68\pm0.03$	 	&$1.80\pm0.10$	&$2.55\pm0.20$	 	&$2.19\pm0.12$	&$2.90\pm0.08$	  \\
+		CSD2			 &  $660\pm30$	&$4.10\pm0.08$	 			& $692\pm31$   &$4.44\pm0.16$	 	&$694\pm32$	&$3.61\pm0.10$	 	&$610\pm29$	&$3.33\pm0.03$	 	&$553\pm28$	&$3.68\pm0.20$	 	&$685\pm29$	&$4.26\pm0.08$	  \\
 		\hline 
-		CSD9			 &  $0.06\pm0.01$	&$15.16\pm0.10$	 				& $0.15\pm0.04$   & $10.53\pm0.01$	  	&$0.10\pm0.05$	&$5.10\pm0.05$	 	&$0.05\pm0.01$	&$16.40\pm0.10$	  	&$0.09\pm0.07$	&$5.55\pm0.20$	  	&$0.07\pm0.05$	&$14.00\pm0.10$	  \\ 
+		CSD9			 &  $111\pm18$	&$7.82\pm0.10$	 				& $127\pm29$   & $7.63\pm0.01$	  	&$99\pm20$	&$10.10\pm0.05$	 	&$87\pm19$	&$6.13\pm0.10$	  	&$82\pm25$	&$9.74\pm0.20$	  	&$115\pm19$	&$10.83\pm0.10$	  \\ 
 		\hline
-		SSD1		 &  $3.95\pm0.05$	&$1.31\pm0.01$	 	& $4.18\pm0.07$   &$1.59\pm0.08$	 	&$3.95\pm0.13$	&$1.30\pm0.07$	 	&$3.59\pm0.03$	&$1.49\pm0.01$	 	&$3.45\pm0.12$	&$1.40\pm0.08$	 	&$3.91\pm0.06$	&$1.40\pm0.01$  \\
+		SSD1		 &  $1257\pm25$	&$1.41\pm0.01$	 	& $1290\pm27$   &$2.09\pm0.08$	 	&$1205\pm30$	&$2.05\pm0.07$	 	&$1104\pm25$	&$1.77\pm0.01$	 	&$1071\pm27$	&$2.02\pm0.08$	 	&$1224\pm31$	&$2.33\pm0.01$  \\
 		\hline 
-		SSD4		 &  $0.59\pm0.08$	& $9.52\pm0.10$	 		&  $0.57\pm0.09$  &$7.84\pm0.15$	 	&$0.63\pm0.06$	&$4.40\pm0.10$	 	&$1.00\pm0.05$	&$2.51\pm0.16$	 	&$0.60\pm0.80$	&$3.31\pm0.27$	 	&$0.60\pm0.08$	&$5.10\pm0.28$	  \\
+		SSD4		 &  $183\pm32$	& $10.18\pm0.10$	 		&  $179\pm25$  &$10.68\pm0.15$	 	&$191\pm35$	&$7.78\pm0.10$	 	&$298\pm37$	&$7.51\pm0.16$	 	&$188\pm36$	&$6.96\pm0.27$	 	&$185\pm25$	&$10.43\pm0.28$	  \\
 		\hline
 	\end{tabularx}
 	\label{tab:worth}
@@ -96,7 +96,7 @@ absorbers are listed in Table ~\ref{tab:table25}. Fuel salt composition of LiF-B
 \begin{sidewaystable}
 	\fontsize{5}{7}\selectfont
 	\centering
-	\caption{The shadowing effect for different CR materials.}
+	\caption{The shadowing effect for different CR materials (SD-TMSR initially loaded by $^{233}$U).}
 	\vspace{0.1in}
 		\begin{tabularx}{\textwidth}{|X|X|X|X|X|X|X|}
 		\hline
@@ -122,11 +122,11 @@ absorbers are listed in Table ~\ref{tab:table25}. Fuel salt composition of LiF-B
 	\hline 
 	CSD2			&	$\star$				& $\star$	&$\star$		&$\star$		&$\star$  &$\star$	 \\  
 	\hline 
-	CSD9		&	$\star$$\star$				& $\star$$\star$	&$\star$		&$\star$$\star$			&$\star$$\star$	  &$\star$$\star$		 \\ 	 
+	CSD9		&	$\star$$\star$				& $\star$$\star$	&$\star$$\star$		&$\star$$\star$			&$\star$$\star$	  &$\star$$\star$		 \\ 	 
 	\hline
 	SSD1	&	$\star$				& $\star$	&$\star$		&$\star$		&$\star$  &$\star$ \\	  
 	\hline 
-	SSD4		&		$\star$$\star$			& 	$\star$$\star$	&$\star$		&$\star$		&$\star$  &	$\star$$\star$	 \\  
+	SSD4		&		$\star$$\star$			& 	$\star$$\star$	&$\star$$\star$		&$\star$$\star$			&$\star$$\star$  &	$\star$$\star$	 \\  
 	\hline
 	\end{tabularx}
 	\begin{tablenotes}
@@ -136,10 +136,40 @@ absorbers are listed in Table ~\ref{tab:table25}. Fuel salt composition of LiF-B
 \end{tablenotes}
 	\label{tab:table25}
 \end{sidewaystable}
+
+\begin{table} %[b!]
+	\caption{The CRW of all CRs, CSD, and SSD for SD-TMSR initially loaded by reactor-grade Pu and TRU, unit [pcm].}
+	\begin{tabularx}{\textwidth}{ p{2cm} | X X X   X X X } \hline
+		\multirow{1}{*}{Absorbing}
+		 \multirow{1}{*}{materials}
+		 		& 
+		\multicolumn{6}{c}{Startup fissile material} \\ \cline{2-7}
+		\space   & \multicolumn{3}{c}{Pu} & 
+		\multicolumn{3}{c}{TRU} \\ \cline{2-7}
+		\space  & All CRs & CSD & SSD & All CRs & CSD & 
+		SSD \\ \hline
+		Nat. B$_4$C 
+		&$11353\pm35$&$5963\pm30$&$3908\pm31$&$12173\pm31$&$6872\pm35$ &$4408\pm30$
+		\\ 
+		B$_4$C-90 
+		&$13264\pm35$&$6755\pm29$&$4837\pm35$&$13915\pm30$&$7883\pm28$&$5028\pm35$ \\
+		HfB$_2$ 
+		&$10825\pm27$&$5562\pm30$&$3741\pm31$&$12027\pm30$&$6795\pm31$&$4477\pm29$ \\ 
+	    HfH$_{1.62}$
+		&$9836\pm30$&$4828\pm32$&$3545\pm30$&$11651\pm30$&$6583\pm31$&$4158\pm30$ \\ 
+		Gd$_2$O$_3$ 
+		&$8608\pm35$&$4384\pm28$&$3471\pm31$&$10356\pm28$&$5851\pm29$&$3858\pm31$ \\ 
+		Eu$_2$O$_3$ 
+		&$11826\pm31$&$6019\pm30$&$4073\pm29$&$12648\pm30$&$7146\pm30$&$4604\pm31$ \\ 
+		\hline
+	\end{tabularx}
+	\label{tab:table51}
+\end{table}
+
 \subsubsection{CRW} \label{CR_worth}
 
-Among the absorbers investigated, the total worth of all CRs extends from $33.7\pm0.4$ $\$$ to $48.19\pm0.68$ 
-$\$$ (the first row in Table~\ref{tab:worth}). B$_4$C-90 (boron enriched to 90\% $^{10}$B)
+Among the absorbers investigated, the total worth of all CRs extends from $10558\pm30$ $pcm$ to $14978\pm37$ 
+$pcm$ (the first row in Table~\ref{tab:worth}). B$_4$C-90 (boron enriched to 90\% $^{10}$B)
 has the largest absorption ability, while Gd$_2$O$_3$ has the lowest 
 absorption compared with the other absorbing materials in this study. This 
 result agrees with macroscopic absorption cross section data 
@@ -152,9 +182,10 @@ herein and will be investigated in future work.
 The worth of the Control Safety Devices (CSD) clusters is $1.56$ times greater than 
 the worth of the Shutdown Safety Devices (SSD) system for all absorbing materials. Either CSD or SSD 
 clusters are able to shut down the reactor initially loaded by 
-$^{233}$U and reactor-grade Pu regardless of the absorbing material type.
-However, only SSD clusters made of B$_4$C-90 are able to shut down the SD-TMSR 
-initially loaded by transuranic (TRU) elements ($\rho_e$ is $15.38\pm0.04$ $\$$).
+$^{233}$U regardless of the absorbing material type.
+For reactor-grade Pu (Table~\ref{tab:table51}), also, either CSD or SSD 
+clusters are able to compensate the initial excess reactivity or shut down the reactor initially loaded by reactor-grade Pu regardless of the absorbing material type. However, only SSD clusters made of B$_4$C-90 are able to shut down the SD-TMSR 
+initially loaded by transuranic (TRU) elements ($\rho_e$ is $4800\pm35$ $pcm$).
 The reason for this is the much larger 
 absorption cross section of $^{10}$B in the relatively soft neutron energy 
 spectrum of the SD-TMSR core started with TRU \cite{ashraf2020Strategies}.
@@ -187,30 +218,41 @@ provide the reactor core with sufficient negative reactivity. The
 shutdown margin (SDM) is calculated by equation~\ref{Equ:6}.
 Table~\ref{tab:table2} summarizes the shutdown margins for the SD-TMSR core 
 initially loaded with $^{233}$U, reactor-grade Pu, and TRU 
-elements for different absorbing materials. All absorbing materials provide a sufficient positive
-SDM for the SD-TMSR core that is initially loaded with 
-$^{233}$U and reactor-grade Pu. However, the SDMs for the TRU case are 
-negative or slightly positive (in B$_4$C-90 case); this makes the SSD clusters 
-unreliable to shut down the reactor loaded with TRU.
-For the TRU case, increasing the number of SSD clusters would provide a sufficient positive SDM.
-This should be carefully studied when designing the reactivity control system.
+elements for different absorbing materials. All absorbing materials provide a sufficient positive SDM for the SD-TMSR core that is initially loaded with $^{233}$U and reactor-grade Pu. We considered the sufficient positive SDM to be 2$\beta$, where $\beta$ is the total delayed fraction. Thus, the sufficient positive SDM is $\sim$1300 $pcm$. The SDMs for the TRU case are negative or slightly positive (in B$_4$C-90 case). Thus, the SSD clusters made of non-B$_4$C-90 materials are ineffectual to shut down the reactor loaded with TRU. Table~\ref{tab:table50} lists the shutdown margin provided by all SSD clusters when a single SSD cluster with maximum worth (i.e., SSD1) is withdrawn. As shown in Table~\ref{tab:table50}, the control rods still meet the shutdown requirement even in the case of SSD1 cluster failure (withdrawal) for the SD-TMSR core that is initially loaded with $^{233}$U and reactor-grade Pu. For the TRU case, in the case of SSD1 cluster failure, substitutional insertion of CSD with SSD clusters will provide a sufficient positive SDM. 
 
 \begin{table}  %[!hb]
 	\caption{The SDMs for the SD-TMSR core for different absorbing materials.}
 	\vspace{0.1in}
-	\begin{tabularx}{\textwidth}{p{3cm} s s s}
+	\begin{tabularx}{\textwidth}{p{2.5cm} p{2.5cm} p{2.5cm} p{3cm}}
 		\hline
 		Absorbing materials        				&  $^{233}$U & reactor-grade Pu&  TRU \\
 		\hline
-		Nat. B$_4$C					& $12.62\pm0.08$ $\$$ &$10.18\pm0.09$ $\$$ &$-1.12\pm0.08$ $\$$ \\
-		B$_4$C-90                          & $14.74\pm0.09$ $\$$ & $12.28\pm0.12$ $\$$ & $ $ $ $ $1.01\pm0.09$ $\$$ \\
-		Eu$_2$O$_3$                       &  $12.93\pm0.09$ $\$$    &  $10.47\pm0.12$ $\$$   &$-0.80\pm0.09$ $\$$\\
-		HfB$_2$        				 &$12.62\pm0.24$ $\$$ &$10.16\pm0.26$ $\$$ &$-1.11\pm0.24$ $\$$   \\
-		HfH$_{1.62}$							& $11.58\pm0.19$ $\$$ &$9.12\pm0.22$ $\$$ &$-2.15\pm0.19$ $\$$ \\
-		Gd$_2$O$_3$	  		& $10.35\pm0.22$ $\$$ &$7.890\pm0.25$ $\$$& $-3.38\pm0.22$ $\$$\\
+		Nat. B$_4$C					& $3302\pm28$ $pcm$ &$1743\pm31$ $pcm$  &$-392\pm25$ $pcm$ \\
+		B$_4$C-90                   & $3818\pm30$ $pcm$ & $2507\pm39$ $pcm$ & $ $ $ $ $228\pm26$ $pcm$ \\
+		Eu$_2$O$_3$                 &  $3496\pm30$ $pcm$&  $1645\pm25$ $pcm$&$-196\pm25$ $pcm$\\
+		HfB$_2$        				&$3220\pm42$ $pcm$  &$1412\pm42$ $pcm$  &$-323\pm25$ $pcm$   \\
+		HfH$_{1.62}$				& $2854\pm35$ $pcm$ &$1215\pm31$ $pcm$  &$-642\pm31$ $pcm$\\
+		Gd$_2$O$_3$	  		        & $2625\pm41$ $pcm$ &$1141\pm31$ $pcm$  & $-942\pm35$ $pcm$\\
 		\hline
 	\end{tabularx}
 	\label{tab:table2}
+\end{table}
+\begin{table}  %[!hb]
+	\caption{The SDMs for the SD-TMSR core when the SSD1 cluster is fully withdrawn.}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{p{2.5cm} p{2.5cm} p{2.5cm} p{3cm}}
+		\hline
+		Absorbing materials         &  $^{233}$U        & reactor-grade Pu  &  TRU \\
+		\hline
+		Nat. B$_4$C					& $2045\pm25$ $pcm$ &$498\pm27$ $pcm$   & $-1637\pm27$ $pcm$ \\
+		B$_4$C-90                   & $2528\pm25$ $pcm$ & $1257\pm25$ $pcm$ &  $-1082\pm26$ $pcm$ \\
+		Eu$_2$O$_3$                 &  $2272\pm30$ $pcm$&  $524\pm27$ $pcm$ &$-1450\pm25$ $pcm$\\
+		HfB$_2$        				&$2015\pm35$ $pcm$  &$257\pm37$ $pcm$   &$-1698\pm35$ $pcm$   \\
+		HfH$_{1.62}$				& $1750\pm25$ $pcm$ &$170\pm27$ $pcm$   &$-1787\pm31$ $pcm$\\
+		Gd$_2$O$_3$	  		        & $1554\pm35$ $pcm$ &$120\pm25$ $pcm$    & $-2166\pm35$ $pcm$\\
+		\hline
+	\end{tabularx}
+	\label{tab:table50}
 \end{table}
 
 \subsubsection{Interference between CR systems}
@@ -221,6 +263,8 @@ anti-shadowing is observed when the combined rod worth is greater than the sum
 of the individual worths. As listed in Tables~\ref{tab:worth} and ~\ref{tab:table25}, the strongest anti-shadowing effect occurred in 
 SSD4 and CSD9 clusters that are located at the boundary between the core zones 
 with different moderator-to-fuel ratios. This happened because fewer clusters surround the SSD4 and CSD9 clusters compared with other clusters located in the inner zone of the SD-TMSR (see Figure~\ref{fig:core_25}). Consequently, low interference between these SSD4 and CSD9 clusters and other surrounding clusters is observed. The obtained results show a negligible relationship between the absorbing material type and the interference between the CR clusters (i.e., the A$_{CRi}$).
+
+We calculated the shutdown margin (SDM) and the amplification factor (A$_{CRi}$) for three different configurations of the CRs in the graphite element for the SD-TMSR initially loaded by TRU (maximum excess reactivity at startup) as demonstrated in Figure~\ref{fig:3_CR}. Results showed that three rods in the graphite element save the 60-degree symmetry of the component; however, the SDM in such a case is $-1058$ $pcm$ and the A$_{CRi}$ is $1.09$. In the case of four rods, the 60-degree symmetry of the graphite element is broken; however, the SDM is about $228$ $pcm$, and the A$_{CRi}$ is $0.97$. Finally, when six rods are distributed evenly in the graphite element, both symmetry and relatively high SDM are obtained ($598$ $pcm$), but the A$_{CRi}$ is about $0.29$, which means high interference between rods due to the shadowing effect in this case. Therefore the 3- and 6-CR configurations are ineffectual due to the negative SDM and the low A$_{CRi}$, respectively. The 4-CRs configuration is adopted in the current study since the SDM is positive, and almost no shadowing effect has been observed.
 
 Insertion of the CR affects the neutron flux distribution, which is 
 the primary reason for the amplification of CRWs indicated in 
@@ -233,6 +277,15 @@ CRs deforms the radial flux shape close to CRs.
 This shifts the neutron flux from the core center towards the 
 periphery. The maximum neutron flux shift occurs when all CRs are inserted 
 into the core \cite{girardin2007control}.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\textwidth]{3_CR.png}
+	\vspace{-0.5in}
+	\caption{$XY$ section of graphite element with a) 3-CRs b) 4-CR c) 6-CRs configurations.} 
+	\label{fig:3_CR}
+\end{figure}
+
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\textwidth]{totalflux.png}
@@ -245,17 +298,16 @@ into the core \cite{girardin2007control}.
 
 \subsubsection{Integral and differential CRW}
 
-The integral and differential CRWs are calculated for three 
-different systems: all CRs, CSD, and SSD systems. The CRs are 
-inserted gradually into the core from the top to the bottom. 
+The integral CRWs are calculated for three different systems: all CRs, CSD, and SSD systems. We calculated the differential CRWs for the CSD system only because special adjusting rods (i.e., CSD) were assumed to adjust the reactivity.
+The CRs are inserted gradually into the core from the top to the bottom. 
 Equations~\ref{Equ:4} and~\ref{Equ:5} are used to calculate the integral and 
 differential CRW, respectively. Figure~\ref{fig:integ} illustrates the integral CRW for CRs 
 made of B$_4$C-90. The maximum integral worth of all CRs, CSD, and SSD 
-clusters are about $48.39$ $\$$, $25.30$ $\$$, and $16.46$ $\$$, respectively. The 
+clusters are about $14978$ $pcm$, $7914$ $pcm$, and $4998$ $pcm$, respectively. The 
 integral worth of SSD clusters made of B$_4$C-90 is sufficient to shut down the reactor from any 
 state.
 
-The differential CRWs are demonstrated in Figure~\ref{fig:diff}. Theoretically, at the top of the core, the CR insertion has little effect since this region has low thermal neutron flux. Thus the differential CRW has the lowest values in this region. The effect of CR insertion increases gradually near the center of the core. At the center of the core (region with maximum thermal neutron flux), the differential CRW is the largest and changes slowly with rod insertion. From the center of the core to the bottom, the differential CRW values decrease (region with low thermal neutron flux). Figure~\ref{fig:diff} shows that the maximum differential CRW is shifted toward the bottom of the core and the curves are not exactly symmetrical. This is due to the asymmetrical distribution of the fuel and graphite in simulation \cite{xuemei2013study,son2016control}.
+The differential CRWs are demonstrated in Figure~\ref{fig:diff}. Theoretically, at the top of the core, the CR insertion has little effect since this region has low thermal neutron flux. Thus the differential CRW has the lowest values in this region. The effect of CR insertion increases gradually near the center of the core. At the center of the core (region with maximum thermal neutron flux), the differential CRW is the largest and changes slowly with rod insertion. From the center of the core to the bottom, the differential CRW values decrease (region with low thermal neutron flux). Figure~\ref{fig:diff} shows that the maximum differential CRW is shifted toward the bottom of the core and the curve is not exactly symmetrical. This is due to the asymmetrical distribution of the fuel and graphite in simulation \cite{xuemei2013study,son2016control}.
 
 Figure~\ref{fig:CSD} shows the integral CRW for only Control Safety Devices (CSD) clusters with six 
 different absorbing materials. The results show that all absorbing materials 
@@ -275,7 +327,7 @@ Notably, all results are based on steady-state calculations.
 	\centering
 	\includegraphics[width=\textwidth]{diff.png}
 	\vspace{-0.5in}
-	\caption{Differential CRW of all CRs, CSD, and SSD clusters (CRs made of B$_4$C-90).} 
+	\caption{Differential CRW of CSD clusters (CRs made of B$_4$C-90).} 
 	\label{fig:diff}
 \end{figure}
 \begin{figure}

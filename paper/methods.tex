@@ -18,6 +18,37 @@ thermochemical state of the liquid fuel salt. Three different types of initial
 fissile materials are considered: (1) $^{233}$U \cite{ashraf2020whole}, 
 (2) reactor-grade Pu \cite{marka1993explosive}, and (3) transuranic (TRU) 
 elements from \gls{LWR} \gls{SNF} \cite{de2000scenarios}.
+The reactor-grade Pu and TRU isotopic vectors are summarized in 
+Table~\ref{tab:table52} and ~\ref{tab:table53}, respectively.
+
+\begin{table} % [!ht]
+	\centering
+	\caption{Reactor-grade Pu vector (wt.\%) \cite{marka1993explosive}.}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{X X X X X}
+		\hline
+		$^{238}$Pu & $^{239}$Pu & $^{240}$Pu & $^{241}$Pu & $^{242}$Pu \\
+		\hline
+		$ $ $ $ $ $ $ $ $ $1.3 &$ $ $ $ $ $60.3&$ $ $ $ $ $24.3&$ $ $ $ $ $ $ $ $ $9.1&$ $ $ $ $ $ $ $ $ $ $ $ $ $5 \\
+		\hline
+	\end{tabularx}
+	\label{tab:table52}
+\end{table}
+
+\begin{table} %  [!ht]
+	\centering
+	\caption{TRU vector (wt.\%) \cite{de2000scenarios}.}
+	\vspace{0.1in}
+	\begin{tabularx}{\textwidth}{X X X X X X X X X X}
+		\hline
+		$^{237}$Np&$^{238}$Pu & $^{239}$Pu & $^{240}$Pu & $^{241}$Pu & $^{242}$Pu&$^{241}$Am &$^{243}$Am&$^{244}$Cm &$^{245}$Cm\\
+		\hline
+		$ $ $ $ $ $ $ $ $ $6.3&$ $ $ $ $ $ $ $ $ $2.7& $ $ $ $ $ $45.9& $ $ $ $ $ $21.5& $ $ $ $ $ $10.7&$ $ $ $ $ $ $ $ $ $6.7&$ $ $ $ $ $ $ $ $ $3.4&$ $ $ $ $ $ $ $ $ $1.9&$ $ $ $ $ $ $ $ $ $$ $0.8&$ $ $ $ $ $ $ $ $ $0.1 \\
+		\hline
+	\end{tabularx}
+	\label{tab:table53}
+\end{table}
+
 The density and volume of the fuel salt are 3.3 g/cm$^{3}$ and 52.9 m$^3$, 
 respectively. The liquid fuel salt circulates continuously through the channels
 that pierce the graphite hexagonal prisms. The core is surrounded by 
@@ -85,13 +116,10 @@ In the present work, six different absorbing materials are considered based on t
 	\label{fig:Radius}
 \end{figure}
 
-The assessment of the optimal absorber radius should be an important consideration. If the CR radius is too large, the absorber material is not effectively utilized, due to self-shielding. We changed the radius of the CR and calculated the corresponding $k_{eff}$ when all CRs were fully inserted. Figure~\ref{fig:Radius} illustrates the change of the $k_{eff}$ with the radius of the B$_4$C control rod. As shown in Figure~\ref{fig:Radius}, in the region between 0 and 0.75 cm, the $k_{eff}$ decreases sharply with increasing absorber radius. However, in the region between 0.75 and 1.0 cm, there is almost no change in the $k_{eff}$. This is because of the geometry self-shielding of the neutron flux; beyond r = 0.75 cm, the $^{10}$B atoms in the central zone of the CR have relatively low chance for neutron capture.
-From the obtained results, we proposed the control rod as a cylinder with a radius of 0.75 cm and a height of 520 cm (core height in addition to upper and lower plenums).
+The assessment of the optimal absorber radius should be an essential consideration. If the CR radius is too large, the absorber material is not effectively utilized due to self-shielding. We changed the radius of the CR and calculated the corresponding $k_{eff}$ when all CRs were fully inserted. Figure~\ref{fig:Radius} illustrates the change of the $k_{eff}$ with the radius of the control rod for all different materials. As shown in Figure~\ref{fig:Radius}, in the region between 0.0 and 0.75 cm, the $k_{eff}$ decreases sharply with increasing absorber radius for all absorbers. However, for the B$_4$C control rod, in the region between 0.75 and 1.0 cm, there is almost no change in the $k_{eff}$. This is because of the geometry self-shielding of the neutron flux; beyond r = 0.75 cm, the $^{10}$B atoms in the central zone of the CR have a relatively low chance for neutron capture. In contrast, other absorbers are not affected by the self-shielding phenomenon in the considered region (0.0$<$r$<$1.0 cm). From the obtained results, we proposed the control rod as a cylinder with a radius of 0.75 cm and a height of 520 cm (core height in addition to upper and lower plenums).
 The absorbing material is surrounded by a 0.25-cm-thick cladding made of AIM1 
 (15Cr-15Ni) steel alloy \cite{SERAN2017285} and the guide tube is made of 
-SiC structural material (see Figure~\ref{fig:cr}). We simulated a 0.1-cm-thick gap between the 
-cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity.
-All densities of rod materials are listed in
+SiC structural material (see Figure~\ref{fig:cr}). Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work. All densities of rod materials are listed in
 Table~\ref{tab:table111}.
 
 \begin{figure}[t!]  % replace 't' with 'b' to \centering
@@ -216,18 +244,16 @@ worth, and interference effects (shadowing effects) are described below.
 
 \subsubsection{Reactivity calculation}
 
-The excess reactivity $\rho$$_e$ is the reactivity of the core when all control rods are withdrawn. $\rho$$_e$ is calculated by SERPENT-2 in \$ units based on equation~\ref{Equ:1}, where $k_{eff}$ is the effective multiplication factor of the core and $\beta_{eff}$ is the effective fraction of delayed neutrons:
+The excess reactivity $\rho$$_e$ is the reactivity of the core when all control rods are withdrawn. $\rho$$_e$ is calculated by SERPENT-2 based on equation~\ref{Equ:1}, where $k_{eff}$ is the effective multiplication factor of the core:
 
 \begin{equation}
 \label{Equ:1}
-{{\rho}_{e}}=\dfrac{{k_{eff}}-1}{{k_{eff}}{{\beta}_{eff}}}.
+{{\rho}_{e}}=\dfrac{{k_{eff}}-1}{{k_{eff}}}.
 \end{equation}
-
-The effective delayed neutron fraction is calculated by the adjoint-weighted time constants using a perturbation technique in SERPENT-2 \cite{leppanen2014calculation}, and it accounts for the steady-state of the fuel salt.
 
 \subsubsection{The control rod worth (CRW)}
 
-The control rod worth (CRW) is the amount of negative reactivity associated with the control rod insertion. The CRW is calculated by SERPENT-2 in \$ units based on equation~\ref{Equ:2}, where $\Delta\rho$$_{CRi}$ is the worth of the i$^{th}$ control rod (CR), $\rho$$_e$ is the initial excess reactivity, and $\rho$$_{CRi}$ is the excess reactivity after insertion of the i$^{th}$ CR \cite{vcerba2017optimization}:
+The control rod worth (CRW) is the amount of negative reactivity associated with the control rod insertion. The CRW is calculated by SERPENT-2 based on equation~\ref{Equ:2}, where $\Delta\rho$$_{CRi}$ is the worth of the i$^{th}$ control rod (CR), $\rho$$_e$ is the initial excess reactivity, and $\rho$$_{CRi}$ is the excess reactivity after insertion of the i$^{th}$ CR \cite{vcerba2017optimization}:
 
 \begin{equation}
 \label{Equ:2}
@@ -273,16 +299,15 @@ If A$_{CRi}$ is $<$1, the CRW is reduced due to shadowing effects, but if A$_{CR
 
 The integral CRW is the total reactivity change due to the full 
 insertion or withdrawal of the CR. However, the \textit{differential CRW} is the
-reactivity inserted per unit of withdrawal [\$/cm]. To calculate those 
+reactivity inserted per unit of withdrawal [pcm/cm]. To calculate those 
 parameters, we varied the position of CR clusters from fully withdrawn to 
 fully inserted. Equation~\ref{Equ:4} is used to calculate the integral CRW 
-[\$], where $k_{j-1}$ and $k_{j}$ are the effective multiplication factors 
-before and after CR insertion to the $j$$^{th}$ step, respectively, $\beta_{j}$ is the
-fraction of delayed neutrons at the $j$$^{th}$ step, and $N$ is the number of steps:
+[pcm], where $k_{j-1}$ and $k_{j}$ are the effective multiplication factors 
+before and after CR insertion to the $j$$^{th}$ step, respectively, and $N$ is the number of steps:
 
 \begin{equation}
 \label{Equ:4}
-{{\Delta}{\rho}_{j}}=\sum_{j=1}^{N}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}}.
+{{\Delta}{\rho}_{j}}=\sum_{j=1}^{N}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}}.
 \end{equation}
 
 Equation~\ref{Equ:5} is used to calculate the theoretical differential CRW, where 
@@ -290,7 +315,7 @@ $\Delta Z$ is the length of rod inserted:
 
 \begin{equation}
 \label{Equ:5}
-\dfrac{{\partial}{\rho}_{j}}{{\partial{Z}}}=\dfrac{1}{{\Delta}{Z}}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}{{\beta}_{j}}}.
+\dfrac{{\partial}{\rho}_{j}}{{\partial{Z}}}=\dfrac{1}{{\Delta}{Z}}\dfrac{{k_{j}}-{k_{j-1}}}{{{k_{j}}{k_{j-1}}}}.
 \end{equation}
 
 
