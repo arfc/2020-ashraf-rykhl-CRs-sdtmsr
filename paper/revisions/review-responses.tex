@@ -165,7 +165,7 @@ changes which certainly improved the paper.
         		        		
         		The following paragraph has been added to the manuscript to clarify this point:\\
         		
-Additionally, the Nuclear Regulatory Commission (NRC) prescribes that one of two independent reactivity control systems should use control rods (Criterion 26) \cite{nuclear1987standard}. According to the demands of nuclear safety regulations, two independent shutdown systems of Control Safety Devices (CSD) and Shutdown Safety Devices (SSD) must be adopted in reactor design to ensure the reactor safe operation, to adjust power, and to ensure the shutdown of the reactor anytime independently. All the shutdown systems must meet the shutdown margin of the reactor. For the CSD, it should contain the reactivity adjusting rods, reactor safety rods and reactivity compensation rods.
+The control rod worth and its efficiency in compensating excess reactivity is a subject of significant interest since it directly affects the reactor safety \cite{atkinson2019small}. Additionally, the Nuclear Regulatory Commission (NRC) prescribes that one of two independent reactivity control systems should use control rods (Criterion 26) \cite{nuclear1987standard}. According to the demands of nuclear safety regulations, two independent shutdown systems must be adopted in reactor design to ensure the reactor safe operation, to adjust power, and to ensure the shutdown of the reactor anytime independently. All the shutdown systems must be sufficient to shut down the reactor at any time during operation.
         		    
         \end{solution}
 
@@ -189,7 +189,7 @@ Additionally, the Nuclear Regulatory Commission (NRC) prescribes that one of two
 	\begin{solution}
 		
 	We appreciate your detailed review.
-	Indeed rapid solidification would require a very rapid decline in temperature that is precluded by the same negative temperature feedback coefficient due to a reactivity insertion transient at 300 K. That is, the speed of salt temperature reduction is slowed, throughout any fuel cooling transient, by the negative temperature feedback coefficient. The feedback coefficient does not suddenly start when the temperature of the salt reaches a specific temperature. Indeed, a temperature of 300K could not be reached while power is still being generated in the core. Indeed, it could likely only be reached after the power from post-shutdown decay heat has reduced substantially due to time. If that is the case, then the reactor must have already been shut down.
+	Indeed rapid solidification would require a very rapid decline in temperature precluded by the same negative temperature feedback coefficient due to a reactivity insertion transient at 300K. That is, the speed of salt temperature reduction is slowed, throughout any fuel cooling transient, by the negative temperature feedback coefficient. The feedback coefficient does not suddenly start when the temperature of the salt reaches a specific temperature. Indeed, a temperature of 300K could not be achieved while power is still being generated in the core. It could likely only be reached after the post-shutdown decay heat has reduced substantially due to time. If that is the case, then the reactor must have already been shut down.
 	
 	
 	
@@ -204,7 +204,7 @@ Additionally, the Nuclear Regulatory Commission (NRC) prescribes that one of two
 	 
 	 The following paragraph has been added to the text to clarify this point:\\
 	
-     We changed the radius of the CR and calculated the corresponding $k_{eff}$ when all CRs were fully inserted. Figure~2 illustrates the change of the $k_{eff}$ with the radius of the control rod for all different materials. As shown in Figure~2, in the region between 0.0 and 0.75 cm, the $k_{eff}$ decreases sharply with increasing absorber radius for all absorbers. However, for the B$_4$C control rod, in the region between 0.75 and 1.0 cm, there is almost no change in the $k_{eff}$. This is because of the geometry self-shielding of the neutron flux; beyond r = 0.75 cm, the $^{10}$B atoms in the central zone of the CR have relatively low chance for neutron capture. Other absorbers not significantly affected by the self-shielding phenomenon in the region of study (0.0$<$r$<$1.0 cm). From the obtained results, we proposed the control rod as a cylinder with a radius of 0.75 cm and a height of 520 cm (core height in addition to upper and lower plenums).
+     The assessment of the optimal absorber radius should be an essential consideration. If the CR radius is too large, the absorber material is not effectively utilized due to self-shielding. We changed the radius of the CR and calculated the corresponding $k_{eff}$ when all CRs were fully inserted. Figure~2 illustrates the change of the $k_{eff}$ with the radius of the control rod for all different materials. As shown in Figure~2, in the region between 0.0 and 0.75 cm, the $k_{eff}$ decreases sharply with increasing absorber radius for all absorbers. However, for the B$_4$C control rod, in the region between 0.75 and 1.0 cm, there is almost no change in the $k_{eff}$. This is because of the geometry self-shielding of the neutron flux; beyond r = 0.75 cm, the $^{10}$B atoms in the central zone of the CR have a relatively low chance for neutron capture. In contrast, other absorbers are not affected by the self-shielding phenomenon in the considered region (0.0$<$r$<$1.0 cm). From the obtained results, we proposed the control rod as a cylinder with a radius of 0.75 cm and a height of 520 cm (core height in addition to upper and lower plenums).
 	 
      
 \end{solution}
@@ -213,11 +213,11 @@ Additionally, the Nuclear Regulatory Commission (NRC) prescribes that one of two
 \question As shown in Figure~3, only a small thickness of gap of 0.1 cm is designed in a control rod, which would not meet the heat release requirements. It is necessary to evaluate the thermal emission behavior of the control rods, since the control rod material would release a large amount of heat after absorbing neutrons.
 \begin{solution}
 	
-    Thank you for the suggestion. According to Robertson \emph{et al.} ``Conceptual design of MSBR`` (1971) the Control rod diameter is 3.75in and the diameter of the hole in the graphite for CR is 4in (ORNL-4548) \cite{robertson_conceptual_1971}. Thus, the gap in the MSBR is about 0.635 cm, i.e., $\sim$7\% of the CR diameter. Consequently, we simulated a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. Regarding thermal emission calculations - it is out of scope and neglected in the current study.
+    Thank you for the suggestion. Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work.
 	
 	The following paragraph has been added to the text to clarify this point:\\
 	
-	The thickness of the gap between the CR and graphite in MSBR is about 7\% of the CR diameter \cite{robertson_conceptual_1971}, thus, we simulated a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. Thermal emission calculations is out of scope and also neglected in this study.
+	Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work.
 	
 	
 \end{solution}
@@ -309,24 +309,19 @@ Additionally, the Nuclear Regulatory Commission (NRC) prescribes that one of two
         
         \begin{solution}
              
-              Thank you for the comment. What he meant here?? 
+              Thank you for the comment. The statement has been removed from the text.
               
-               
-               
-                
-                
-                
         \end{solution}
 
         %--------------------------------------------------------------------
         \question How is 0.1 cm a reasonable gap between the cladding and guide tube?
         \begin{solution}
         	
-Thank you for the question. According to Robertson \emph{et al.} ``Conceptual design of MSBR`` (1971) the Control rod diameter is 3.75in and the diameter of the hole in the graphite for CR is 4in (ORNL-4548) \cite{robertson_conceptual_1971}. Thus, the gap in the MSBR is about 0.635 cm, i.e., $\sim$7\% of the CR diameter. Consequently, we simulated a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. Regarding thermal emission calculations - it is out of scope and neglected in the current study.
+Thank you for the question. Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work.
 
 The following paragraph has been added to the text to clarify this point:\\
 
-The thickness of the gap between the CR and graphite in MSBR is about 7\% of the CR diameter \cite{robertson_conceptual_1971}, thus, we simulated a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. Thermal emission calculations is out of scope and also neglected in this study.
+Robertson \emph{et al.} suggested the thickness of the gap between the CR and graphite in MSBR of about 7\% of the CR diameter \cite{robertson_conceptual_1971}. We adopted this design solution and assumed a 0.1-cm-thick gap ($\sim$7\% of the CR diameter) between the cladding and guide tube to facilitate the control rod movement. However, the absorber-cladding gap was neglected for simplicity. An important physical effect, thermal emission, and corresponding thermal-hydraulics simulations to predict the temperature of the salt around CRs are out of the scope of this study and will be covered in future work.
 
 
 
@@ -336,11 +331,11 @@ The thickness of the gap between the CR and graphite in MSBR is about 7\% of the
         \question Why do the four rods break the 60-degree symmetry of the fuel assemblies?
         
         \begin{solution}
-                 Thank you for the excellent point. We calculated the shutdown margin (SDM) and the amplification factor (A$_{CRi}$) for three different configurations of the CRs in the graphite element for the SD-TMSR initially loaded by TRU (maximum excess reactivity at startup) as demonstrated in Figure~8. Results showed that three rods in the graphite element save the 60-degree symmetry of the element, however, the SDM in such a case is $-1058$ $pcm$ and the A$_{CRi}$ is $1.09$. In the case of four rods, the 60-degree symmetry of the graphite element is broken, however, the SDM is about $228$ $pcm$ and the A$_{CRi}$ is $0.97$. Finally, when six rods are distributed in the graphite element both symmetry and relatively high SDM are obtained ($598$ $pcm$) but the A$_{CRi}$ is about $0.29$, which means high interference between rods due to the shadowing effect in this case. Therefore the 3-CRs and 6-CRs configuration are neglected due to the negative SDM and the low A$_{CRi}$, respectively. The 4-CRs configuration is adopted in the current study since the SDM is positive and almost no shadowing effect has observed.
+                 Thank you for the excellent point. We calculated the shutdown margin (SDM) and the amplification factor (A$_{CRi}$) for three different configurations of the CRs in the graphite element for the SD-TMSR initially loaded by TRU (maximum excess reactivity at startup) as demonstrated in Figure~8. Results showed that three rods in the graphite element save the 60-degree symmetry of the component; however, the SDM in such a case is $-1058$ $pcm$ and the A$_{CRi}$ is $1.09$. In the case of four rods, the 60-degree symmetry of the graphite element is broken; however, the SDM is about $228$ $pcm$, and the A$_{CRi}$ is $0.97$. Finally, when six rods are distributed evenly in the graphite element, both symmetry and relatively high SDM are obtained ($598$ $pcm$), but the A$_{CRi}$ is about $0.29$, which means high interference between rods due to the shadowing effect in this case. Therefore the 3- and 6-CR configurations are ineffectual due to the negative SDM and the low A$_{CRi}$, respectively. The 4-CRs configuration is adopted in the current study since the SDM is positive, and almost no shadowing effect has been observed.
                  
                  The following paragraph has been added to the manuscript:\\
                
-We calculated the shutdown margin (SDM) and the amplification factor (A$_{CRi}$) for three different configurations of the CRs in the graphite element for the SD-TMSR initially loaded by TRU (maximum excess reactivity at startup) as demonstrated in Figure~8. Results showed that three rods in the graphite element save the 60-degree symmetry of the element, however, the SDM in such a case is $-1058$ $pcm$ and the A$_{CRi}$ is $1.09$. In the case of four rods, the 60-degree symmetry of the graphite element is broken, however, the SDM is about $228$ $pcm$ and the A$_{CRi}$ is $0.97$. Finally, when six rods are distributed in the graphite element both symmetry and relatively high SDM are obtained ($598$ $pcm$) but the A$_{CRi}$ is about $0.29$, which means high interference between rods due to the shadowing effect in this case. Therefore the 3-CRs and 6-CRs configuration are neglected due to the negative SDM and the low A$_{CRi}$, respectively. The 4-CRs configuration is adopted in the current study since the SDM is positive and almost no shadowing effect has observed.
+We calculated the shutdown margin (SDM) and the amplification factor (A$_{CRi}$) for three different configurations of the CRs in the graphite element for the SD-TMSR initially loaded by TRU (maximum excess reactivity at startup) as demonstrated in Figure~8. Results showed that three rods in the graphite element save the 60-degree symmetry of the component; however, the SDM in such a case is $-1058$ $pcm$ and the A$_{CRi}$ is $1.09$. In the case of four rods, the 60-degree symmetry of the graphite element is broken; however, the SDM is about $228$ $pcm$, and the A$_{CRi}$ is $0.97$. Finally, when six rods are distributed evenly in the graphite element, both symmetry and relatively high SDM are obtained ($598$ $pcm$), but the A$_{CRi}$ is about $0.29$, which means high interference between rods due to the shadowing effect in this case. Therefore the 3- and 6-CR configurations are ineffectual due to the negative SDM and the low A$_{CRi}$, respectively. The 4-CRs configuration is adopted in the current study since the SDM is positive, and almost no shadowing effect has been observed.
 
 
                  
